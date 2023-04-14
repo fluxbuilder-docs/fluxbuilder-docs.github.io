@@ -131,6 +131,61 @@ const config = {
           },
         ],
       },
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Docs',
+            items: [
+              {
+                href: 'https://fluxbuilder.com',
+                position: 'left',
+                className: 'header-link',
+                label: 'Home',
+              },
+              {
+                href: 'https://fluxbuilder.com/feature',
+                position: 'left',
+                className: 'header-link',
+                label: 'Feature',
+              },
+              {
+                href: 'https://fluxbuilder.com/agency',
+                position: 'left',
+                className: 'header-link',
+                label: 'Agency',
+              },
+              {
+                href: 'https://fluxbuilder.com/pricing',
+                position: 'left',
+                className: 'header-link',
+                label: 'Pricing',
+              },
+              {
+                href: 'https://docs.fluxbuilder.com',
+                position: 'left',
+                className: 'header-link active',
+                label: 'Docs',
+              },
+              {
+                href: 'https://fluxbuilder.com/pricing',
+                position: 'left',
+                className: 'header-link',
+                label: 'Profile',
+              },
+            ],
+          },
+          // ... other links
+        ],
+        logo: {
+          alt: 'InspireUI',
+          src: '/img/logo.png',
+          href: 'https://www.inspireui.com',
+          width: 160,
+          height: 51,
+        },
+        copyright: `Copyright © ${new Date().getFullYear()} InspireUI Ltd.`, // You can also put own HTML here
+      },
 
       prism: {
         theme: lightCodeTheme,
