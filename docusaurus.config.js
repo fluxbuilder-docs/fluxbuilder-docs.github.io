@@ -6,16 +6,16 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "ShopBuilder App",
+  title: "Document - FluxBuilder - An Ultimate Approach For Flutter Mobile Apps",
   tagline: "",
-  url: "https://docs.shopbuilder.app",
+  url: "https://docs.fluxbuilder.com",
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
 
-  organizationName: "shopbuilder-app", // Usually your GitHub org/user name.
-  projectName: "shopbuilder-app.github.io", // Usually your repo name.
+  organizationName: "fluxbuilder-docs", // Usually your GitHub org/user name.
+  projectName: "fluxbuilder-docs.github.io", // Usually your repo name.
   deploymentBranch: "gh-pages",
 
   presets: [
@@ -73,7 +73,7 @@ const config = {
       metadata: [
         {
           name: "keywords",
-          content: "ShopBuilder App - Flutter App Builder",
+          content: "Document - FluxBuilder - An Ultimate Approach For Flutter Mobile Apps",
         },
       ],
       sitemap: {
@@ -88,24 +88,41 @@ const config = {
           alt: "Logo",
           src: "img/logo.png",
           srcDark: 'img/logo_dark.png',
-          href: 'https://shopbuilder.app',
+          href: 'https://fluxbuilder.com',
           target: '_self',
         },
 
         items: [
           {
-            href: 'https://docs.shopbuilder.app',
+            href: 'https://fluxbuilder.com',
             position: 'left',
             className: 'header-link',
-            label: 'Docs',
+            label: 'Home',
           },
           {
-            href: 'https://shopbuilder.app/pricing/',
+            href: 'https://fluxbuilder.com/feature',
+            position: 'left',
+            className: 'header-link',
+            label: 'Feature',
+          },
+          {
+            href: 'https://fluxbuilder.com/agency',
+            position: 'left',
+            className: 'header-link',
+            label: 'Agency',
+          },
+          {
+            href: 'https://fluxbuilder.com/pricing',
             position: 'left',
             className: 'header-link',
             label: 'Pricing',
           },
-         
+          {
+            href: 'https://fluxbuilder.com/pricing',
+            position: 'left',
+            className: 'header-link',
+            label: 'Profile',
+          },
         ],
       },
 
