@@ -118,6 +118,12 @@ const config = {
             label: 'Pricing',
           },
           {
+            href: 'https://docs.fluxbuilder.com',
+            position: 'left',
+            className: 'header-link active',
+            label: 'Docs',
+          },
+          {
             href: 'https://fluxbuilder.com/pricing',
             position: 'left',
             className: 'header-link',
