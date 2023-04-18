@@ -132,7 +132,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'Docs',
@@ -182,7 +182,7 @@ const config = {
           src: '/img/logo.png',
           href: 'https://www.inspireui.com',
           width: 160,
-          height: 51,
+          height: 36,
         },
         copyright: `Copyright © ${new Date().getFullYear()} InspireUI Ltd.`, // You can also put own HTML here
       },
