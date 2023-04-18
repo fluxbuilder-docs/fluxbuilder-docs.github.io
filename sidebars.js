@@ -16,14 +16,9 @@ const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   tutorialSidebar: [
     'Introduction',
-    'Download and Install',
-    'Sign Up and Login',
-    'Create Your App',
-    'Design Your App',
-    'Build Your App Demo',
-    'Configure App Features',
-    'Build and Publish Your App',
-    'Import Export and Others',
+    {type: 'doc',id: 'download-and-install'},
+    {type: 'doc',id: 'sign-up-and-login'},
+   
 //     {
 //       type: 'category',
 //       label: 'Design',
