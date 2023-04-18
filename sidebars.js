@@ -18,6 +18,13 @@ const sidebars = {
     'Introduction',
     {type: 'doc',id: 'download-and-install'},
     {type: 'doc',id: 'sign-up-and-login'},
+    {type: 'doc',id: 'create-your-app'},
+    {type: 'doc',id: 'design-your-app'},
+    {type: 'doc',id: 'build-your-app-demo'},
+    {type: 'doc',id: 'config-app-features'},
+    {type: 'doc',id: 'build-and-publish-your-app'},
+    {type: 'doc',id: 'import-export-and-other'},
+    {type: 'doc',id: 'changelog'},
    
 //     {
 //       type: 'category',
