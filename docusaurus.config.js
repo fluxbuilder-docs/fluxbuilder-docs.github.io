@@ -84,6 +84,7 @@ const config = {
       },
       navbar: {
         title: "",
+        hideOnScroll: true,
         logo: {
           alt: "Logo",
           src: "img/logo.png",
@@ -95,39 +96,43 @@ const config = {
         items: [
           {
             href: 'https://fluxbuilder.com',
-            position: 'left',
+            position: 'right',
             className: 'header-link',
             label: 'Home',
           },
           {
             href: 'https://fluxbuilder.com/feature',
-            position: 'left',
+            position: 'right',
             className: 'header-link',
             label: 'Feature',
           },
           {
             href: 'https://fluxbuilder.com/agency',
-            position: 'left',
+            position: 'right',
             className: 'header-link',
             label: 'Agency',
           },
           {
             href: 'https://fluxbuilder.com/pricing',
-            position: 'left',
+            position: 'right',
             className: 'header-link',
             label: 'Pricing',
           },
           {
             href: 'https://docs.fluxbuilder.com',
-            position: 'left',
+            position: 'right',
             className: 'header-link active',
             label: 'Docs',
           },
           {
             href: 'https://fluxbuilder.com/pricing',
-            position: 'left',
+            position: 'right',
             className: 'header-link',
             label: 'Profile',
+          },
+          {
+            type: 'search',
+            position: 'left',
           },
         ],
       },
