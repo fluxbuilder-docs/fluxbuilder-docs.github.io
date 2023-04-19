@@ -17,7 +17,6 @@ const sidebars = {
   tutorialSidebar: [
     'Introduction',
     {type: 'doc',id: 'download-and-install'},
-    {type: 'doc',id: 'sign-up-and-login'},
     {
       type: 'category',
       label: 'Integration',
