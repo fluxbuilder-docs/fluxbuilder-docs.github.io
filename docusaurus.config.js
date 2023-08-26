@@ -76,10 +76,7 @@ const config = {
           content: "Document - FluxBuilder - An Ultimate Approach For Flutter Mobile Apps",
         },
       ],
-      gtag: {
-        trackingID: 'G-QKWPZEM3TZ',
-        anonymizeIP: true,
-      },
+    
       sitemap: {
         // https://www.sitemaps.org/protocol.html#xmlTagDefinitions
         changefreq: "weekly",
