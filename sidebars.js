@@ -36,6 +36,12 @@ const sidebars = {
         },
       ]
     },
+   // External link
+    {
+      type: 'link',
+      label: 'Free Download', // The link label
+      href: 'https://fluxbuilder.com/download', // The external URL
+    },
 
     // External link
     {
@@ -43,12 +49,7 @@ const sidebars = {
       label: 'Support Ticket', // The link label
       href: 'https://support.fluxbuilder.com', // The external URL
     },
-   // External link
-    {
-      type: 'link',
-      label: 'Download FluxBuilder', // The link label
-      href: 'https://fluxbuilder.com/download', // The external URL
-    },
+   
 
     // {type: 'doc',id: 'download-and-install'},
     // {
