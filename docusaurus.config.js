@@ -133,7 +133,7 @@ const config = {
             from: '/d18a0923-a34c-4c88-8cc9-dd462764e6de/', to: '/judgeme-review',
           },
            {
-            from: '/e327bffd-65f3-4ef5-8716-06e9c817f0d9/', to: '/flutterwave-payment,
+            from: '/e327bffd-65f3-4ef5-8716-06e9c817f0d9/', to: '/flutterwave-payment',
           },
           {
             from: '/import-export-and-other/', to: '/import-export-and-other/',
