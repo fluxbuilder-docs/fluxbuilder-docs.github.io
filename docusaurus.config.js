@@ -73,8 +73,70 @@ const config = {
       {
         redirects: [
           {
-            to: '/firebase-settings/',
-            from: '/f584d7ee-720d-4ee1-a44b-6fc5cf4c036a/',
+            from: '/f584d7ee-720d-4ee1-a44b-6fc5cf4c036a/', to: '/firebase-settings/',
+          },
+          {
+            from: '/091fece8-1bec-4fcc-bcf8-dd35fe103418/', to: '/firebase-remote-config',
+          },
+          {
+            from: '/e56c6f41-4bab-4267-82dd-1e3c63f260af/', to: '/update-app-without-republishing/',
+          },
+          {
+            from: '/9b954313-c2b3-4eea-99e2-4b6da77a660a/', to: '/social-login',
+          },
+          {
+            from: '/a98ae663-4684-4d32-b73c-6110a000735d/', to: '/push-notifications-via-onesignal',
+          },
+          {
+            from: '/7347e6a0-743f-41d2-bd73-6f08f560fa06/', to: '/google-maps',
+          },
+          {
+            from: '/add08dcb-3690-496b-81d0-0615bbc57687/', to: '/advertisements',
+          },
+          {
+            from: '/06e1aa51-06c7-4543-bf99-1148218e9e92/', to: '/app-performance',
+          },
+          {
+            from: '/fa8f99cf-18d1-471c-afd4-ab301a19e9ca/', to: '/tap-payment',
+          },
+          {
+            from: '/4e340640-6a74-4f80-a33f-916195b34c2d/', to: '/paystack-payment',
+          },
+          {
+            from: '/d4f08600-bd28-429a-9f6d-03b8d86210d8/', to: '/paytm-payment',
+          },
+          {
+            from: '/b8b83862-0557-4182-a5a4-36d848236173/', to: '/woocommerce-appointment',
+          },
+          {
+            from: '/e7184bfb-1160-42b0-ac68-561a2740d9e6/', to: '/firebase-realtime-chat',
+          },
+          {
+            from: '/e7184bfb-1160-42b0-ac68-561a2740d9e6/', to: '/build-and-publish-your-app/',
+          },
+          {
+            from: '/6c0cb275-bc49-4c36-8afa-840906c66731/', to: '/design-app-branding',
+          },
+          {
+            from: '/0cc6306d-8975-4a0a-b894-69aac81f9f4c', to: '/stripe',
+          },
+          {
+            from: '/8af02f09-0df9-4a32-8c20-e717d045d88f/', to: '/google-analytics',
+          },
+          {
+            from: '/f7f8d72b-f450-404c-b368-28ccd532fcc2/', to: '/shopify-payment',
+          },
+          {
+            from: '/123e7eff-ed60-4126-bd71-50ead0d190bb', to: '/openai-supabase-server',
+          },
+          {
+            from: '/d18a0923-a34c-4c88-8cc9-dd462764e6de/', to: '/judgeme-review',
+          },
+           {
+            from: '/e327bffd-65f3-4ef5-8716-06e9c817f0d9/', to: '/flutterwave-payment,
+          },
+          {
+            from: '/import-export-and-other/', to: '/import-export-and-other/',
           },
         ],
       },
