@@ -67,6 +67,19 @@ const config = {
       },
     ],
   ],
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/firebase-settings/',
+            from: '/f584d7ee-720d-4ee1-a44b-6fc5cf4c036a/',
+          },
+        ],
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
