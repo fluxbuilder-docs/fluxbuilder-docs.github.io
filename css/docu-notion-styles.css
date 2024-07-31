@@ -37,8 +37,8 @@ See the use in the docu-notion-sample-site: https://github.com/sillsdev/docu-not
 
 
 table td:first-child {
-  min-width: 300px;
-  font-weight: 600;
+  min-width: 300px !important;
+  font-weight: 600 !important;
   font-size: 1em;
 }
 
