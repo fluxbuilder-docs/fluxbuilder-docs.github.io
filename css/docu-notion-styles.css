@@ -54,6 +54,12 @@ See the use in the docu-notion-sample-site: https://github.com/sillsdev/docu-not
   width: calc(min(32px, 4vw));
 }
 
+table td:first-child {
+  min-width: 300px !important;
+  font-weight: 600 !important;
+  font-size: 1em;
+}
+
 .notion-spacer:last-child {
   display: none;
 }
