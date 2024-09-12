@@ -37,21 +37,16 @@ const config = {
             ),
           ],
         },
-      }),
-    ],
-    [
-      '@docusaurus/preset-classic',
-      {
         gtag: {
           trackingID: 'G-QKWPZEM3TZ',
           anonymizeIP: true,
         },
-      },
+      }),
     ],
   ],
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "fr"],
+    locales: ["en"],
     localeConfigs: {
       en: {
         label: "English",
