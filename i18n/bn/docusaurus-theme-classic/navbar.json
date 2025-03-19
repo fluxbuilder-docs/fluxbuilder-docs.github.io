@@ -1,0 +1,30 @@
+{
+  "logo.alt": {
+    "message": "Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Home": {
+    "message": "Home",
+    "description": "Navbar item with label Home"
+  },
+  "item.label.Feature": {
+    "message": "Feature",
+    "description": "Navbar item with label Feature"
+  },
+  "item.label.Agency": {
+    "message": "Agency",
+    "description": "Navbar item with label Agency"
+  },
+  "item.label.Pricing": {
+    "message": "Pricing",
+    "description": "Navbar item with label Pricing"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Profile": {
+    "message": "Profile",
+    "description": "Navbar item with label Profile"
+  }
+}

@@ -2,7 +2,6 @@
   "name": "docu-notion-sample-site",
   "version": "0.0.0",
   "private": false,
-  "type": "module",
   "scripts": {
     "clear-docs": "rimraf ./docs/",
     "pull-test-tagged": "yarn clear-docs && cross-var yarn docu-notion -n $DOCU_NOTION_INTEGRATION_TOKEN -r $DOCU_NOTION_SAMPLE_ROOT_PAGE -m ./docs -i ./static/notion_imgs -p /notion_imgs/ --status-tag test",
@@ -13,7 +12,12 @@
     "build": "docusaurus build",
     "deploy": "docusaurus deploy",
     "//serve": "Needed, for example, to test the search functionality locally",
-    "serve": "docusaurus serve"
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-translations-all": "yarn write-translations --locale zh && yarn write-translations --locale hi && yarn write-translations --locale es && yarn write-translations --locale fr && yarn write-translations --locale ar && yarn write-translations --locale bn && yarn write-translations --locale ru && yarn write-translations --locale pt && yarn write-translations --locale vi",
+    "start-zh": "docusaurus start --locale zh",
+    "start-vi": "docusaurus start --locale vi",
+    "build-all": "docusaurus build"
   },
   "dependencies": {
     "@docusaurus/core": "^3.7.0",

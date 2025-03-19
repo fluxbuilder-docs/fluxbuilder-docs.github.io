@@ -1,0 +1,10 @@
+{
+  "copyright": {
+    "message": "Copyright © 2025 <a href=\"https://inspireui.com\">InspireUI Ltd.</a>",
+    "description": "The footer copyright"
+  },
+  "logo.alt": {
+    "message": "InspireUI",
+    "description": "The alt text of footer logo"
+  }
+}

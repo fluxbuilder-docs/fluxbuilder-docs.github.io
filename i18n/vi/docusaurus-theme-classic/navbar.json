@@ -1,0 +1,30 @@
+{
+  "logo.alt": {
+    "message": "Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Home": {
+    "message": "Trang chủ",
+    "description": "Navbar item with label Home"
+  },
+  "item.label.Feature": {
+    "message": "Tính năng",
+    "description": "Navbar item with label Feature"
+  },
+  "item.label.Agency": {
+    "message": "Đại lý",
+    "description": "Navbar item with label Agency"
+  },
+  "item.label.Pricing": {
+    "message": "Giá cả",
+    "description": "Navbar item with label Pricing"
+  },
+  "item.label.Docs": {
+    "message": "Tài liệu",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Profile": {
+    "message": "Hồ sơ",
+    "description": "Navbar item with label Profile"
+  }
+}

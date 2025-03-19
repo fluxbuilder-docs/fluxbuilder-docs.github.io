@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.link.Free Download": {
+    "message": "Free Download",
+    "description": "The label for link Free Download in sidebar tutorialSidebar, linking to https://fluxbuilder.com/download"
+  },
+  "sidebar.tutorialSidebar.link.Support Ticket": {
+    "message": "Support Ticket",
+    "description": "The label for link Support Ticket in sidebar tutorialSidebar, linking to https://support.fluxbuilder.com"
+  }
+}

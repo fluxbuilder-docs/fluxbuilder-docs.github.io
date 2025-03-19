@@ -10,6 +10,44 @@ This project was upgraded from Docusaurus v2 to v3 on March 19, 2024. The upgrad
 - Updated React to v18
 - Updated prism-react-renderer to v2.4.1
 
+## Multilingual Support
+
+This documentation site supports the following languages:
+- English (en) - Default
+- Chinese (zh)
+- Hindi (hi)
+- Spanish (es)
+- French (fr)
+- Arabic (ar)
+- Bengali (bn)
+- Russian (ru)
+- Portuguese (pt)
+- Vietnamese (vi)
+
+### Managing Translations
+
+To generate translation files for all languages:
+```bash
+yarn write-translations-all
+```
+
+To start the development server in a specific language:
+```bash
+# For Chinese
+yarn start-zh
+
+# For Vietnamese
+yarn start-vi
+
+# For other languages, use the standard format
+yarn start --locale [locale-code]
+```
+
+To build the site with all languages:
+```bash
+yarn build
+```
+
 This repo creates https://sillsdev.github.io/docu-notion-sample-site/.
 
 The GitHub Action associated with this repo does these things:

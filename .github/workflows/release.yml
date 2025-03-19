@@ -37,6 +37,8 @@ jobs:
           DOCU_NOTION_INTEGRATION_TOKEN: ${{ secrets.DOCU_NOTION_INTEGRATION_TOKEN }}
           DOCU_NOTION_SAMPLE_ROOT_PAGE: ${{ secrets.DOCU_NOTION_SAMPLE_ROOT_PAGE }}
         run: yarn pull
+      - name: Write language configs
+        run: yarn write-translations-all
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
