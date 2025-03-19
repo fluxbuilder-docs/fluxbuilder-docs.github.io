@@ -1,3 +1,15 @@
+# FluxBuilder Documentation Site
+
+This website is built using [Docusaurus 3](https://docusaurus.io/), a modern static website generator.
+
+## Upgrade Notes
+
+This project was upgraded from Docusaurus v2 to v3 on March 19, 2024. The upgrade included:
+- Updated dependencies to Docusaurus v3.7.0
+- Migrated configuration files to ES modules
+- Updated React to v18
+- Updated prism-react-renderer to v2.4.1
+
 This repo creates https://sillsdev.github.io/docu-notion-sample-site/.
 
 The GitHub Action associated with this repo does these things:
