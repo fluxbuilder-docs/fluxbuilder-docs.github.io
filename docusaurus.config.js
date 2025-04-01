@@ -159,6 +159,18 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      scripts: [
+        {
+          src: 'https://cdn.taku-app.com/js/latest.js',
+          async: true,
+          defer: true,
+        },
+        {
+          src: '/src/taku-init.js',
+          async: true,
+          defer: true,
+        },
+      ],
     }),
 };
 
