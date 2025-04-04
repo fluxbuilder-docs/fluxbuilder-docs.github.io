@@ -18,19 +18,6 @@ const config = {
   projectName: "fluxbuilder-docs.github.io", // Usually your repo name.
   deploymentBranch: "gh-pages",
 
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
-    localeConfigs: {
-      en: {
-        label: "English",
-        direction: "ltr",
-        htmlLang: "en-US",
-        calendar: "gregory",
-      },
-    },
-  },
-
   presets: [
     [
       "classic",
@@ -57,8 +44,20 @@ const config = {
       }),
     ],
   ],
-
-  plugins: [
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+    localeConfigs: {
+      en: {
+        label: "English",
+        direction: "ltr",
+        htmlLang: "en-US",
+        calendar: "gregory",
+      },
+    },
+  },
+  themes: [
+    // ... Your other themes.
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
