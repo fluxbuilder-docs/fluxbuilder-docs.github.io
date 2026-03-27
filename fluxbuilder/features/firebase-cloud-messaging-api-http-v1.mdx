@@ -1,0 +1,55 @@
+---
+title: "Firebase Cloud Messaging API (HTTP v1)"
+---
+
+
+If you are using Firebase Cloud Messaging API (Legacy) for HTTP and XMPP, let's migrate to [the latest Firebase Cloud Messaging API (HTTP v1)](https://firebase.google.com/docs/cloud-messaging/migrate-v1) **before June 2024.**
+
+
+Those deprecated APIs will be removed in June 2024. This affects the Push Notifications functionality through Firebase for users or vendors.
+
+
+### Video Guide
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/nJJrTm4p-QU"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+### Manual Guide
+
+
+Firstly, download the [latest MStore API](https://wordpress.org/plugins/mstore-api/) plugin, and install it on your website.
+
+
+Then, let's generate a private key file for your service account as the steps below:
+
+1. In the [Firebase console](https://console.firebase.google.com/), create your project or open the existing one.
+2. Select **Project Settings** > **Service Accounts**.
+
+![](/images/notion/2284347d28bc.png)
+
+1. Click **Generate New Private Key**, then confirm by clicking **Generate Key**.
+
+![](/images/notion/8494e887d374.png)
+
+
+![](/images/notion/9478230cde3d.png)
+
+
+Finally, open the admin site, go to the **Mstore API**, upload the private key file.
+
+
+![](/images/notion/24c59aefe36a.png)
+
+
+That's all :)
+
+

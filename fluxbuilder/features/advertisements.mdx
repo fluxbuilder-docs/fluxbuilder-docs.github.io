@@ -1,0 +1,147 @@
+---
+title: "Advertisements"
+---
+
+
+**Google AdMob** and **Facebook Ads** are available on the app. Let's check out the way to configure them.
+
+
+## 1. App Tracking Transparency
+
+
+The **App Tracking Transparency** is supported to allow you to display iOS 14+ tracking authorization dialog and request permission to collect data. **Collected data** is crucial for ad networks to work efficiently on ios 14+ devices. This also prevents your app from being rejected by **App Store** by violating **Legal** - **Privacy** - **Data Use and Sharing** session.
+
+
+![](/images/notion/d9b79b07cad4.png)
+
+
+---
+
+
+## 2. Set Up Google AdMob or Facebook Ads
+
+
+### 💠 Setup Google AdMob app and Ad Units
+
+- Because Flutter is a multi-platform SDK, you need to add an app and ad units for both Android and iOS in AdMob.
+
+**Step 1**: In [AdMob Console](https://apps.admob.com/v2/home), create a new Android App.
+
+
+![](/images/notion/c37630409596.png)
+
+
+**Note:** _If you choose_ _`Yes`_ _when being asked_ _`Is the app listed on a supported app store?`__, your advertisement setup must be reviewed and approved before being available to use._
+
+
+**Step 2**: Create Ad Units (Banner, Reward, Interstitial, and Native)
+
+
+![](/images/notion/2e5837080c7d.png)
+
+
+**Step 3**: Repeat Step 1 and Step 2 to create iOS App and Ad units for iOS App.
+
+
+### 💠 Facebook Ads
+
+
+**Requirements:**
+
+- Payment Information on **Facebook Developer** must be completed.
+- Your app needs **Facebook Approval**.
+- You can test your app even if it hasn't been published on **Google Play**/ **App Store** yet thanks to **testingID** that we supported. However, keep in mind that you need to update your information at **Google Developer** when you released your app in order to continue using this feature.
+
+<Tip>
+Note: You might see different illustrations compared with the below instructions because of different versions in **Facebook Developer Console** by the time these documents were written.
+</Tip>
+
+
+**Step 1:** Integrate your app in [Facebook Developer Console](https://developers.facebook.com/)
+
+
+**Step 2**: In **Dashboard**, click on **Setup Audience Network** and fill out all of the necessary information:
+
+
+![](/images/notion/cdaf9fba57d9.png)
+
+
+**Step 3:** When you finish to register your **Audience Network information**, click `Go to Monetization Manager`
+
+
+![](/images/notion/3d401011f3c2.png)
+
+
+**Step 4:** Select the platform you want to implement your Ads on. Let's say Android, then click + Add
+
+
+![](/images/notion/c5167fdec7b9.png)
+
+
+**Step 5:** Declare your app information whether your app has been released on **Google Play** / **App Store** or not.
+
+
+![](/images/notion/1faec0e28466.png)
+
+
+**Step 6:** Select your first placement, then choose the type of ads placement.
+
+
+<Tip>
+Currently, the placements supported are **Banner**, **Interstitial**, **Native**, and **Reward**. Remember to create those placements when you finish `Add Android / iOS App`
+</Tip>
+
+
+![](/images/notion/0db05ab3cdab.png)
+
+
+**Step 7:** At `Confirm Audience Network SDK Integration` step, check `The Audience Network SDK has been integrated into my app` and click `Confirm Manually`
+
+
+**Step 8:** At `Enter your business payment account information` step, click `Add payment account` and finish your payment registration.
+
+
+**Step 9:** Go back to `Facebook Monetization Manager` home page, click on `Integration > Properties` on the left-hand side menu bar and select your project property > `Ad Space Property`.
+
+
+![](/images/notion/53504d46c73b.png)
+
+
+**Step 10:** Successfully creating **Banner**, **Native**, **Reward** and **Interstitial Placement Ads** would lead to the result as below. Click on `Copy ID` at the end of each **Ad Placement** and save those values for later uses.
+
+
+![](/images/notion/308b5fc809c2.png)
+
+
+**Step 11:** Repeat from step 4 to step 10 to create placements for **iOS platform**, and to create 4 types of placement just like **Android** (**Banner**, **Interstitial**, **Native**, and **Reward**). After that, click on `Copy ID` at the end of each **Ad Placement** and save those values for later uses.
+
+
+## 3. Add a new Ads
+
+
+Below is an example of adding a `Banner` `Google AdMob` into `Home` screen:
+
+
+![](/images/notion/8ba52f44c5ea.png)
+
+
+**Steps**: Open **FluxBuilder**, choose `Features` > `Advertisement` >`Enable Advertisement` > `Enter Your AdMob App IDs` and start adding your first Ads by clicking on `ADD NEW ITEM`.
+
+
+![](/images/notion/f27cc91b927a.png)
+
+
+Each Ad item including:
+
+- A `Type` which could be `Banner`, `Reward`, `Interstitial` or `Native`
+- An `Android ID` which could be obtained from Step 2, session 2 - Google Admob depending on its `Type`
+- An `iOS ID` which you could obtain from Step 10, session 3 - Facebook Ads depending on its `Type`
+- A `Delay time to show`  to control the delayed time of an Ads to be shown, in second.
+- Multiple `Screens` that you want to display your Ads on
+
+![](/images/notion/deea29dfff9f.png)
+
+
+That’s all 🙂
+
+

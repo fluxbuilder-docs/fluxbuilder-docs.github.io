@@ -1,0 +1,182 @@
+---
+title: "Developer"
+---
+
+
+### Overview
+
+
+The guide provides a suite of simple and flexible API endpoints to add or remove data on your products, and customers.
+
+
+_Please note that, at present, the guide primarily focuses on assisting developers in executing the essential steps efficiently._
+
+
+### API Authentication
+
+
+All Agency API calls require authentication by passing **both of the following parameters**:
+
+- `agency_id`: found at Admin page > Settings > Developer
+- `agency_auth_code`: can be generated at Admin page > Settings > Developer
+
+### Product API
+
+1. **Create Product**
+
+`POST` [https://api-partners.vercel.app/api/product](https://api-partners.vercel.app/api/product)
+
+- Body
+    - `agency_id`: The agency ID identifies your account. This can be found in Admin > Settings > Developer.
+    - `agency_auth_code`: The agency auth code is a private API key for authenticating API requests. This key should never be used in client side code or shared publicly. This can be found in Admin > Settings > Developer.
+    - `email`: User email address
+    - `preview_mode`: User can edit the app’s UI and features but cannot build apps when value is `true`. Allowed values: `true`, `false` . Default: `false`
+    - `product_type`: Type of application. Leaving empty will apply all values. These are the allowed values: `fluxstore_woo`, `fluxstore_shopify`, `fluxstore_pro`, `fluxstore_prestashop`, `fluxstore_strapi`, `fluxnews`, `fluxstore_mv`, `fluxlisting`, `fluxstore_notion`, `fluxstore_bigcommerce`, `fluxstore_manager`, `fluxstore_delivery`, `fluxgpt`.
+    - server_config: The default server config. Allowed values: Object for each product_type
+        - `fluxstore_woo` : url, consumer_key, consumer_secret
+        - `fluxstore_pro` : url, consumer_key, consumer_secret, access_token, platform [woo, opencart, magento]
+        - `fluxstore_mv` : url, consumer_key, consumer_secret, platform [wcfm, dokan],
+        - `fluxnews` : url
+        - `fluxstore_shopify` : url, access_token
+        - `fluxlisting` : url, consumer_key, consumer_secret, platform [listeo, listpro, mylisting]
+        - `fluxstore_bigcommerce` : url_store, store_hash, token, url_generator_token
+        - `fluxstore_notion` : token, product, customer, category, order, appconfig
+        - `fluxstore_prestashop` : url, key
+        - `fluxstore_strapi` : url
+        - `fluxstore_manager` : url, consumer_key, consumer_secret, platform [woo, wcfm, dokan]
+        - `fluxstore_delivery` : url, consumer_key, consumer_secret, platform [woo, wcfm, dokan]
+        - `fluxgpt` : url, supabase_url, supabase_anon_key
+
+        Example for fluxstore_mv:
+
+
+        ```javascript
+        {
+            "url": "https://inspireui.com",
+            "consumer_key": "ck_c16d601d14a44c8080418c1ab9336b72ae8faff2",
+            "consumer_secret": "cs_1c11c4d0ee3bef861421bf3622f20f6b49c8497a",
+            "platform": "dokan"
+        }
+        ```
+
+
+    `fluxstore_woo`: FluxStore WooCommerce
+
+
+    `fluxstore_pro`: FluxStore Pro
+
+
+    `fluxstore_mv`: FluxStore Multi Vendor
+
+
+    `fluxnews`: FluxNews
+
+
+    `fluxstore_shopify`: FluxStore Shopify
+
+
+    `fluxlisting`: FluxListing
+
+
+    `fluxstore_bigcommerce`: FluxStore Bigcommerce
+
+
+    `fluxstore_notion`: FluxStore Notion
+
+
+    `fluxstore_prestashop`: FluxStore Prestashop
+
+
+    `fluxstore_strapi`: FluxStore Strapi
+
+
+    `fluxstore_manager`: FluxStore Manager
+
+
+    `fluxstore_delivery`: FluxStore Delivery
+
+
+    `fluxgpt`: FluxGPT
+
+- Example Response
+
+    ```json
+    {
+        "success": true,
+        "response": {
+            "id": "ae4fe82b-def4-49c2-a1fa-a1f2f62f1940",
+            "created_at": "2024-04-23T10:00:31.184021+00:00",
+            "agency_id": "e597cdb9-0c9c-4d8c-96c3-c92b34d06f81",
+            "customer_id": "9749b7aa-1b93-4da9-89b7-ceffe149bf22",
+            "key": "096f1588-b046-459b-a2aa-72c8ad61b240",
+            "preview_mode": false,
+            "grid": false,
+            "product_type": "fluxstore_woo"
+        }
+    }
+    ```
+
+1. **Delete Product**
+
+`POST` [https://api-partners.vercel.app/api/product/delete](https://api-partners.vercel.app/api/product/delete)
+
+- Body
+    - `agency_id`: The agency ID identifies your account. This can be found in Admin > Settings > Developer.
+    - `agency_auth_code`: The agency auth code is a private API key for authenticating API requests. This key should never be used in client side code or shared publicly. This can be found in Admin > Settings > Developer.
+    - `id`: The product id
+- Example Response
+
+    ```json
+    {
+        "success": true
+    }
+    ```
+
+
+### User API
+
+1. **Create User**
+
+`POST` [https://api-partners.vercel.app/api/user](https://api-partners.vercel.app/api/user)
+
+- Body
+    - `agency_id`: The agency ID identifies your account. This can be found in Admin > Settings > Developer.
+    - `agency_auth_code`: The agency auth code is a private API key for authenticating API requests. This key should never be used in client side code or shared publicly. This can be found in Admin > Settings > Developer.
+    - `email`: The new user email address
+    - `name`: The user name
+    - `phone`: The user phone number
+- Example Response
+
+    ```json
+    {
+        "success": true,
+        "response": {
+            "id": "ae4fe82b-def4-49c2-a1fa-a1f2f62f1940",
+            "created_at": "2024-04-23T10:00:31.184021+00:00",
+            "agency_id": "e597cdb9-0c9c-4d8c-96c3-c92b34d06f81",
+            "customer_id": "9749b7aa-1b93-4da9-89b7-ceffe149bf22",
+            "key": "096f1588-b046-459b-a2aa-72c8ad61b240",
+            "preview_mode": false,
+            "grid": false,
+            "product_type": "fluxstore_woo"
+        }
+    }
+    ```
+
+1. **Delete User**
+
+`POST` [https://api-partners.vercel.app/api/user/delete](https://api-partners.vercel.app/api/user/delete)
+
+- Body
+    - `agency_id`: The agency ID identifies your account. This can be found in Admin > Settings > Developer.
+    - `agency_auth_code`: The agency auth code is a private API key for authenticating API requests. This key should never be used in client side code or shared publicly. This can be found in Admin > Settings > Developer.
+    - `email`: User email address
+- Example Response
+
+    ```json
+    {
+        "success": true
+    }
+    ```
+
+

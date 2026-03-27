@@ -1,0 +1,195 @@
+# FluxBuilder
+
+FluxBuilder documentation — An Ultimate Approach For Flutter Mobile Apps. Covers onboarding, integration with WooCommerce/Shopify/WordPress, design customisation, features (push notifications, social login, payments, Firebase, AI), build & publish, Agency mode, and changelogs.
+
+> Source: https://docs.fluxbuilder.com
+
+## Get Started
+
+- [Onboarding](https://docs.fluxbuilder.com/onboarding.md): Welcome to FluxBuilder! FluxBuilder drag-and-drop app builder is a user-friendly tool that enables users to easily customize and build their own PWA, iOS, and Android mobile apps. It saves time and mo
+
+## FluxBuilder
+
+- [Index Features](https://docs.fluxbuilder.com/fluxbuilder/index-features.md): For the own benefit of users, please read the following available features to make sure that you comprehend what you can get from our powerful Mobile Apps.
+- [Supported Plugins](https://docs.fluxbuilder.com/fluxbuilder/supported-plugins.md): The FluxBuilder Mobile app supports a range of popular plugins to enhance your online store's functionality. By integrating these plugins into your website before configuring the app, you can tailor t
+- [Download and Install](https://docs.fluxbuilder.com/fluxbuilder/download-and-install.md): FluxBuilder is offered in both desktop and web versions, giving you flexibility in how you choose to use it.
+
+## Integration
+
+- [Sign Up and Login](https://docs.fluxbuilder.com/fluxbuilder/integration/sign-up-and-login.md): After launching FluxBuilder, sign up for a new account for Free, by selecting the Sign In item:
+- [Create New App](https://docs.fluxbuilder.com/fluxbuilder/integration/create-new-app.md): This guide shows you how to create Native apps (for your website).
+- [Customize App](https://docs.fluxbuilder.com/fluxbuilder/integration/customize-app.md): After creating your app on FluxBuilder, let's see the guided walkthrough to clear how to make changes on your app.
+- [App Activation](https://docs.fluxbuilder.com/fluxbuilder/integration/app-activation.md): This guide shows you how to:
+- [App Performance](https://docs.fluxbuilder.com/fluxbuilder/integration/app-performance.md): If you do not see any Images, Products, or Categories, the App loads slowly, blurry Image, the below solutions will solve them.
+- [App Security](https://docs.fluxbuilder.com/fluxbuilder/integration/app-security.md): App Security is a top priority for any mobile application. In this guide, we’ll walk you through essential steps to enhance security for your apps built with FluxBuilder App Builder.
+- [Import and Export](https://docs.fluxbuilder.com/fluxbuilder/integration/import-and-export.md): After designing your app via the FluxBuilder tool, you can Export custom design and feature files to store on your local device.
+- [Not Have A Website](https://docs.fluxbuilder.com/fluxbuilder/integration/not-have-a-website.md): If you do not currently have a website but wish to build your own iOS and Android applications, please consider one of the following solutions:
+
+## Serverless Setup
+
+- [Serverless Introduction](https://docs.fluxbuilder.com/fluxbuilder/integration/serverless-setup/serverless-introduction.md): A serverless app uses cloud platforms like Firebase to handle backend logic, data storage, and user authentication—without requiring you to manage a server. With FluxBuilder’s serverless model, you ge
+- [Create Serverless App](https://docs.fluxbuilder.com/fluxbuilder/integration/serverless-setup/create-serverless-app.md): Follow this guide to quickly set up a new serverless app using FluxBuilder.
+- [Product & Content Management](https://docs.fluxbuilder.com/fluxbuilder/integration/serverless-setup/product-content-management.md): > Upload and manage all images and assets used in your app
+- [Customer & Order Management](https://docs.fluxbuilder.com/fluxbuilder/integration/serverless-setup/customer-order-management.md): All user information is displayed in this section. Admins can view detailed profiles and Orders of each customer.
+- [Store Configuration](https://docs.fluxbuilder.com/fluxbuilder/integration/serverless-setup/store-configuration.md): > Set up delivery options, and fees
+
+## Integration
+
+- [Shopify Access Token](https://docs.fluxbuilder.com/fluxbuilder/integration/shopify-access-token.md): > ⚠️ > Legacy custom apps can’t be created after January 1, 2026(https://changelog.shopify.com/posts/legacy-custom-apps-can-t-be-created-after-january-1-2026)
+- [Woocommerce API](https://docs.fluxbuilder.com/fluxbuilder/integration/woocommerce-api.md): To create WooCommerce app (single vendor, WCFM, or Dokan) or Manager app, let’s install our free MStore API and some plugins to your WooCommerce website so that the app can sync with your data:
+- [WordPress API](https://docs.fluxbuilder.com/fluxbuilder/integration/wordpress-api.md): To create your WordPress app (app for posting, blog, news, etc), install our free MStore API to your WordPress website so that the app can sync with your data.
+- [Listing API](https://docs.fluxbuilder.com/fluxbuilder/integration/listing-api.md): To build a mobile app for your Listeo(https://1.envato.market/aVLrM), MyListing(https://1.envato.market/AeAR7), or Listing Pro(https://1.envato.market/Zadbz) website, install our free MStore API and s
+- [Opencart API](https://docs.fluxbuilder.com/fluxbuilder/integration/opencart-api.md): To build your Opencart app, install the API below on your Opencart website so that the app can sync with your data:
+- [Magento API](https://docs.fluxbuilder.com/fluxbuilder/integration/magento-api.md): To build your Magento app, install the plugin below on your Magento website so that the app can sync with your data:
+- [PrestaShop API](https://docs.fluxbuilder.com/fluxbuilder/integration/prestashop-api.md): To build your PrestaShop app, install the API below on your PrestaShop website so that the app can sync with your data:
+- [Strapi API Settings](https://docs.fluxbuilder.com/fluxbuilder/integration/strapi-api-settings.md): In Strapi, there’s no fixed template to follow. When you create a Content Type, Strapi automatically generates REST API endpoints for it.
+- [Notion API Settings](https://docs.fluxbuilder.com/fluxbuilder/integration/notion-api-settings.md): This guide walks you through the process of setting up a Notion integration for use with FluxBuilder. You’ll learn how to create a Notion integration, duplicate and connect a database, and update your
+- [Delivery Boy app’s plugins](https://docs.fluxbuilder.com/fluxbuilder/integration/delivery-boy-app-s-plugins.md): To build a Delivery Boy app (single vendor, WCFM, or Dokan), let’s install our free MStore API and some plugins to your WooCommerce website so that the app can sync with your data:
+
+## Design
+
+- [App Screens](https://docs.fluxbuilder.com/fluxbuilder/design/app-screens.md): Design your App’s UI easily and flexibly by drag&drop. You can also configure to update your App’s UI without republishing app(https://docs.fluxbuilder.com/update-app-without-republishing) to App Stor
+- [App UIs](https://docs.fluxbuilder.com/fluxbuilder/design/app-uis.md): Design other UIs of your App easily and flexibly by drag&drop.
+- [Product Details](https://docs.fluxbuilder.com/fluxbuilder/design/product-details.md): The Product Detail Screen provides a comprehensive view of the selected product. This instruction provides you with the necessary details and guidance to customize and optimize the Product Detail Scre
+- [YITH WooCommerce](https://docs.fluxbuilder.com/fluxbuilder/design/yith-woocommerce.md): The feature creates eye-catching graphic badges to draw attention to special discounts, ongoing promotions, and the most important features of your products on app. These badges help customers quickly
+- [Blogs Settings](https://docs.fluxbuilder.com/fluxbuilder/design/blogs-settings.md): FluxBuilder support settings basically the Blog Detail Page. Open your app on FluxBuilder and get started as following.
+- [Splash Screen](https://docs.fluxbuilder.com/fluxbuilder/design/splash-screen.md): The Splash screen (also known as launch screen) is the first screen you see when you visit an app.
+- [Color Override](https://docs.fluxbuilder.com/fluxbuilder/design/color-override.md): What it is:
+- [Multi Languages](https://docs.fluxbuilder.com/fluxbuilder/design/multi-languages.md): Now you can use FluxBuilder to set the Default Language of your app, configure multi-languages, or auto-detect languages, as the image below:
+- [Translation Override](https://docs.fluxbuilder.com/fluxbuilder/design/translation-override.md): Some clients found a few incorrect words in the translation of the app and wanted to update them correctly. Follow this video to update incorrect words:
+
+## Features
+
+- [App Features](https://docs.fluxbuilder.com/fluxbuilder/features/app-features.md): After designing your App’s UI, now setup your App’s features. You can also configure to update your App’s features without republishing(/2eeafaf8e4d44f05a9e7df7baa43d17e) app to App Store and Google P
+- [Smart Chat](https://docs.fluxbuilder.com/fluxbuilder/features/smart-chat.md): Follow these steps to enable Smart Chat to easily contact your customers:
+- [WCFM Live Chat](https://docs.fluxbuilder.com/fluxbuilder/features/wcfm-live-chat.md): The WCFM Live Chat feature allows real-time communication between users, vendors, and admins directly within your app. It’s built for seamless multi-role support — whether your users are guests, regis
+- [Social Login](https://docs.fluxbuilder.com/fluxbuilder/features/social-login.md): This feature is available on almost apps, but Manager and Delivery Boy apps have not supported it yet.
+- [Login via Email OTP](https://docs.fluxbuilder.com/fluxbuilder/features/login-via-email-otp.md): This section is a guide on how to set up login via email OTP for Shopify app.
+- [Firebase Settings](https://docs.fluxbuilder.com/fluxbuilder/features/firebase-settings.md): Follow steps below to set up Firebase for your Apps:
+- [Firebase Remote Config](https://docs.fluxbuilder.com/fluxbuilder/features/firebase-remote-config.md): This guide shows the way to update or sync the Changed Features and UI of your app without re-publishing the app to Apple Store and Google Play.
+- [Firebase Realtime Chat](https://docs.fluxbuilder.com/fluxbuilder/features/firebase-realtime-chat.md): This Realtime Chat feature helps to chat between the Vendor and the Client. When you click on the "Realtime Chat" item in the Smart Chat tab, the conversation screen of Firebase Realtime Chat will pop
+- [Woo Product Add-Ons & File Upload](https://docs.fluxbuilder.com/fluxbuilder/features/woo-product-add-ons-file-upload.md): This guide explains the way to configure WooCommerce Product Add-Ons, Upload File on the product (especially for drug store/ online medicine store, needs to upload prescription), short-description typ
+- [Dynamic Links (DeepLink)](https://docs.fluxbuilder.com/fluxbuilder/features/dynamic-links-deeplink.md): This section shows how to configure the Dynamic Links. There are some smarter ways to manage sharing links in your apps, include:
+- [FluxBuilder Dynamic Links](https://docs.fluxbuilder.com/fluxbuilder/features/fluxbuilder-dynamic-links.md): FluxBuilder Dynamic Links is the top alternative to Firebase Dynamic Links.
+- [Branch.iO Dynamic Links](https://docs.fluxbuilder.com/fluxbuilder/features/branch-io-dynamic-links.md): Since Firebase Dynamic Links will be deprecated on August 25, 2025, it's time for a smooth transition.
+- [Offline Mode](https://docs.fluxbuilder.com/fluxbuilder/features/offline-mode.md): Offline Mode feature is introduced in FluxBuilder from version 2.3.0, ensuring a seamless shopping experience even when users temporarily lose internet connectivity.
+- [PW WooCommerce Gift Cards](https://docs.fluxbuilder.com/fluxbuilder/features/pw-woocommerce-gift-cards.md): This guide is to explain how to customize PW Gift Card products on app. Similar to Amazon.com gift cards, you can sell gift cards in your WooCommerce store.
+- [Push Notifications via Firebase](https://docs.fluxbuilder.com/fluxbuilder/features/push-notifications-via-firebase.md): Your app can receive and process push notifications on Android and iOS. Besides, you are able to automatically send Order Status Notifications when order status changes.
+- [Firebase Cloud Messaging API (HTTP v1)](https://docs.fluxbuilder.com/fluxbuilder/features/firebase-cloud-messaging-api-http-v1.md): If you are using Firebase Cloud Messaging API (Legacy) for HTTP and XMPP, let's migrate to the latest Firebase Cloud Messaging API (HTTP v1)(https://firebase.google.com/docs/cloud-messaging/migrate-v1
+- [Push Notifications via OneSignal](https://docs.fluxbuilder.com/fluxbuilder/features/push-notifications-via-onesignal.md): You can push notifications to your clients using Firebase(https://docs.fluxbuilder.com/push-notifications-via-firebase) or OneSignal. This guide explains the way to use OneSignal to push notifications
+- [Order Notification](https://docs.fluxbuilder.com/fluxbuilder/features/order-notification.md): Notifications will auto-push to users or vendor. Must log in to receive the Order Notification through the app.
+- [Google Analytics & FaceBook Tracking](https://docs.fluxbuilder.com/fluxbuilder/features/google-analytics-facebook-tracking.md): Google Analytics or Firebase Analytics, is a great feature to understand the clients' favorites through their activities and orders on the app.
+- [Google Maps](https://docs.fluxbuilder.com/fluxbuilder/features/google-maps.md): This guide shows you the basic way to configure Google Map API Key. Then you can use your Google API Key for:
+- [WooCommerce Subscription](https://docs.fluxbuilder.com/fluxbuilder/features/woocommerce-subscription.md): This feature allow clients to pay for your goods or services on a weekly, monthly, or annual basis by subscribing to them.
+- [Order Attribution Tracking](https://docs.fluxbuilder.com/fluxbuilder/features/order-attribution-tracking.md): This feature allows store owners to identify and record specific orders from the app. This is quite an important feature for a growing business when you run ads for different campaigns that you want t
+- [Nearest Stores](https://docs.fluxbuilder.com/fluxbuilder/features/nearest-stores.md): Multi Vendors apps (using WCFM or Dokan plugin) can show the nearest stores on Google Map:
+- [Search Nearby Vendors (WCFM)](https://docs.fluxbuilder.com/fluxbuilder/features/search-nearby-vendors-wcfm.md): The feature is available for the Multi-Vendor app (WCFM plugin) and allows users to search the nearby vendors.
+- [Privacy & Security](https://docs.fluxbuilder.com/fluxbuilder/features/privacy-security.md): > 💡 The feature config is updated from GDPR Compliance feature.
+- [Advertisements](https://docs.fluxbuilder.com/fluxbuilder/features/advertisements.md): Google AdMob and Facebook Ads are available on the app. Let's check out the way to configure them.
+- [Min Max Quantities](https://docs.fluxbuilder.com/fluxbuilder/features/min-max-quantities.md): Learn how to configure the Minimum and Maximum quantities of products that users can purchase, Quantity group, and Min Total cart amount.
+- [Ajax Search Pro & FiboSearch](https://docs.fluxbuilder.com/fluxbuilder/features/ajax-search-pro-fibosearch.md): We support two search options for your app. Please select the one that fits your needs: FiboSearch(https://wordpress.org/plugins/ajax-search-for-woocommerce/) (New) or Ajax Search Pro(https://codecany
+- [Judge.me Review](https://docs.fluxbuilder.com/fluxbuilder/features/judge-me-review.md): The feature is available for the Shopify app only. If you want to set up product reviews, you can do so using the Judge.me. Follow these steps to get started:
+- [Vendors](https://docs.fluxbuilder.com/fluxbuilder/features/vendors.md): This guide includes some configurations for vendors in the Multi Vendors app.
+- [Coupon](https://docs.fluxbuilder.com/fluxbuilder/features/coupon.md): This guide walks you through configuring the coupon feature in the app, including enabling coupon codes, displaying all available coupons in a list, and hiding expired ones.
+- [Point Offline Store](https://docs.fluxbuilder.com/fluxbuilder/features/point-offline-store.md): A powerful feature that allows to generate QR codes automatically, enabling managers to scan and add or redeem points seamlessly.
+- [Checkout Setup](https://docs.fluxbuilder.com/fluxbuilder/features/checkout-setup.md): 1. Open your app on FluxBuilder.
+- [Order History](https://docs.fluxbuilder.com/fluxbuilder/features/order-history.md): This guide includes configurations for Order History and Order Details pages on app.
+- [Woocommerce Appointment](https://docs.fluxbuilder.com/fluxbuilder/features/woocommerce-appointment.md): This part shows the way to config the booking feature on WooCommerce.
+- [B2B WholeSale](https://docs.fluxbuilder.com/fluxbuilder/features/b2b-wholesale.md): The feature now supports Simple and Variable products.
+- [B2B King](https://docs.fluxbuilder.com/fluxbuilder/features/b2b-king.md): The customers, after signing up for B2B roles, will be able to purchase products at wholesale prices.
+- [Loyalty](https://docs.fluxbuilder.com/fluxbuilder/features/loyalty.md): The loyalty feature allows customers to earn points from purchases made at offline stores, which can be redeemed for rewards. It includes a tiered reward system, QR code integration, and a comprehensi
+- [Multi Payment (Webview)](https://docs.fluxbuilder.com/fluxbuilder/features/multi-payment-webview.md): The payment on the app works the same as your website via Webview Payment. This feature is available in source code, and technical support is available for the extended license.
+- [Direct Bank Transfer (BACS)](https://docs.fluxbuilder.com/fluxbuilder/features/direct-bank-transfer-bacs.md): If your website has Direct Bank Transfer (BACS) payment, this native payment will also be available on app.
+- [COD Payment](https://docs.fluxbuilder.com/fluxbuilder/features/cod-payment.md): To get the feature, please make sure to Enable Address Screen on app as this guide. Then:
+- [Razorpay Payment](https://docs.fluxbuilder.com/fluxbuilder/features/razorpay-payment.md): This guide instructs you to install Razorpay for Woocommerce, Pro (Woocommerce), Multi Vendors, and Notion apps.
+- [PayPal Payment](https://docs.fluxbuilder.com/fluxbuilder/features/paypal-payment.md): Step 1: Open PayPal Developer Dashboard(https://developer.paypal.com/dashboard).
+- [Mercado Pago Payment](https://docs.fluxbuilder.com/fluxbuilder/features/mercado-pago-payment.md): Follow this guide to set up Mercado Pago Payment on your apps. The feature supports WooCommerce, Pro (WooComerce), Multi Vendors apps.
+- [PayTM Payment](https://docs.fluxbuilder.com/fluxbuilder/features/paytm-payment.md): This payment is available for WooCommerce.
+- [Paystack Payment](https://docs.fluxbuilder.com/fluxbuilder/features/paystack-payment.md): This payment is available for WooCommerce.
+- [Flutterwave Payment](https://docs.fluxbuilder.com/fluxbuilder/features/flutterwave-payment.md): This payment is available for WooCommerce.
+- [PhonePe Payment](https://docs.fluxbuilder.com/fluxbuilder/features/phonepe-payment.md): Before adding this feature to your app, please make sure it is available on your website.
+- [Stripe, Apple & Google Pay](https://docs.fluxbuilder.com/fluxbuilder/features/stripe-apple-google-pay.md): This native payment is available for WooCommerce apps.
+- [Tap Payment](https://docs.fluxbuilder.com/fluxbuilder/features/tap-payment.md): The feature is available for WooCommerce and Notion.
+- [MyFatoorah Payment](https://docs.fluxbuilder.com/fluxbuilder/features/myfatoorah-payment.md): Follow this guide to set up MyFatoorah Payment on your apps. The feature supports WooCommerce, Pro (WooComerce), Multi Vendors, and Listing apps.
+- [In-App Purchases](https://docs.fluxbuilder.com/fluxbuilder/features/in-app-purchases.md): This guide shows you how to install In-App Purchases for Woocommerce, Pro (Woocommerce), and Multi Vendors apps.
+- [Midtrans Payment](https://docs.fluxbuilder.com/fluxbuilder/features/midtrans-payment.md): Midtrans - Payment Gateway of Indonesia has the ability to manage all payments and send funds (disbursement) easily.
+- [Xendit Payment](https://docs.fluxbuilder.com/fluxbuilder/features/xendit-payment.md): Xendit is a payment solution for businesses in Indonesia, the Philippines, and Southeast Asia. Secure online payments are supported on your WooCommerce store using Xendit-WooCommerce to improve the eC
+- [Thawani Payment](https://docs.fluxbuilder.com/fluxbuilder/features/thawani-payment.md): The payment is available for Woocommerce, Pro (Woocommerce, Opencart), and Multi Vendors apps.
+- [First Iraqi Bank Payment](https://docs.fluxbuilder.com/fluxbuilder/features/first-iraqi-bank-payment.md): The payment supports Woocommerce, Pro (Woocommerce), and Multi Vendors apps.
+- [Shopify Payment](https://docs.fluxbuilder.com/fluxbuilder/features/shopify-payment.md): 2.1 Go to your app and Edit.
+- [Assign Orders to Delivery Boy](https://docs.fluxbuilder.com/fluxbuilder/features/assign-orders-to-delivery-boy.md): The Vendor or website Administrator can assign orders to the delivery boy.
+- [OpenAI: Setup Supabase Server](https://docs.fluxbuilder.com/fluxbuilder/features/openai-setup-supabase-server.md): This guide explains how to securely store the OpenAI Key using the free Supabase service.
+- [OpenAI: Input Key](https://docs.fluxbuilder.com/fluxbuilder/features/openai-input-key.md): The feature is available for OpenAI app only.
+- [OpenAI: Subscription](https://docs.fluxbuilder.com/fluxbuilder/features/openai-subscription.md): This feature will ask users to subscribe to the app to use all of OpenAI App’s main features.
+- [Maintenance Mode](https://docs.fluxbuilder.com/fluxbuilder/features/maintenance-mode.md): Some clients wanna their Apps to still work smoothly when their Websites are in Maintenance (want to close the site for access, but allow access only through the mobile app.)
+
+## Build
+
+- [Build a Demo App](https://docs.fluxbuilder.com/fluxbuilder/build/build-a-demo-app.md): > ℹ️ You can view a demo app of your website for Free using the drag&drop FluxBuilder App Builder.
+- [Update App Without Republishing](https://docs.fluxbuilder.com/fluxbuilder/build/update-app-without-republishing.md): If you have at least one of the following needs, please follow this documentation before building your app:
+- [Build & Publish App](https://docs.fluxbuilder.com/fluxbuilder/build/build-publish-app.md): Build your own applications and publish them to the Google Play and App Store to promote your business.
+- [Build PWA](https://docs.fluxbuilder.com/fluxbuilder/build/build-pwa.md): This document guides you through building your Progressive Web App (PWA).
+- [SHA-1 and SHA-256](https://docs.fluxbuilder.com/fluxbuilder/build/sha-1-and-sha-256.md): Use one of these 3 ways to get SHA-1 and SHA-256:
+- [Create Key Store](https://docs.fluxbuilder.com/fluxbuilder/build/create-key-store.md): This guide shows how to create Keystore .jks file correctly.
+- [Create AppStore Key to upload Testflight](https://docs.fluxbuilder.com/fluxbuilder/build/create-appstore-key-to-upload-testflight.md): To install and publish your iOS App to Apple Store, you must have an apple developer account, and create API Keys.
+- [Team ID and iOS Bundle ID](https://docs.fluxbuilder.com/fluxbuilder/build/team-id-and-ios-bundle-id.md): To build iOS app or setup Apple Login and some iOS features, you need the iOS Bundle ID and Team ID.
+
+## More
+
+- [FluxBuilder Config](https://docs.fluxbuilder.com/fluxbuilder/fluxbuilder-config.md): This guide shows other features of FluxBuilder, e.g. Realtime chat with your customers directly on FluxBuilder, use FluxBuilder with your local language, set FluxBuilder with your favorite color, zoom
+- [FAQ](https://docs.fluxbuilder.com/fluxbuilder/faq.md): Sometimes we got questions like this:
+- [How To Get Support?](https://docs.fluxbuilder.com/fluxbuilder/how-to-get-support.md): You have subscribed to the Basic(https://pay.fluxbuilder.com/checkout/buy/9351a684-744d-4bf1-89a3-09136e4e6203), Professional(https://pay.fluxbuilder.com/checkout/buy/ed01ca72-dd25-4a35-b68c-0d57bf09c
+
+## ChangeLog
+
+- [Version 2.4](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-4.md): Last updated: Dec 25th, 2025
+- [Version 2.3](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-3.md): Last updated: Oct 3rd, 2025
+- [Version 2.2](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-2.md): Last updated: July 8th, 2025
+- [Version 2.1](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-1.md): Last updated: Dec 24th, 2024
+- [Version 2.0.10](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-10.md): Last updated: Aug 30th, 2024
+- [Version 2.0.9](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-9.md): Last updated: Aug 1th, 2024
+- [Version 2.0.8](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-8.md): Last updated: June 5th, 2024
+- [Version 2.0.7](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-7.md): Last updated: March 28th, 2024
+- [Version 2.0.6](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-6.md): Last updated: January 12th, 2024
+- [Version 2.0.5](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-5.md): Last updated: December 04th, 2023
+- [Version 2.0.4](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-4.md): Version 2.0.4 - October 6th, 2023
+- [Version 2.0.3](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-3.md): Version 2.0.3 - August 26th, 2023
+- [Version 2.0.2](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-2.md): Version 2.0.2 - July 15th, 2023
+- [Version 2.0.1](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-1.md): Version 2.0.1 - June 21, 2023
+- [Version 2.0.0](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-0.md): Version 2.0.0 - April 27th, 2023
+- [Version 1.7.0](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-1-7-0.md): Version 1.7.0  - April 10th, 2023
+- [Version 1.6.1](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-1-6-1.md): Version 1.6.1 - Jan 10th, 2023
+
+## Agency
+
+- [Introduction](https://docs.fluxbuilder.com/agency/introduction.md): _Want to build apps for your customers but don't know how to code, can't use Xcode, and don't even have a Mac to build iOS apps?_
+- [Mail Settings](https://docs.fluxbuilder.com/agency/mail-settings.md): > 💡 Your customers will receive emails from the step of creating an account until the final app build. In Mail Settings, you can customize the email information to reflect your brand, removing any me
+- [Customers](https://docs.fluxbuilder.com/agency/customers.md): > 💡 In this section, you have the ability to create accounts for your customers, enabling them to log in to your App Builder and design and build their own apps. Additionally, you can add or create p
+- [Settings](https://docs.fluxbuilder.com/agency/settings.md): > 💡 In this section, you can configure all information for your App Builder, such as: name, color, logo, show or hide blog, products on Dashboard, billing, etc.
+- [Products](https://docs.fluxbuilder.com/agency/products.md): > 💡 This guide shows the way to display your Product Templates on your App Builder, so that users can see your Product Templates, open to preview, enjoy, and change the design/UI without saving.
+- [Templates ⚡️](https://docs.fluxbuilder.com/agency/templates.md): > 💡 This guide shows the way to display your UI Templates on your App Builder, so that users can see your UI Templates and easily select the most suitable designs for their apps, eliminating the need
+- [Build On Cloud](https://docs.fluxbuilder.com/agency/build-on-cloud.md): > 💡 This Build On Cloud feature allows you (Agency) to build Apps for your customers from the Admin page.
+- [Git Repository ⚡️](https://docs.fluxbuilder.com/agency/git-repository.md): > 💡 Besides building from our default source code, you can upload your customized source code (your own Git Repositories) on the Admin page, so that customers can auto-build apps for that source code
+- [Developer](https://docs.fluxbuilder.com/agency/developer.md): The guide provides a suite of simple and flexible API endpoints to add or remove data on your products, and customers.
+
+## Changelog
+
+- [Version 2.4](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-4.md): Last updated: Dec 25th, 2025
+- [Version 2.3](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-3.md): Last updated: Oct 3rd, 2025
+- [Version 2.2](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-2.md): Last updated: July 8th, 2025
+- [Version 2.1](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-1.md): Last updated: Dec 24th, 2024
+- [Version 2.0.10](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-10.md): Last updated: Aug 30th, 2024
+- [Version 2.0.9](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-9.md): Last updated: Aug 1th, 2024
+- [Version 2.0.8](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-8.md): Last updated: June 5th, 2024
+- [Version 2.0.7](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-7.md): Last updated: March 28th, 2024
+- [Version 2.0.6](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-6.md): Last updated: January 12th, 2024
+- [Version 2.0.5](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-5.md): Last updated: December 04th, 2023
+- [Version 2.0.4](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-4.md): Version 2.0.4 - October 6th, 2023
+- [Version 2.0.3](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-3.md): Version 2.0.3 - August 26th, 2023
+- [Version 2.0.2](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-2.md): Version 2.0.2 - July 15th, 2023
+- [Version 2.0.1](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-1.md): Version 2.0.1 - June 21, 2023
+- [Version 2.0.0](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-2-0-0.md): Version 2.0.0 - April 27th, 2023
+- [Version 1.7.0](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-1-7-0.md): Version 1.7.0  - April 10th, 2023
+- [Version 1.6.1](https://docs.fluxbuilder.com/fluxbuilder/changelog/version-1-6-1.md): Version 1.6.1 - Jan 10th, 2023
+- [version 1.6.0](https://docs.fluxbuilder.com/changelog/version-1-6-0.md): Last updated: Jan 10th, 2023
+

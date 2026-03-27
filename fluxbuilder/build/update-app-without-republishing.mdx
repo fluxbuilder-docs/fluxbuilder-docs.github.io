@@ -1,0 +1,294 @@
+---
+title: "Update App Without Republishing"
+---
+
+
+If you have at least one of the following needs, please follow this documentation **before building your app**:
+
+- You want to _update your Apps without re-publishing_ them to App Store and Google Play.
+- Or want to build _Multi-language App_.
+
+Follow the detailed guide below :)
+
+
+## Video Guide
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/x5ToXFgjJWs"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+## UI and Feature Files
+
+
+For easy understanding, kindly review the definitions of **UI and Feature Files**.
+
+- The UI/Design of the app is saved to **config JSON files**. Each file is for one language. 
+
+For example: `config_en.json` is App Design file in English, `config_ar.json` is app design file in Arabic, etc. For other language, please view [this guide](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html). 
+
+Config JSON files you get by selecting [Export](https://docs.fluxbuilder.com/import-export-and-other).
+
+<Info>
+_If you want to use multiple languages, for example, your app has 3 languages: English, Arabic, and Japanese. You need to export 3 config JSON files:_ _`config_en.json`_ _,_ _`config_ar.json`_ _, and_ _`config_ja.json`_
+</Info>
+
+- The Features of the app are saved to **`env.dart`** **file** which you [Export](https://docs.fluxbuilder.com/import-export-and-other/) from your App on the FluxBuilder app builder.
+
+---
+
+
+## 4 Methods 
+
+
+There are 4 methods (using MStore API, Cloud Server, Github, or Firebase) to update the UI/Design and Features of your Apps without republishing them to Google Play and App Store. 
+
+
+### 1. MStore API
+
+
+This method is used for **Updating the UI DESIGN of Apps** via MStore API (Recommended).
+
+
+Available for WooCommerce and WordPress Apps. For other apps, please go to the next part.
+
+
+**Steps:**
+
+
+Step 1: [Install MStore API](https://wordpress.org/plugins/mstore-api/) to your website.
+
+
+Step 2: Enable `MStore-API Caching` on FluxBuilder tool as below:
+
+
+![](/images/notion/aa8c0852907a.png)
+
+
+Step 3: Upload the config json files (e.g. `config_en.json` files) to `Website` on FluxBuilder:
+
+
+![](/images/notion/6d2f19ff22c6.png)
+
+
+Make sure it appears in the plugin setting as the image below:
+
+
+![](/images/notion/53eee030d22f.png)
+
+
+Done. You have enabled this solution to your App. Design other features you like, then build and publish your apps to App Stores.
+
+
+**Later, if you want to update your UI Design, just do step 3** and enjoy the new UI.
+
+
+---
+
+
+### 2. Cloud Server
+
+
+Here is another method used to **Update the UI DESIGN of Apps** via any Cloud Servers.
+
+
+Available for all apps (except for Manager and Delivery Boy apps).
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/CteGkm26nYM"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+📗 **Precondition**
+Upload (the UI Design) config JSON files to any Cloud Servers. 
+There are **some free servers** recommended by us:
+
+- Github Page: [https://pages.github.com](https://pages.github.com/) (recommended for Multilingual Apps).
+- Vercel: [https://vercel.com](https://vercel.com/) (for single language App).
+- Surge: [https://surge.sh](https://surge.sh/)
+- FireStore: [https://firebase.google.com](https://firebase.google.com/)
+
+**Solution 1: Use Vercel** (recommended because it is quick and easy, but for a **single language** app only).
+
+
+Step 1: Create a new Free account on [https://now.sh](https://now.sh/) (or [https://vercel.com](https://vercel.com/)) , then go to `Settings > Token > Create`:
+
+
+![](/images/notion/5f9de21a18a0.png)
+
+
+Step 2: Copy and save **the created Token (1).**
+
+
+Step 3: Get App Config URL by FluxBuilder. Open **FluxBuilder** > click on **Publish** and select **Vercel** > input the **Token Key** and click **Upload** > copy the created URL Config.
+
+
+![](/images/notion/41aca5d22420.png)
+
+
+**Solution 2**: Use other **Cloud servers**: (can use for both a single language or **multilingual app**)
+
+
+Step 1: Upload (the UI/Design) config JSON files to a Cloud Server.
+
+
+Step 2: Copy and save **the link** that you have uploaded (**the link must end with a .json file**, e.g. _https://example.com/config_en.json_) **(2)**.
+
+
+**📗 Configuration on FluxBuilder**
+
+
+Step 1: In the Features, open Cloud Config. Enable `Config on Cloud` option.
+
+
+Step 2: If using Vercel, paste **the created URL Config** into the App Config URL.
+
+
+![](/images/notion/00e1c0c38459.png)
+
+
+If using other servers, paste the link (2) (on the "Precondition" part above) into the `App Config URL` textbox, then click `Save` to upload this configuration to Cloud.
+
+
+**Done**. You have enabled this solution to your App. Design other features you like, then build and publish your apps to App Stores.
+
+
+**Later, when you want to update your UI Design**:
+If using Vercel, you only need to input your **created Token (1)** (on the "Precondition" part above) and click UPLOAD:
+
+
+![](/images/notion/1b538cc14f27.png)
+
+
+If using other servers, [export](https://docs.fluxbuilder.com/import-export-and-other/) and upload (the UI Design) config JSON files to your Cloud Server.
+
+
+---
+
+
+### 3. Github
+
+
+This is another method used for **Updating the UI DESIGN of** Apps.
+
+
+**📗 Get Token Key**
+
+
+Go to [https://github.com](https://github.com/) - Please make sure that you already have an account and login.
+
+
+Go to the **Settings** page. On the left-side menu, select **Developer Settings**. In **Personal access tokens**, select **Token (classic)**.
+
+
+![](/images/notion/7e5843cfc035.png)
+
+
+Here, click on **Generate new token**, and select **Generate new token (classic)**.
+
+
+![](/images/notion/191f521f4566.png)
+
+
+Then, remember to select **repo** option, and click **Generate token** button.
+
+
+![](/images/notion/fa38f1fa2db6.png)
+
+
+Copy the token key and use it for later.
+
+
+**📗 Update App Config before Publishing**
+
+
+Before publishing the app, please configure the app as below for other later updates.
+
+
+Open your app on FluxBuilder. Click **Publish** button, select **Github**. Now, input the **Token Key** and **File Name**. Click **UPLOAD** button to get the Config URL.
+
+
+![](/images/notion/a70fb3bafde6.png)
+
+
+After save the Config URL, please go to **Features** > open **Cloud Config** > enable **Config on Cloud** and input **App Config URL**.
+
+
+![](/images/notion/1cfa700d4e69.png)
+
+
+Done. You have enabled this solution to your App. Edit more as your needs, then build and publish your apps to App Stores.
+
+
+**📗 Update App Design**
+
+
+Once you've completed all the above steps, you can update the app design without republishing by following the steps below. If you need to update in multiple languages, remember to rename the design file to correspond with each language (e.g., `config_ar.json` for Arabic, or `config_en.json` for English), and click **UPLOAD** for each file.
+
+
+![](/images/notion/2d8f57b28208.png)
+
+
+---
+
+
+### 4. Firebase
+
+
+This feature helps you to upload both **UI Design** (config JSON files) and **Features** (env.dart file) via **Firebase Remote Config**. This is [the guide](https://docs.fluxbuilder.com/firebase-remote-config).
+
+
+---
+
+
+## Update your Multi-Language App
+
+
+You can update your multiple languages app without republishing. Please use 1 of 2 methods above: 
+- “MStore API” (for WooCommerce/WordPress apps only)
+- “Cloud Server” (Github, for all apps).
+
+
+After designing and configuring the app for each language, please click **Save**, then click on **Publish** button.
+
+
+Here, select the method you want as the guides above. While updating, remember to input the design config file name in correspondence with the language. For example: `config_ar.json` for Arabic, or `config_en.json` for English, Finally, click **UPLOAD** for each file.
+
+
+![](/images/notion/85ef9e1621c2.png)
+
+
+---
+
+
+## Update FluxStore MAX
+
+
+Update your multisite app’s UI without republishing as the guide below:
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/Mn9gH7-sOiQ"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+

@@ -1,0 +1,87 @@
+---
+title: "SHA-1 and SHA-256"
+---
+
+
+## Get SHA-1 and SHA-256 
+
+
+Use one of these 3 ways to get SHA-1 and SHA-256:
+
+
+1️⃣ **Use FluxBuilder:**
+
+
+Step 1: Open app and go to **Build**
+
+
+Step 2: Select **Cloud** > **Android App Bundle** or **Android APK** 
+
+
+Step 3: Update Bundle ID
+
+
+Step 4: Upload Keystore file with other information, or create a new one.
+
+
+Step 5: After that, the SHA-1 and SHA-256 will be created automatically. Otherwise, please click **Get SHA Keys** button
+
+
+![](/images/notion/977a058ef903.png)
+
+
+2️⃣ **Self-signing Your Application:**
+
+
+Step 1: Create Key Store **.jks** file following [this guide](https://docs.fluxbuilder.com/create-keystore-file). _(skip this step if you have an existing Keystore .jks file)._
+
+
+Step 2: Follow [this guide](https://developers.google.com/android/guides/client-auth) to create SHA-1 and SHA-256 certificate fingerprints.
+
+
+Save all of the SHA-1 keys to a note for later usage.
+
+
+3️⃣ **From Google Play:**
+
+
+You can also get SHA-1 and SHA-256 after uploading your app to Google Play Console, you can get both **SHA-1** and **SHA-256** under **App signing key certificate** & **Upload key certificate**
+
+
+![](/images/notion/6da236fae04a.jpg)
+
+
+Save all of the SHA-1 keys to a note for later usage.
+
+
+## Update SHA-1 and SHA-256 
+
+
+Step 1: Open the Firebase page [https://console.firebase.google.com](https://console.firebase.google.com/) 
+
+
+Step 2: Open your Firebase project. Click the gear icon in the upper left corner, and select the [Project settings] item:
+
+
+![](/images/notion/0de1719ff861.png)
+
+
+Step 3: Select your Android app, select the [Add fingerprint] button: 
+
+
+![](/images/notion/025c3d28b954.png)
+
+
+Enter your SHA-1 key and click the Save button. (view the **Get SHA-1 and SHA-256** guide above).
+Continue to enter your SHA-256 key and click the Save button.
+
+
+When finishing, you can **download the [google-services.json] file** and save this important file to use later:
+
+
+![](/images/notion/35a8ee1d7e86.png)
+
+
+That’s all :)
+
+

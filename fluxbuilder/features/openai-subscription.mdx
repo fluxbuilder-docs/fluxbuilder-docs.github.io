@@ -1,0 +1,85 @@
+---
+title: "OpenAI: Subscription"
+---
+
+
+This feature will ask users to subscribe to the app to use all of OpenAI App’s main features.
+
+
+## 1. Configuration Subscription
+
+
+Here are the simple steps to set it up:
+
+1. First, set up a Revenuecat account by following the easy-to-follow instructions in the [SDK Quickstart guide](https://www.revenuecat.com/docs/projects).
+2. Once you have your account set up, you can easily set up in-app products for iOS by following the clear instructions in the [iOS in-app product setup guide.](https://www.revenuecat.com/docs/ios-products)
+3. And last but not least, you can also set up in-app products for Android by following the step-by-step instructions in the [Android in-app product setup guide.](https://www.revenuecat.com/docs/android-products)
+4. Continue our product setup [guide](https://www.revenuecat.com/docs/entitlements#products) Note: You don't need to set up the **Offering Product** and you need to make sure when creating **Entitlement, you must set Identifier as "Pro"**
+
+## 2. Export configuration and pass it to FluxGPT
+
+
+### 2.1 Get API key from iOS or Android Project
+
+1. [Go to app.revenuecat.com](https://app.revenuecat.com/projects/80700e4d/api-keys)
+2. Click on Projects
+
+![](/images/notion/a4f11a01cabe.png)
+
+1. Click on your Project
+
+![](/images/notion/28e4cf8d2606.png)
+
+1. Click on your apps like iOS or Android
+
+![](/images/notion/64a77d5b4a96.png)
+
+1. Click on Public API Key
+
+![](/images/notion/fb134793a9b4.png)
+
+1. Click on copy text to save the Key
+
+![](/images/notion/9baaaaa0256d.png)
+
+
+### 2.2 Get Product Identifier
+
+1. [Go to app.revenuecat.com](https://app.revenuecat.com/projects/dcb64a37/products)
+2. Click on Projects
+
+![](/images/notion/7bfa1658bb3d.png)
+
+1. Click on your project
+
+![](/images/notion/21a021b03975.png)
+
+1. Click on Products
+
+![](/images/notion/4e0341363427.png)
+
+1. Copy the identifier of the product you want to save. For iOS, append the identifier to the **revenueProductsIos** list. For Android, append the identifier to the **revenueProductsAndroid** list.
+
+![](/images/notion/e6c3e2859ab9.png)
+
+
+### 2.3 Enable Subscription on The App
+
+1. Open your your OpenAI app on FluxBuilder
+2. Go to **Features** → **General** → **OpenAI**
+3. **Enable Subscription**
+4. Input the API Key from iOS or Android Project into the **Revenue Google API Key** and **RevenueCat: Apple API Key**
+5. Input Product Identifier into **RevenueCat: Products IOS** and **RevenueCat: Products Android**
+
+![](/images/notion/778875ecb727.png)
+
+
+## 3. Disable Subscription
+
+
+**Use** [**FluxBuilder**](https://www.fluxbuilder.com/download)**:**
+
+1. Open your FluxGPT app on FluxBuilder
+2. Go to **Features** → **General** → **OpenAI**
+3. Turn off the **Enable Subscription** toggle switch
+

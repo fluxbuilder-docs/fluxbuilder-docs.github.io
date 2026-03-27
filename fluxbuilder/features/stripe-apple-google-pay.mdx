@@ -1,0 +1,188 @@
+---
+title: "Stripe, Apple & Google Pay"
+---
+
+
+## 1. Stripe
+
+
+This native payment is available for WooCommerce apps.
+
+
+Update `Stripe's information` into the [drag&drop FluxBuilder](https://www.fluxbuilder.com/download) 
+
+
+![](/images/notion/a0829ed54445.png)
+
+- **Server Endpoint**: This is the URL to your Stripe Node Server. Please follow the below tutorial to set up Stripe Node Server.
+- **Publishable Key**: Publishable key taken from your Stripe dashboard.
+- **Payment Method Ids**: all ID of your Stripe methods.
+- **Enable**:  to enable Stripe payment. Default is `disable`
+- **Enable** **Google Pay**: to enable Google Pay payment. To use Google Pay, remember that do not select **Version 1** , input **Merchant Display Name** and **Merchant Country Code**.
+- **Enable ApplePay**: enable Apple Pay payment. To use Apple Pay, remember that do not select **Version 1** , input **Merchant Display Name** and **Merchant Country Code**. Check the [guide to create ](https://help.apple.com/developer-account/#/devb2e62b839)[**merchantIdentifier**](https://help.apple.com/developer-account/#/devb2e62b839).
+- **Version**: there are version 1, version 3 and version 4
+- E**nable Manual Capture**: Enable this automatically captures funds when the customer authorizes the payment. Disable will Place a hold on the funds when the customer authorizes the payment, but don’t capture the funds until later (not all payment methods support this). [Check Stripe's documentation](https://stripe.com/docs/payments/capture-later). Default is **`disable`**
+
+### Setup Stripe Node Server
+
+
+**If you are using StripeServerNode-v2, update it to the latest StripeServerNode-v3 to use with the latest version.**
+
+
+**Use** [**FluxBuilder**](https://www.fluxbuilder.com/download)**:**
+
+
+1. Open your app and go to **Features**
+2. In **Tools** → select **Deploy Stripe Payment** 
+3. Deploy Stripe server and save to your local to update into the **Stripe Payment** feature
+
+
+![](/images/notion/42b112617d07.png)
+
+
+### Skip Server Deployment
+
+
+If you don't want to deploy Stripe server, please skip above step:
+
+
+**In FluxBuilder**, please disable the **Use Stripe Node** **Server** :
+
+
+![](/images/notion/f12a8ec0f52e.png)
+
+
+**Test:**
+
+- Test API keys (publishable key & secret key) can be taken [here](https://dashboard.stripe.com/test/apikeys).
+- You can use a card number **`4242 4242 4242 4242`** with any CVV & any future expiry date to test Stripe payment (only works with test keys).
+- To test 3D Secure, you can use this card **`4000 0027 6000 3184`** or get more at Stripe's [documentation](https://stripe.com/docs/testing#regulatory-cards).
+
+### Multiple Stripe Methods
+
+
+Tthe apps support native Multiple Payment Methods IDs for the Native Stripe. This means many Payment Methods IDs can be enabled as native payments in the app to be available to use. E.g. Stripe Express, Stripe Connect, etc.
+
+
+**Use** [**FluxBuilder**](https://www.fluxbuilder.com/download)
+
+1. Open your app on **FluxBuilder**
+2. Go to **Features** → **Stripe** → input **Payment Method IDs** and click on the **+**  button
+
+![](/images/notion/eee2a4b05111.png)
+
+
+### The Capture Later
+
+
+Learn more at [Stripe's documentation](https://stripe.com/docs/payments/capture-later). 
+
+
+### Save Checkout Info
+
+
+The feature is available for Woocommerce, Pro (Woocommerce) and Multi Vendors, supports Version 4 of Stripe payment saving Cards so your customers don't need to enter checkout information every time they pay.
+
+
+Note: if you are using an old version and want to use version 4 then have to redeploy the Stripe Payment (refer to the guide **Setup Stripe Node Server** above).
+
+
+**Use** [**FluxBuilder**](https://www.fluxbuilder.com/download)**:**
+
+1. Open your app on FluxBuilder and navigate to the **Features** section.
+2. Select "Stripe Payment"
+3. In the Stripe Payment settings, choose "Version 4" to use the latest version of the Stripe payment integration.
+4. Toggle the "Enable Save Card" option to the "On" position.
+
+    ![](/images/notion/26ef73a80dfe.png)
+
+
+## 2. Apple Pay
+
+
+Available for WooCommerce:
+
+1. Take a look at the [integration requirements](https://developer.apple.com/documentation/passkit/apple_pay/setting_up_apple_pay_requirements).
+2. Create a [merchant identifier](https://developer.apple.com/documentation/passkit/apple_pay/setting_up_apple_pay#3735191) for your business.
+3. Create a [payment processing certificate](https://developer.apple.com/documentation/passkit/apple_pay/setting_up_apple_pay#3735192) to encrypt payment information.
+4. Create Apple Pay Certificate (as the guide below)
+5. Update configs by [FluxBuilder](https://www.fluxbuilder.com/download)
+
+![](/images/notion/a2baffe4d856.png)
+
+1. Release to TestFlight before testing with live keys. To test with test keys, use an iOS simulator.
+
+### ✨ Create Apple Pay Certificate
+
+
+**Video Guide:** 
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/ASiLtsr6_Rw"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+**Manual Guide:**
+
+
+**Step 1:** Generate a Certificate Signing Request (CSR) on Stripe
+
+1. Go to [https://dashboard.stripe.com/settings/payments/apple_pay](https://dashboard.stripe.com/settings/payments/apple_pay) and log in to your Stripe account.
+2. Add a new application:
+    - Click on **Add new application**.
+    - Stripe will auto download a file “stripe.certSigningRequest” (Certificate Signing Request (CSR) file).
+
+**Step 2:** Create a Payment Processing Certificate on the Apple Developer Portal
+
+1. Log in to your Apple Developer account: Visit [Apple Developer](https://developer.apple.com/) and sign in.
+2. Access Certificates, Identifiers & Profiles: Navigate to **Account** > **Certificates, Identifiers & Profiles**. or Go to the link [https://developer.apple.com/account/resources/certificates/add](https://developer.apple.com/account/resources/certificates/add)
+3. Create a Merchant ID (if not already created):
+    - Select **Identifiers** > **Merchant IDs**.
+    - Click the ”+” button to add a new Merchant ID.
+    - Enter a description and identifier (e.g., merchant.com.yourcompanyname).
+    - Click **Continue**, then **Register**.
+4. Generate a Payment Processing Certificate:
+    - Under **Certificates**, click the ”+” button to add a new certificate.
+    - Select **Apple Pay Payment Processing Certificate** and click **Continue**.
+    - Choose the Merchant ID you created earlier and click **Continue**.
+    - Upload the CSR file you downloaded from Stripe by clicking **Choose File**, selecting the CSR file, and then clicking **Continue**.
+    - Click **Download** to obtain the generated certificate (.cer file).
+
+**Step 3:** Upload the Certificate to Stripe
+
+1. Return to Stripe’s Apple Pay settings: In the **Stripe Dashboard**, go back to **Settings** > **Payment methods** > **Apple Pay**.
+2. Upload the certificate:
+    - Click **Upload** and select the .cer file you downloaded from the Apple Developer portal.
+    - After uploading, the certificate should appear under **iOS certificates**.
+
+**Step 4:** Verify Your Domain for Apple Pay on the Web (if applicable)
+
+1. Add your domain in Stripe:
+    - Navigate to **Settings** > **Payment methods** > **Apple Pay** > **Payment method domains**.
+    - Click **Add new domain**.
+    - Enter your domain (e.g., yourwebsite.com) and click **Save and continue**.
+2. Download the verification file: Stripe will provide a file named apple-developer-merchantid-domain-association.
+3. Upload the verification file to your website: Place the file in the .well-known directory of your website, so it’s accessible at [https://yourwebsite.com/.well-known/apple-developer-merchantid-domain-association](https://yourwebsite.com/.well-known/apple-developer-merchantid-domain-association).
+4. Verify the domain in Stripe: After uploading the file, return to Stripe and click **Verify** next to your domain.
+
+## 3. Google Pay
+
+
+Available for WooCommerce:
+
+1. Take a look at the [integration requirements](https://developers.google.com/pay/api/android/overview).
+2. Sign in to the [business console](https://pay.google.com/business/console) and create a business.
+3. Fill in all business information and Request production access to the Google Pay API for your app. You can wait a few days for the validation.
+4. Update these configs in FluxBuilder: go to **Features** → in **Payment Methods**, select **Stripe Payment** → turn on **Enabled** **Stripe** → **Enable Google Pay** → input **Merchant Display Name** and **Merchant Country Code.**
+5. Upload your app to Google Play Console (Internal testing/Closed testing track) and download it from Play Store to test.
+
+That’s all :)
+
+

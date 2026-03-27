@@ -1,0 +1,100 @@
+---
+title: "Google Maps"
+---
+
+
+This guide shows you the basic way to configure Google Map API Key. Then you can use your Google API Key for: 
+
+- Auto-Fill Address from Map of E-commerce apps:
+
+![](/images/notion/f3c964914ee6.gif)
+
+- Google Map in Product Detail screen of Listing apps:
+
+![](/images/notion/cdfeb948dec5.jpeg)
+
+- Google Map in Store Settings of Manager (Vendor) or Delivery Boy apps.
+
+---
+
+
+To create a Google Map API Key, follow steps below:
+
+
+## Step 1: Create Google API Key
+
+
+### 1. Manual Guide
+
+
+If you have not got an API key yet:
+
+- Get an API key at [https://cloud.google.com/maps-platform/](https://cloud.google.com/maps-platform/) > select **Get Started**
+- On **Google Map Platform**, open **Credentials** page and select **CREATE CREDENTIALS** option.
+- After clicking **API Key**, the **API Key Created** dialog will display with the API Key which has been created automatically.
+- Copy **Your API Key** and go to **Step 2: Edit on FluxBuilder** below.
+
+### 2. Important to do
+
+- You **need to enable Billing** on the **Google Cloud Project** at [https://console.cloud.google.com/project/_/billing/enable](https://console.cloud.google.com/project/_/billing/enable) to use the Maps feature. Learn more at [https://developers.google.com/maps/gmp-get-started](https://developers.google.com/maps/gmp-get-started) - If the map does not display, it's because of your billing.
+- You need to **`enable`** **Maps Static API**:
+
+    ![](/images/notion/7d72009dfbb8.jpg)
+
+- To protect your keys, log in to [https://console.cloud.google.com/apis/credentials/key](https://console.cloud.google.com/apis/credentials/key) and manage the restrictions per-app bundle id:
+
+    ![](/images/notion/ab2bc3ce0b75.png)
+
+
+## Step 2: Edit on FluxBuilder
+
+
+Enter all information of Step 1 to the FluxBuilder:
+
+
+![](/images/notion/535bbc2828a8.png)
+
+
+## Step 3: Configure Maps Style
+
+
+The app has the ability to customize Google Map Styles to be different between Dark and White modes.
+
+
+There are more than 250 advanced customizations, and elegant Cloud-based maps styling to save development time and resources.
+
+
+![](/images/notion/2b2eea143ea2.jpg)
+
+
+![](/images/notion/f9327c20308b.png)
+
+
+1️⃣ First, you should customize the map style as the steps below:
+
+1. Go to [Styling Wizard: Google Maps APIs](https://mapstyle.withgoogle.com/)
+2. Click `Use the legacy Json styling wizard`.
+3. Select or customize the map style.
+4. Click **FINISH.**
+5. Click **COPY JSON** and save it for later use.
+6. Click **COPY STATIC MAP URL** and save it for later use.
+
+    ![](/images/notion/a4f5d7019171.png)
+
+
+2️⃣ Second, config the map style on FluxBuilder.
+
+
+Steps:
+
+1. Open your app
+2. Go to **Features** > **Google Maps.**
+3. Input your **Google API Key** (refer to **Step 1: Create Google API Key**).
+4. In the **Maps Style**, input the copied **JSON** and **URL** for **Style for Light Mode** and **Style for Dark Mode**.
+
+![](/images/notion/7f6a1fe863ca.png)
+
+
+That’s all :)
+
+

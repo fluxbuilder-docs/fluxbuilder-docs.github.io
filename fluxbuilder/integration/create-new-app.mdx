@@ -1,0 +1,148 @@
+---
+title: "Create New App"
+---
+
+
+This guide shows you how to create Native apps (for your website).
+
+
+To create Webview apps, please follow this [video guide](https://youtu.be/wBRgB8C9_nI).
+To create  Serverless apps (build apps without a site), check out [this guide](https://docs.fluxbuilder.com/setup-serverless-store-in-admin-panel).
+
+
+Ready to go? Let's start the steps below to build your Native apps:
+
+
+## 1. Install API on your Website
+
+
+Make sure to install the required API below into your website. 
+It helps to display full products and images of your website on iOS & Android apps, and sync with your data/website:
+
+- [Shopify Access Token](https://docs.fluxbuilder.com/shopify-access-token) to build Shopify app.
+- [WooCommerce API](https://docs.fluxbuilder.com/woocommerce-api) to build WooCommerce app (single vendor, WCFM, Dokan), Manager app. [Supported Product Types](https://docs.fluxbuilder.com/woocommerce-api#2d1cbb074f6280559287fe2b9b52d8b5).
+- [WordPress API](https://docs.fluxbuilder.com/wordpress-api) to build WordPress app (posting, blog, news, etc.).
+- [Listing API](/35a8b116cb814fc7b98544c0f5fcecf4) to build Listing app for your Listeo, MyListing, or Listing Pro website.
+- [Magento API](https://docs.fluxbuilder.com/magento-api) to build Magento app.
+- [Opencart API](https://docs.fluxbuilder.com/opencart-api) to build Opencart app.
+- [PrestaShop API](https://docs.fluxbuilder.com/prestashop-api) to build PrestaShop app.
+- [Strapi API](/d4cb60310e71429fb985223348f2771a) to build Strapi app.
+- [Delivery Boy’s plugins](/a972160506be48568119922662ae8dbd) to build Delivery Boy app.
+- Other apps do not require API.
+
+---
+
+
+## 2. Create App on FluxBuilder 
+
+
+### Video guide
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/Lr9UUcAebc4"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+### Manual guide
+
+
+**Step 1**:  Select [Dashboard] > choose [Create New App] 
+_(If you subscribed to a plan but haven't created an app yet, refer to_ [_this guide_](https://docs.fluxbuilder.com/app-activation)_.)_
+
+
+![](/images/notion/53da69ee525c.png)
+
+
+**Step 2: Server Integration**
+
+
+![](/images/notion/9999016c1144.png)
+
+
+Input your `Website URL` or `IP address of the HOSTING service` (e.g. https://1.100.67.68), select your website Framework, input API Keys/Access Token (if any), then click Run Troubleshoot 
+
+- Make sure you input https instead of http
+- Make sure you do not input sub-folder domain like this [https://yaari.store/pk-en](https://yaari.store/pk-en) because it causes Rest API issue. Please change to subdomain or main domain.
+
+If getting failed, please click ? icon at the end of the Failed Message to see the solution:
+
+
+![](/images/notion/ed6a09df6506.png)
+
+
+**Step 3: Select a template**
+
+
+---
+
+
+![](/images/notion/276386c3b393.png)
+
+
+**Step 4: App Information**
+
+
+Input the App Information as below:
+
+- **App Name** (required): input the name of your App/
+- **App Category** (required): select the field of the App.
+- **Short Description** (optional): input basic information about the app.
+- **Upload Logo** (optional): upload the logo of App in both Light Theme and Dark Theme. It can be changed later.
+
+![](/images/notion/a6e70ea509ce.png)
+
+
+**Step 5: Choose Color and Font** 
+
+
+These settings can also be edited later. Now, click **CREATE APP** to start your journey.
+
+
+---
+
+
+## 3. Common issues and Solutions
+
+- If you see a `failed` message after clicking on `Run Troubleshoot`, please click on the `failed` button to view the solution. Alternatively, you can check the solutions listed below:
+
+    | Failed item🚨            | Solution ✅                                                                                                                                                                      |
+    | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    |                          | Make sure you do not input sub-folder domain like this https://yaari.store/pk-en. Please change to subdomain or main domain                                                     |
+    |                          | Make sure you input `https` instead of http                                                                                                                                     |
+    | SSL Verification         | Please select `Run Troubleshoot` again or Ignore it.                                                                                                                            |
+    | Permalink Setting        | Check your backend to see if it works https://`your website`/wp-json/wc/v2/products?consumer_key=`your ck key`&consumer_secret=`your cs key`                                    |
+    | CS & CK Authorization    | Please input your Consumer Key and Consumer Secret, following [this guide](https://docs.woocommerce.com/document/woocommerce-rest-api/).                                        |
+    | CS & CK Validation       | Make sure you have inputted the correct Consumer Key and Consumer Secret, , following [this guide](https://docs.woocommerce.com/document/woocommerce-rest-api/).                |
+    | WooCommerce Connectivity | Your REST APIs are not enabled on your website, please follow [this guide](https://docs.fluxbuilder.com/woocommerce-api).                                                       |
+    | PrestaShop Connectivity  | It could be missing the PrestaShop plugin/API on your site. Please follow [this guide](https://docs.fluxbuilder.com/prestashop-api).                                            |
+    | Magento Connectivity     | You could install this extension to active the API integrate with the app following [this guide](/1f7d7e56d4e0493eadb15ec51abab470).                                            |
+    | WCFM Connectivity        | Missing WCFM Rest API. Please install WCFM Rest API plugin to solve it.                                                                                                         |
+    | Dokan Connectivity       | Missing Dokan Rest API. Please install Dokan Rest API plugin to solve it.                                                                                                       |
+    | Opencart Connectivity    | You could install this extension to active the API integrate with the app following [this guide](/cdf589e4a23746408283ad3e7e547802).                                            |
+    | Listing Connectivity     | Your REST APIs are not enabled on your website, please follow [this guide](https://docs.fluxbuilder.com/listing-api).                                                           |
+    | Shopify Connectivity     | Please insert "**https://**" before your website URL [https://tppr.me/gJY9G](https://tppr.me/gJY9G) and follow [this guide](https://docs.fluxbuilder.com/shopify-access-token). |
+    | Post Connectivity        | Please check if you install any strange plugins that needing the permission to access                                                                                           |
+    | Plugin Activation        | Please install the FREE [MStore API](https://wordpress.org/plugins/mstore-api/) on your website.                                                                                |
+
+- **Cannot see** any **Images**, **Products,** or **Categories**, use [this solution](https://docs.fluxbuilder.com/app-performance).
+- **App loads slowly**, also use [this solution](https://docs.fluxbuilder.com/app-performance).
+- If you’ve followed this guide but are still facing issues, it might be due to a plugin conflict on your site. Please **open a ticket here** so we support you for FREE [https://support.fluxbuilder.com](https://support.fluxbuilder.com/)
+
+<Info>
+If you see images have non-good resolution on [FluxBuilder](https://fluxbuilder.com/), don't worry, we downgrade the resolution of images to improve the speed of FluxBuilder. After building, the app loads images with high resolution smoothly on the real device.
+</Info>
+
+
+That’s all ☺️
+
+
+---
+
+

@@ -1,0 +1,537 @@
+---
+title: "FAQ"
+---
+
+
+## Resolve Missing Products or Categories Issue 
+
+
+Sometimes we got questions like this: 
+
+
+"When I use FluxBuilder and show categories, my total website does not works" 
+
+
+or "My Products and Categories do not show"
+
+
+Resizing images and optimizing network requests for images are good solutions to show the missing product/category images or make the app load images faster.
+
+
+Please follow “Common issues and Solutions” in [this guide](https://docs.fluxbuilder.com/create-your-app).
+
+
+---
+
+
+## Resolve White Screen or App not Responding Issue
+
+
+When launching the app, if you encounter a situation where the app becomes unresponsive or freezes at the initial loading screen, it is likely due to the improper configuration of the Splash Screen.
+
+
+To double-check the Splash Screen, please open the **Features** of the app on [FluxBuilder](https://www.fluxbuilder.com/download), in **Branding**, select **Splash Screen**. Now, let check:
+
+1. If the feature is enabled with blank configuration.
+2. If the feature is configured incorrectly.
+
+To correct the case, please refer to this [Splash Screen Guide](/b239b61d962b4be084a504fa84bef7bd) step by step.
+
+
+![](/images/notion/0ebe41bc6bc0.png)
+
+
+Now you can re-check by create Test APK, or Test iOS by going to Build as below:
+
+
+![](/images/notion/351aea758b83.png)
+
+
+---
+
+
+## Hide Unavailable Attributes
+
+
+⁉️ "Hello, I have product have color and sizes, for example, i need when select color red display sizes, and when i select blue color blue display other sizes.”
+
+
+🙍‍♀️ This is a helpful feature and it has been supported in FluxBuilder. You can easily configure it to make it work on app by these steps:
+
+1. Open your app on [FluxBuilder](https://www.fluxbuilder.com/download)
+2. On the simulator, click on any variable product
+3. On the right panel, turn on the option **Hide Invalid Attributes**
+
+![](/images/notion/566f3db618b6.png)
+
+
+**Note**: All attributes will be displayed when the feature is disabled, as shown in the image below:
+
+
+![](/images/notion/95c258dfa240.png)
+
+
+---
+
+
+## Customize Banner Image Radius
+
+
+One of the ways to make your design appear more gentle and soft is by using the technique of rounding images.
+
+
+FluxBuilder supports rounded banner images. However, some of our clients found it hard to edit the Radius of the banner images (especially for the STATIC and HORIZONTAL banner type). In this guide, we will guide you how to adjust the roundness for STATIC and HORIZONTAL banner type.
+
+
+Step 1: Open the app on FluxBuilder
+
+
+Step 2: Go to the **Home** tab, in **HOME LAYOUT**, and select the banner that needs editing.
+
+
+Step 3: Select a **STATIC** or **HORIZONTAL** banner type.
+
+
+Step 4: Select or Add the banner image that needs adjusting in **DATA** 
+
+
+Step 5: Drag the **Radius** slider to increase or decrease it. 
+
+
+![](/images/notion/372141eec838.png)
+
+
+Step 6: Click **UPDATE** 
+
+
+Since the rounding will affect the widget that wraps around the image, make sure the image size is not significantly smaller than the widget size to achieve a more visually pleasing rounded effect by some of the recommended ways below
+
+- Adjust the **Padding** of the image:
+
+![](/images/notion/98b74dbfc1e8.png)
+
+- Change the **Image Resize**:
+
+![](/images/notion/05c560c5978a.png)
+
+
+---
+
+
+## Display a Page or Webview screen
+
+
+We got a lot of you asking me "How can I fetch a page from my site Not as a Web View on App?"
+
+
+You can show a page as Web View or Not As Web View. It depends on your needs.
+
+
+To show a page as Web View, select Page on DESIGN LAYOUT (near the PostScreen below).
+
+
+To show a page Not As Web View, select PostScreen as the image below:
+
+
+![](/images/notion/0b0c970f596f.png)
+
+
+---
+
+
+## Add or Hide Side Menu
+
+
+We get this question “How to display the side menu because i can't find it maybe because the template and how to change the design?”
+
+
+If you do not know how to add SideMenu (or Left menu) on app’s Homepage. This guide is here to help you save time and provide clear instructions on how to display the side menu and configure its design.
+
+
+**1. Add Side Menu**
+
+
+The Side Menu is now located in some layouts:
+
+- **Logo on HOME LAYOUT**
+
+![](/images/notion/fec2e125965b.png)
+
+
+To add a **Side Menu** from the **Logo** layout of **HOME LAYOUT**, please follow the following steps:
+
+- Open your app and go to the **Home** page.
+- On **HOME LAYOUT**, click the Add New Layout button.
+- Select **Logo** and scroll down to enable the **Show Menu** option.
+- Click Save.
+
+![](/images/notion/cb15d7e1c1f5.png)
+
+- **AppBar Items**
+
+Side Menu can also be added on all UI of app from AppBar. 
+
+
+Open your app and expand the **Design** on the left menu. Select **AppBar**. Then click **ADD NEW** item:
+
+
+![](/images/notion/d3875e5b621c.png)
+
+
+Select the **Text** or **Icon** type. In the **Action**, you can choose **Open Side Menu**:
+
+
+![](/images/notion/c22f1ce07796.png)
+
+
+Remember to enable AppBar and select the screen to show AppBar after adding a new item:
+
+
+![](/images/notion/013dee22e372.png)
+
+
+**2. Configure Side Menu**
+
+
+To configure the Side Menu, you should expand the **Design** on the left menu, and select **Side Menu** to edit it directly:
+
+
+![](/images/notion/2461b9968b14.png)
+
+
+**3. Hide Side Menu**
+
+
+To disable the Side Menu completely on the app, you can follow the steps below:
+
+- Open your app
+- Expand the **Design** on the left menu, select **Side Menu**
+- Uncheck the option **Enable Side Menu**
+
+![](/images/notion/2253bbcd65a2.png)
+
+
+That’s all :)
+
+
+---
+
+
+## Create a Popup for Event Announcements
+
+
+There is a way to put a POPUP when the client opens Your App which helps your customers easily view an event, sale, or an important announce.
+
+
+Video guide: [https://www.youtube.com/watch?v=oFFnE1Ssm74](https://www.youtube.com/watch?v=oFFnE1Ssm74)
+
+
+---
+
+
+## Hide Shopping Cart for Catalog-Only Use
+
+
+⁉️ “I want to use the application only as a catalogue. Can we cancel the sales functions?“
+
+
+🙍‍♀️ We understand that some users prefer to use the application solely as a catalog without any Shopping Cart on the app. We are happy to inform you that you can indeed disable the sales functions in FluxBuilder. This guide will provide you with step-by-step instructions on how to achieve that using FluxBuilder.
+
+
+**Manual Guide**
+
+
+**Step 1:** Open your app on FluxBuilder and go to **Features** in the left-side menu.
+
+
+**Step 2:** In **Cart & Checkout**, open **Shopping Cart**.
+
+
+**Step 3:** Turn off the **Shopping Cart** option. 
+
+
+![](/images/notion/0d40b986b3ed.png)
+
+
+**Step 4:** Consider to hide or remove all related Cart screens on the app. You can refer to the list below:
+
+- Cart Tab:
+
+![](/images/notion/8a504ab49793.png)
+
+- App Bar:
+
+![](/images/notion/f0941bb84227.png)
+
+- Navigating-to-Cart Banners/ Buttons:
+
+![](/images/notion/6e66bba2cc3a.png)
+
+- Profile Settings:
+
+![](/images/notion/277a89718216.png)
+
+
+Make the most of FluxBuilder and create a seamless catalog experience for your users!
+
+
+---
+
+
+## Hide Out-of-Stock Products
+
+
+How to show or hide Out-of-stock Products?
+
+
+Is there anyway to not show Out Of Stock products on my App?
+
+
+We get these questions. The answer is “Yes, you can”.
+
+
+There are multiple studies show a significant increase in the probability of purchase when there are several Out Of Stock products in the same category. People tend to believe that something is of good quality if many other people express interest in it.
+
+
+However, If there are too many Out Of Stock products—30% of your inventory or more, showing them won’t have a positive impact. When customers are looking for something specific and doesn’t find any alternative on your store.
+
+
+On the FluxBuilder drag&drop App Builder, you can follow these steps:
+
+1. Open your app on FluxBuilder.
+2. Go to **Features** on the left-side menu.
+3. In **General** section, select **Miscellaneous**.
+4. Enable **Show Out-of-stock Products**.
+5. Click **Save** button.
+
+Wish you great business!
+
+
+![](/images/notion/2caf3ebe8e6d.png)
+
+
+---
+
+
+## Create Demo App
+
+
+How to view a Demo App for My Website?
+
+
+Can I see a demo with my web?
+
+
+We usually get these questions. The answer is “Yes, you can”.
+
+
+A Mobile App will take your online business to the next level, because about 78% of all traffic and 66% of all orders came from Mobile Devices.
+
+
+Without purchase, you can view a Demo App for Your Website using the [FluxBuilder](https://www.fluxbuilder.com/download) drag&drop App Builder for Free.
+
+- Edit your App UI with drag&drop quickly and elegantly
+- Build a Test APK, Test iOS to see what your App looks like in just a few minutes
+
+This is the [Quick guide](https://docs.fluxbuilder.com/create-your-app).
+
+
+Support multi-type of your Websites:
+
+- WooCommerce
+- WCFM (WC Lovers)
+- Dokan
+- Wordpress (multi-purpose, blog, news, )
+- Shopify
+- Opencart
+- Magento
+- Listeo, MyListing, ListingPro
+- PrestaShop
+- Strapi
+- Notion
+- BigCommerce
+
+---
+
+
+## Customize Checkout Page
+
+
+A client asked “How to remove Shipping from the app? Also, how to customize Checkout page? I need to remove many fields (city, zip code, street ...etc)”
+
+
+You can edit Checkout screen or remove some items as the [detailed guide](/1c1cbb074f6280c88cf4d6a508e325fc).
+
+
+![](/images/notion/abc1a154cedd.png)
+
+
+![](/images/notion/2ea415c30859.png)
+
+
+---
+
+
+## Open External Website
+
+
+A client asked “Can I open external URL open in Chrome (not web view) from inside my App, in google chrome for example?”
+
+
+You can completely configure External URLs on 4 locations as images below:
+
+
+**Home & Dynamic tabs:**
+
+
+![](/images/notion/ae7ab25d4b7c.png)
+
+
+**Button and Banner**[**:**](https://l.facebook.com/l.php?u=https%3A%2F%2Ftppr.me%2F5kmgC%3Ffbclid%3DIwAR0eCIUnJPX8ancg4uDzrZC_7w4cDeQWJLlyT3729w_ZPAOImY6jUuhEvN0&h=AT0lQ3e2L3waZ5ewiaD-rzW6ZvgjN7tqrFBtCTIYcsYZ_AeZErut-UciLBYEZYVixwTkacZv4EpJrVk-naNMrbAltg52mp4U-srOlek1ihVgVCVgd6igBpXHRBkjTWFK2j4F&__tn__=-UK-R&c%5B0%5D=AT0XWYFrmg0Y7GsQlUXtEM__zrpZ23nuh6ZxzM6rr2iLLUFEMxFYwOK4ojSL2CyuxzXO7-x-twndJTyocqwQswSQtjkjH_8CsF6SyYyGMkylIeSKoXAy9FDU4mzS_lILfjjbMx9qTernZKh2UX1eKPUYSiDwMw)
+
+
+![](/images/notion/0fa35ec5629c.png)
+
+
+**Profile (Settings) tab:**
+
+
+![](/images/notion/8857302f3f75.png)
+
+
+**Sidemenu:**
+
+
+![](/images/notion/2a15d23a07e1.png)
+
+
+---
+
+
+## Customize Downloadable Products
+
+
+Some businesses like DOWNLOAD the Digital Assets, download E-Book, etc. which not require the checkout and shipping address:
+
+
+![](/images/notion/5491152583e8.jpeg)
+
+
+You can setup the app for the DOWNLOADABLE / DIGITAL products (WooCommerce) as the steps below:
+
+1. Open your app on FluxBuilder.
+2. Go to **Features** on the left-side menu.
+3. In **Cart &** **Checkout** section, select **Checkout Screen**.
+4. In **Address**, disable the option **Enable Address**.
+5. Go to **Shipping**, disable the option **Enable Shipping**.
+
+![](/images/notion/3fc3451ad102.png)
+
+
+![](/images/notion/026c9c21d162.png)
+
+
+---
+
+
+## Order New Mapped Categories
+
+
+Many users like to define a new category tree that is different from the backend site. Let’s see the Mapped Categories (or the Remap Categories) feature:
+
+- Allows user to control the Position, Order, and Level of Category manually.
+- Available on Side menu (Category part) and Category screen.
+- Video guide: [https://www.youtube.com/watch?v=Kar-zZl4D9I](https://www.youtube.com/watch?v=Kar-zZl4D9I)
+
+---
+
+
+## Display Special Products
+
+
+One of our valued customers accidentally came and gave us this question: “Can I display some of products in the app not all. For example in WooCommerce I have 10 perfumes but in the app I want to show just 3 it can be or not?”
+
+
+If you have the same question, the guide below will help you out.
+
+
+On Home, we have a powerful layout called Horizontal Products that can show special products instead of full products of any category. You have the ability to choose these special products by following just a few simple steps.
+
+- Open your app on FluxBuilder, and navigate to **Home** config.
+- Add or select **Horizontal Products** on **HOME LAYOUT** to edit.
+
+![](/images/notion/45af57f4a828.png)
+
+- Enable **Use Special Product** and click **ADD PRODUCT**.
+
+![](/images/notion/78f793b6c580.png)
+
+
+Now, feel free to search for the names of the products you need. That’s all!
+
+
+Make your app easier with FluxBuilder. Enjoy!
+
+
+---
+
+
+## Change Flag Image in Languages List
+
+
+When changing the language on an app, the flag associated with each language can help users quickly identify and select their preferred language.
+
+
+If you're looking to update the flag of the language switcher in your app, such as one of our customers’ questions: “can i change the flag of the language switcher Arabic to UAE flag for example ?”, this guide will walk you through the process using [FluxBuilder](https://fluxbuilder.com/).
+
+
+Step 1: Launch FluxBuilder and open your app project.
+
+
+Step 2: Navigate to the **Features** section and select **Export Data**. Follow the instructions provided in this [Import & Export guide](https://docs.fluxbuilder.com/import-export-and-other#14b14ee4537b4cd2bebfbfc689cbbe7b) to export the `env.dart` file.
+
+
+Step 3: Locate the exported `env.dart` file on your local machine and open it using a text editor. Look for the script shown below:
+
+
+![](/images/notion/5844668eaab0.png)
+
+
+Step 4: Within the script, find the line corresponding to the language you want to update (in this case, Arabic). Update the image link by replacing `"icon": "image-link"` with the desired image link. For example, you can set it to `"icon": "UAE-flag-image-link"`.
+
+
+Step 5: Save the modifications you made to the `env.dart` file.
+
+
+Step 6: Return to FluxBuilder. Navigate to the **Features** section and select **Import Data**. Then, import the modified `env.dart` file according to the instructions provided in this [Import & Export guide](https://docs.fluxbuilder.com/import-export-and-other#88f9799055eb4e09918982a595c90485).
+
+
+## Undo Feature
+
+
+The **Undo feature** in FluxBuilder allows you to quickly revert recent changes made to your app’s design without manually reconfiguring elements. This ensures a safer and more efficient workflow, especially during experimentation or iterative design.
+
+
+🔄 **How Undo Works**
+
+- Every time you make a change in FluxBuilder (e.g., edit a widget, update text, change a color, adjust layout), it is stored in a **history stack**.
+- Using **Undo**, you can step backward through your history of edits.
+- You can also use **Redo** to move forward again if you reverted too far.
+
+🖱️ **How to Use Undo in FluxBuilder**
+
+- Click the **Undo icon** (↶) in the top action bar to reverse the last changes.
+- Use the **Redo icon** (↷) to re-apply a reverted change.
+
+---
+
+
+⚠️ **Notes & Limitations**
+
+- Undo only works within the **current session** of FluxBuilder. Once you close the project, the edit history is cleared.
+- Some system-level changes (like saving project settings or syncing with FluxStore app) may not be reversible via Undo.
+- Frequent **Save** is still recommended to preserve major changes.
+
+That’s all :)
+
+

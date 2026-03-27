@@ -1,0 +1,289 @@
+---
+title: "Firebase Realtime Chat"
+---
+
+
+This Realtime Chat feature helps to chat between the Vendor and the Client. When you click on the "Realtime Chat" item in the Smart Chat tab, the conversation screen of Firebase Realtime Chat will pop up.
+
+
+![](/images/notion/7e9a0718d142.jpg)
+
+
+## Realtime Chat setup 
+
+
+### 1. Precondition 
+
+
+Follow this guide [Firebase Settings](https://support.inspireui.com/help-center/articles/26/28/186/firebase-configuration) to create your application on Firebase. _(Skip this step if you already did)_
+
+
+Then, open your app on [Firebase Console](https://console.firebase.google.com/), and make sure you complete these steps below:
+
+- Add your `SHA Keys` to the Android app in **Project Settings**
+- Enable at least `Email/Password` option in **Authentication  → Sign-In method**
+
+![](/images/notion/1f5ea61c718d.png)
+
+- Disable `Email enumeration protection` option in **Authentication → Settings → User actions**
+
+![](/images/notion/44b858b6c8a3.png)
+
+- Go to **Firestore Database → Rules** and set the rule as follows:
+
+```dart
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+    	allow read, write: if request.auth.uid != null;
+    }
+  }
+}
+```
+
+
+![](/images/notion/78e211e2e969.png)
+
+
+### 2. Configuration
+
+1. Go to `Features` > `Smart Chat` > turn on `Enable Smart Chat`.
+2. Enable **`Use Realtime Chat`**.
+3. Enable/disable **`User Can Delete Chat`**, **`User Can Block Another User`**, or **`Admin Can Access All`** **`Chats`**.
+4. Input **`Admin Email`** and **`Admin Name`** **.**
+
+![](/images/notion/ef8269c418dd.png)
+
+
+While creating a new Firebase chat option, you can input "firebase" in **App** to activate it:
+
+
+![](/images/notion/d1631c048b93.png)
+
+
+Remember to enable **Firebase** in **Features**:
+
+
+![](/images/notion/fb7c85f71f05.png)
+
+
+_If it is still_ _not able to turn on this feature_ _, please double-check the following instructions: Enable Cloud Firestore at your Firebase project by following_ [_Cloud Firestore Get Started Docs_](https://firebase.google.com/docs/firestore/quickstart#create) _until Step 5._
+
+
+_Your_ _`Admin Email`_ _will be the default email that all of your users would communicate with. By signing in using_ _`Admin Email`_ _, you would see the chat list containing all of the messages from your customers when choosing_ _`Realtime Chat`_ _at_ _`Smart Chat`_
+
+
+### 3. Result 
+
+
+The result will be like this:
+
+- Using Firebase Smartchat as a **normal** account:
+
+![](/images/notion/877b22a1b69c.png)
+
+- Using Firebase Smartchat as the Admin account:
+
+![](/images/notion/696835768ea8.png)
+
+- Users can block other users:
+
+![](/images/notion/aca9630c1cd1.jpg)
+
+- Users can delete the entire chat thread:
+
+![](/images/notion/14bbacd3f1a4.jpg)
+
+
+## Message Notifications
+
+
+When users chat with a vendor using Firebase Realtime Chat, this feature allows notifications to be displayed on the device when messages arrive whether the app is running in the background or completely shut down, facilitating quick responses from users, vendors, and administrators, ensuring Don't miss any messages.
+
+
+### Method 1 (recommendation)
+
+
+Please follow the detailed guide for Firebase Notification Realtime Chat at this [LINK](https://github.com/inspireui/firebase-notification-realtime-chat?tab=readme-ov-file).
+
+
+### Method 2
+
+
+**Precondition:**
+
+- Follow this guide [Firebase Realtime Chat](https://support.inspireui.com/help-center/articles/26/29/109/firebase-realtime-chat)
+- This feature requires [Billing enabled](https://snipboard.io/73IpOf.jpg). See detail - [https://cloud.google.com/billing/docs/how-to/modify-project](https://cloud.google.com/billing/docs/how-to/modify-project)
+
+**Please follow these steps to set up:**
+
+
+1. Go to the **Cloud Functions** overview page in the Google Cloud console - [https://console.cloud.google.com/functions/list](https://console.cloud.google.com/functions/list)
+
+
+Make sure that the Google Cloud project to which you want to deploy Cloud Functions is selected.
+
+
+2. Click **Create** **function**.
+
+
+![](/images/notion/090988eda50b.png)
+
+
+3. Fill in the information in the fields as shown below:
+
+
+![](/images/notion/8edf73a49cdd.png)
+
+
+4. Click Save then expand the **Runtime**, **build**... section at the end of the page for additional [configuration](https://cloud.google.com/functions/docs/configuring) and [security](https://cloud.google.com/functions/docs/securing) options.
+
+
+![](/images/notion/c249669d7c25.png)
+
+
+**Detail:**
+
+
+Name 1: **FIREBASE_CONFIG**
+
+
+Value 1:
+
+```json
+{
+  "projectId": "[Project ID]",
+  "databaseURL": "[databaseURL]",
+  "storageBucket": "[storageBucket]",
+  "locationId": "[region]"
+}
+```
+
+- `projectId`: [Find it here](https://snipboard.io/H6JDbz.jpg)
+- `databaseURL`: [Find it here](https://snipboard.io/w6dviT.jpg)
+- `storageBucket`: [Find it here](https://snipboard.io/gPelmt.jpg)
+- `locationId` (region): [Find it here](https://snipboard.io/XlS9mI.jpg)
+
+
+Name 2: **GCLOUD_PROJECT**
+
+
+Value 2: `[Project ID]`
+
+
+Name 3: **EVENTARC_CLOUD_EVENT_SOURCE**
+
+
+Value 3: projects/`[Project ID]`/locations/`[region]`/functions/sendNotification
+
+
+5. **Build**, **Connections** and **Security** **and image repo** section remain unchanged.
+
+
+![](/images/notion/fe03ceb17777.png)
+
+
+![](/images/notion/657f8653cfb1.png)
+
+
+![](/images/notion/303d425dbdc6.png)
+
+
+6. Click **Next** to move to the **Code** step.
+
+
+7. In the **Source Code** field, select the **ZIP Upload** option and fill in the remaining information as shown below.
+
+
+![](/images/notion/586ca5002ec1.png)
+
+
+8. In the **Destination bucket** field, Click **Browse** and Select **storageBucket**
+
+
+![](/images/notion/50a92bedc99d.png)
+
+
+9. In the **ZIP file** field, please **DOWNLOAD** the ZIP file I have attached using the link then upload your project and Click **Deploy**.
+
+
+Download link [here](https://drive.google.com/file/d/1ngq7gKQtyiqXWh-aEx9iwEOdXwbvarVv/view?usp=sharing)
+
+
+![](/images/notion/8d6898d67801.png)
+
+
+10. Continue Click Create Function.
+
+
+11. Fill in the information and fields as shown below:
+
+
+![](/images/notion/5e4296943b2a.png)
+
+
+12. Click **Save** then expand the **Runtime**, **build**... section at the end of the page for additional [configuration](https://cloud.google.com/functions/docs/configuring) and [security](https://cloud.google.com/functions/docs/securing) options (Similar to step 4)
+
+
+![](/images/notion/7c376497bf84.png)
+
+
+13. **Build**, **Connections** and **Security and image repo** section remain unchanged (Similar to step 5).
+
+
+14. Click **Next** to move to the **Code** step.
+
+
+15. In the **Source Code** field, select the **ZIP Upload** option and fill in the remaining information as shown below.
+
+
+![](/images/notion/9835ab3a20d4.png)
+
+
+16. In the **Destination bucket** field, Click **Browse** and Select **storageBucket**
+
+
+![](/images/notion/99268ad48b48.png)
+
+
+17. In the ZIP file field, please **DOWNLOAD** the ZIP file I have attached using the link then upload your project and Click **Deploy**.
+
+
+Download link [here](https://drive.google.com/file/d/1ngq7gKQtyiqXWh-aEx9iwEOdXwbvarVv/view?usp=sharing)
+
+
+![](/images/notion/80c91a6b66d5.png)
+
+
+18. When deployment finishes successfully, functions appear with a green check mark in the Cloud Functions overview page in the Google Cloud console:
+
+
+![](/images/notion/0dce8cb8ab67.png)
+
+
+19. Select **pushNotification** function to **Edit**.
+
+
+![](/images/notion/71651a4af9e2.png)
+
+
+20. Click **Next** to move to the **Code** step.
+
+
+21. Select the **.runtimeconfig.json** file and **Edit** your project's information, referring to the suggestions in step 4.
+
+
+![](/images/notion/ecca8ab97b9a.png)
+
+
+22. After completing editing, Click **Deploy** again.
+
+
+23. Similarly, **Edit** the **.runtimeconfig.json** file in the **sendNotification** function and click **Deploy** again.
+
+
+24. Done.
+
+

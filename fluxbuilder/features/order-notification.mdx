@@ -1,0 +1,60 @@
+---
+title: "Order Notification"
+---
+
+
+Notifications will auto-push to users or vendor. Must log in to receive the Order Notification through the app.
+
+
+The guide is for Woocommerce, Pro(Woocommerce), and Multi Vendors apps.
+
+
+<Tip>
+_**Precondition**__:_
+_Requires to setup the_ [_Push Notifications via Firebase_](https://support.inspireui.com/help-center/articles/121/125/14/push-notifications-via-firebase) _or_ [_Push Notification via OneSignal_](https://support.inspireui.com/help-center/articles/121/125/89/push-notifications-via-onesignal)_.If you use OneSignal, your website must install the_ [_OneSignal plugin_](https://wordpress.org/plugins/onesignal-free-web-push-notifications/)_.Make sure to migrate to the latest Firebase Cloud Messaging API (_[_HTTP v1_](https://support.inspireui.com/help-center/articles/42/44/249/firebase-cloud-messaging-api-http-v1)_) before June 2024._
+
+- Requires to setup the [Push Notifications via Firebase](https://support.inspireui.com/help-center/articles/121/125/14/push-notifications-via-firebase) or [Push Notification via OneSignal](https://support.inspireui.com/help-center/articles/121/125/89/push-notifications-via-onesignal).If you use OneSignal, your website must install the [OneSignal plugin](https://wordpress.org/plugins/onesignal-free-web-push-notifications/).
+
+- Make sure to migrate to the latest Firebase Cloud Messaging API ([HTTP v1](https://support.inspireui.com/help-center/articles/42/44/249/firebase-cloud-messaging-api-http-v1)) before June 2024.
+</Tip>
+
+
+There are some types of notifications related to the payment:
+
+1. When having a new Sale/Order:
+    - Auto-send Email to users
+
+        _Available for  MultiVendor, WooCommerce, Pro (WooCommerce) apps._ (1)
+
+    - Auto-push Notification to vendor
+
+        _Available for MultiVendor, Manager apps._ (2)
+
+    - Auto-send Email to vendor
+
+        _Available for MultiVendor, WooCommerce, Pro (WooCommerce), and Manager apps (only WCFM)._ (3)
+
+2. When Order Status is changed:
+    - Auto-push Notification to users
+
+        _Available for MultiVendor, WooCommerce, Pro (WooCommerce) apps._ (4)
+
+    - Auto-push Notification to the driver that is assigned to that order in the Delivery Boy app. (5)
+
+(1): The Default setting, when made Orders with the app by using the COD method, is set on status to PENDING, that will cause the notification is not triggered, fix this problem by following the steps:
+
+1. Open your app on FluxBuilder.
+2. Go to **Features** on the left-side menu.
+3. In **Cart & Checkout** section, select **Checkout Screen**.
+4. Open **Payment**, and enable the option **Update Order Status**.
+
+![](/images/notion/96f2ca8097a7.png)
+
+
+(2)(3)(4)(5): Active the Push Notification by simply updating the `mstore-api` plugin to the [latest version](https://wordpress.org/plugins/mstore-api/) and filling in the Firebase Key (this key in https://console.firebase.google.com as [this image](https://tppr.me/TIljN))
+
+
+
+
+
+

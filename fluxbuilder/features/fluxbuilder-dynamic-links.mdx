@@ -1,0 +1,279 @@
+---
+title: "FluxBuilder Dynamic Links"
+---
+
+
+FluxBuilder Dynamic Links is the top alternative to Firebase Dynamic Links.
+A new powerful sharing system that makes it easy to share product pages, categories, or blogs with deep links. This system is fully integrated into FluxBuilder app builder for better reliability, customization, and branding.
+
+
+You gain full control to edit, analyze, and manage all links and clicks in real-time, ensuring better branding and reliable tracking across iOS and Android.
+
+
+**Step-by-step video tutorial:**
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/3ZNGd_yTRNQ"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+## Step 1: Enable FluxBuilder Dynamic Links
+
+
+**Steps**: Open your app > go to **Features** > **General** > **Dynamic Link Config**. On the Dynamic Link Service dropdownlist, select **FluxBuilder Dynamic Links**:
+
+
+![](/images/notion/35d47be3b98d.png)
+
+
+When configuring **FluxBuilder Dynamic Links** in your app, some fields are required. Please refer to the following instructions (see **Set Up FluxBuilder Dynamic Links** for full details):
+
+1. **iOS and Android Configuration** – Select from the **iOS Configuration** and **Android Configuration** you’ve already added (explained in the next guide).
+2. **Public Keys** – Choose the corresponding key from **API Keys**.
+3. **Domain Name** – Use the subdomain provided when starting your new project.
+4. **Scheme** – Enter a unique name to define the FluxBuilder Dynamic Links scheme for this app.
+
+## Step 2: Set Up FluxBuilder Dynamic Links
+
+
+The guide to set up your FluxBuilder Dynamic Links: 
+
+
+### Start New Project
+
+1. Open your app on FluxBuilder.
+2. Select **Dynamic Links** on the left menu.
+3. Update the **Project Name** to make change for the **Generated Subdomain**.
+4. Click the **CREATE PROJECT** button to start your new project.
+
+![](/images/notion/03ae4a41e568.png)
+
+
+After creating project successfully, you will be navigated to the FluxBuilder Dynamic Links dashboard. Here, you can:
+
+- Create links directly in FluxBuilder.
+- Edit, analyze, copy, and delete links easily.
+- Create API Keys.
+- Update iOS and Android Settings.
+- Track created links and clicks in real time.
+
+![](/images/notion/069ba8894356.png)
+
+
+### 💠 Add API Keys  
+
+1. Open your app on FluxBuilder.
+2. Open **Dynamic Links**.
+3. Click on the Settings icon, select **API Keys**.
+4. Click the button **GENERATE API KEY**.
+
+![](/images/notion/8c0c8fa6ad72.png)
+
+
+![](/images/notion/7a2d05c82b7c.png)
+
+
+![](/images/notion/14249e2ebbd7.png)
+
+
+### 💠 iOS configuration
+
+1. Open your app on FluxBuilder.
+2. Open **Dynamic Links**.
+3. Click on the Settings icon, select **iOS Settings**.
+4. Click the button **ADD IOS CONFIGURATION**.
+5. Input all required fields and click the button SAVE.
+
+![](/images/notion/237c3bdffa85.png)
+
+
+![](/images/notion/f2c70ef55f79.png)
+
+
+![](/images/notion/1517c6b45801.png)
+
+
+### 💠 Android Configuration
+
+1. Open your app on FluxBuilder.
+2. Open **Dynamic Links**.
+3. Click on the Settings icon, select **Android Settings**.
+4. Click the button **ADD ANDROID CONFIGURATION**.
+5. Input all required fields and click the button **SAVE**.
+
+![](/images/notion/d8c77b85026c.png)
+
+
+![](/images/notion/2422c3a96c6b.png)
+
+
+![](/images/notion/5b7cbe5d5284.png)
+
+
+### 💠 Domain
+
+
+The feature is available for Professional plan only. Each account is allowed to add 5 domains.
+
+
+FluxBuilder Dynamic Links supports custom domains so you can replace the default FluxBuilder link (e.g.
+
+
+`https://scheme-deeplink.fluxbuilder.com/...`)
+
+
+with your own domain, such as:
+
+
+`https://scheme-deeplink.yourdomain.com/...`
+
+
+Follow the steps below to set up your personalized domain.
+
+
+**Step 1: Add domains on FluxBuilder**
+
+- Open your app on FluxBuilder.
+- Open **Dynamic Links**.
+
+    ![](/images/notion/12cba1da2e68.png)
+
+- Click on the Settings icon, select **Domain**.
+
+    ![](/images/notion/dad4efc1f7d3.png)
+
+- Click the button **ADD DOMAIN**.
+
+    ![](/images/notion/16503147e6d9.png)
+
+- Input the domain without `http://` or `https://`
+
+    ![](/images/notion/5bc46ebbc663.png)
+
+
+<Tip>
+When setting up your project domain, please make sure to enter a fresh, unused domain or subdomain that has not been used before.
+Some users accidentally input their current live domain — for example, their main site — which leads to conflicts or broken configurations. 
+
+**Example**
+
+If your main domain is:
+
+> `mstore.io`
+
+Then the input domain should be **different and unused**, such as:
+
+> `abc.mstore.io`
+
+> `newdomain.com`
+</Tip>
+
+- Click **ADD DOMAIN** button to finish.
+
+![](/images/notion/93936802c983.png)
+
+
+**Step 2: Add the certificate DNS record to your hosting domain**
+
+
+Below is an example using Cloudflare as the hosting provider:
+
+1. Add the ownership certificate DNS record.
+
+    ![](/images/notion/9afbf360e7cd.png)
+
+2. Add the hosting DNS record.
+
+    ![](/images/notion/03413935974a.png)
+
+3. After adding the records, back to FluxBuilder and reopen Domain page. If the records do not appear immediately, please wait 2–3 minutes and try again.
+
+    ![](/images/notion/303aad29714b.png)
+
+4. Add the SSL certificate record (if required by your hosting setup).
+
+    ![](/images/notion/bf0a0d23ed13.png)
+
+5. Once the records have been added, please wait a few minutes and continue with FluxBuilder. open the Domain page. If it appears as shown below, the setup has been completed successfully.
+
+    ![](/images/notion/c2a9de64b22d.png)
+
+6. To verify that everything is working, open your domain in the browser. Check if there is the line “worker-ok”.
+
+    ![](/images/notion/561c84d382a5.png)
+
+
+### Create New Links
+
+1. Open your app in **FluxBuilder**.
+2. Go to **Dynamic Links**.
+3. Click **Create Link**.
+4. Fill in the **Basic Information** (required):
+    1. Enter the **Web Fallback URL** (a product, blog, or category URL).
+    2. Enter the slug into the **Custom Path**.
+
+    ![](/images/notion/ee311f53ade6.png)
+
+5. (Optional) Add **Mobile App Information** so the link can open inside your app:
+    - Select **iOS and Android Information** from the existing data created in the **Full Settings Control guide**.
+    - Enter your **App Store URL** and **Play Store URL**.
+    - Enter your **Android Package Name**.
+    - For **iOS Deep Link** and **Android Deep Link**, use the format: `<app-scheme>://<project-subdomain>/custom-path-slug`
+
+    For example: `fluxstore://fluxstore-deeplink.fluxbuilder.com/21BA2A`
+
+    - Please note that the `app-scheme` is defined by you. Make sure it matches the **Scheme** configured in **Features > Dynamic Link Config > FluxBuilder Dynamic Link > Scheme**.
+6. (Optional) Add **Link Metadata** (Title, Description, Image URL) for better previews on social media.
+    1. Example for Metadata
+
+        ![](/images/notion/f324e00db8d7.png)
+
+    2. Shared and Link Preview without Link Metadata
+
+        ![](/images/notion/6c2de3867bf2.png)
+
+    3. Shared and Link Preview with Link Metadata
+
+        ![](/images/notion/df3dc8373abd.png)
+
+7. (Optional) Set an **Expiration Date and Time** for the link.
+8. Click **CREATE LINK** to finish.
+
+### Link Management
+
+1. Open your app on FluxBuilder.
+2. Open **Dynamic Links**.
+3. Click the Settings button of a specific link. Then, continue to select:
+
+![](/images/notion/779a738dc813.png)
+
+- **Copy Link**.
+- **View Analytics** to open the **Link Analytics Dashboard**.
+
+![](/images/notion/3cedc3f5c506.png)
+
+- **Edit Link** to update the link.
+- **Delete Link** to remove it.
+
+## Step 3: Update Dynamic Link Config
+
+
+Finally, remember to update all information in the Dynamic Link Config.
+
+
+**Steps**: on the left menu, click [Features] > under General, select [Dynamic Link Config] > update all information > click [Save] button.
+
+
+![](/images/notion/b8f3ac70ba9b.png)
+
+
+That’s all ☺️
+
+

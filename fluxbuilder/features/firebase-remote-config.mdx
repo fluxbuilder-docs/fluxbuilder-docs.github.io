@@ -1,0 +1,129 @@
+---
+title: "Firebase Remote Config"
+---
+
+
+This guide shows the way to **update or sync the Changed Features and UI of your app without re-publishing** the app to Apple Store and Google Play. 
+
+
+<Info>
+Make sure that you have followed all the following steps to enable the feature on the app before releasing.
+</Info>
+
+
+<Info>
+"The default minimum fetch interval for Remote Config is 12 hours, which means that configs won't be fetched from the backend more than once in a 12 hour window, regardless of how many fetch calls are actually made." (Ref: [Get started with Firebase Remote Config](https://firebase.google.com/docs/remote-config/get-started?platform=flutter#throttling)). That means maybe your app can't load and apply the new setting from Firebase as soon as you sync the new version with Firebase. You can reinstall the app to fetch new data.
+</Info>
+
+
+![](/images/notion/fd4e6c44014d.png)
+
+
+Follow steps below:
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/x5ToXFgjJWs"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+## 1. Execute the Firebase Settings 
+
+
+Create your project on Firebase. Then add Android App and iOS App into your project following this guide [Firebase Settings](https://docs.fluxbuilder.com/firebase-settings). _(Skip this step if you already did)_
+
+
+## 2. Create a new private 
+
+
+This step helps to generate a new private key to use for configuring updates to Firebase Remote Config. 
+
+
+**Step 1**: open firebase console your project [https://console.firebase.google.com/](https://console.firebase.google.com/)
+
+- Select the gear icon, then select `General`:
+
+![](/images/notion/bcaacfb2e163.png)
+
+- Select the `Service accounts` tab:
+
+![](/images/notion/547fdee81298.png)
+
+
+**Step 2**: Add role “Firebase Remote Config Admin”:
+
+- Click `Manage service account permissions`:
+
+![](/images/notion/02c58f5d9373.png)
+
+- Open `IAM`:
+
+![](/images/notion/6265ab6a62ef.png)
+
+- Find a `Name` that matches the member name in the Firebase Console:
+
+![](/images/notion/233734827c21.png)
+
+
+![](/images/notion/9b450efff70a.png)
+
+- Click the edit icon:
+
+![](/images/notion/d0f4149cc3ac.png)
+
+- Add new Role with Role is `Firebase Remote Config Admin`:
+
+![](/images/notion/b7616ae1d94b.jpg)
+
+- Click the `SAVE` button.
+
+**Step 3**: Now we go back to the firebase console to download the key by clicking the **Generate new private key** button:
+
+
+![](/images/notion/96e29d32999f.png)
+
+
+## 3. Execute the Firebase Remote Config
+
+
+You can update or sync the Changed Features of your app without re-publishing easily on the drag&drop FluxBuilder for free.
+
+
+<Info>
+Remember to sync the latest settings with Firebase whenever you make changes. 
+</Info>
+
+
+Now, open your app on FluxBuilder. Go to `Features`, select `Firebase Remote Config`, enable the `Firebase Remote Config`, refer to the `Firebase remote config.json` file which is the downloaded key file in Step 3 above: 
+
+
+![](/images/notion/03f0f757c005.png)
+
+
+The system will load to see if your project has configs. If it is a new project, please click `ADD NEW VERSION` to upload the latest config.
+
+
+Now when you build your app, the features and UI of your app will follow the latest config version in Remote Config on Firebase, so whenever you want to change the features/UI, just need to Load version here. 
+
+
+<Tip>
+In case you want to re-upload an old version that existed in your Firebase before:
+1. Open **Firebase Remote Config**.
+
+2. Select the old version in **Release History**.
+
+3. Click `LOAD VERSION` to get the version config.
+
+4. Click **`ADD NEW VERSION`**.
+</Tip>
+
+
+That’s all :)
+
+

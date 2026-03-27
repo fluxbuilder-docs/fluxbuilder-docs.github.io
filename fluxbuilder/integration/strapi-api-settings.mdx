@@ -1,0 +1,160 @@
+---
+title: "Strapi API Settings"
+---
+
+
+In Strapi, there’s no fixed template to follow. When you create a **Content Type**, Strapi automatically generates REST API endpoints for it.
+
+
+So let’s strictly follow our tutorial below including collection/content types names, JSON serializer names, etc. 
+
+
+If you wish to customize your Strapi settings, refer to [Strapi Docs](https://strapi.io/documentation/v3.x/content-api/api-endpoints.html) for Strapi configurations and [JSON-serializable](https://pub.dev/packages/json_serializable) plugin. 
+
+
+## 1. Define content types
+
+
+### 1.1 Product content type
+
+
+A Content Type, also called a model, is a type of data. The Strapi API includes by default, the `user` Content Type. Right now we need products, so our new Content Type is going to `product` (Content Types are always singular).
+
+
+Here are the required steps:
+
+- Navigate to the Content Type Builder in the sidebar ( `http://your-site.com/admin/plugins/content-type-builder` or `http://localhost:xxxx/admin/plugins/content-type-builder`).
+- Click on `+ Create new collection type.`
+- Set `Product` as name.
+- Click on `Continue` and create the followings fields:
+
+![](/images/notion/60a6f5d26329.png)
+
+- Click on Finish
+- Click on Save, the server should restart automatically.
+
+<Tip>
+_**Some fields might not be used yet but are required for future updates.**_
+</Tip>
+
+
+### 1.2 Product-category content type
+
+
+Similar to creating a `Product` content type, repeat those steps, and create a `Product-category` content type with those fields:
+
+
+
+![](/images/notion/87ba8ab86105.png)
+
+
+### 1.3 Shipping content type
+
+
+Create a `Shipping` content type with those fields:
+
+
+
+![](/images/notion/e663f11be846.png)
+
+
+### 1.4 Payment content type
+
+
+Create a `Payment` content type with those fields:
+
+
+![](/images/notion/888e93af656a.png)
+
+
+### 1.5 User content type
+
+
+Create a `User` content type with those fields:
+
+
+
+![](/images/notion/fa170dff7533.png)
+
+
+### 1.6 Order content type
+
+
+Create an `Order` content type with just 1 field: `total` with decimal Number format
+
+
+## 2. Define relations
+
+
+### 2.1 Product relation
+
+- Go to Content-Types Builder at the left-hand side menu bar. Choose `Product` collection type then click `+ Add another field`
+- Create a many-to-many Relation with Product-Category content type as below:
+
+![](/images/notion/fd0d4ee65b91.png)
+
+- Also, create a many-to-many relation with `Order` as below:
+
+![](/images/notion/a5cd7875fe59.png)
+
+
+### 2.2 Order relations
+
+- In `Order` content type, create a relation with `Payment` as below
+
+![](/images/notion/99f83e75a819.png)
+
+- Create a relation with `Shipping` as below
+
+![](/images/notion/9ec3146412ce.png)
+
+- Also, create a relation with `User` as below:
+
+![](/images/notion/111106e7c237.png)
+
+
+## 3. Create some entries
+
+
+When completing all of your content types, the next thing that you need to do is to create some data for it (so that we can test later). To do so, click on `Products` under Collection Types list on the left-hand side menu bar. You are now in the Content Manager plugin: an auto-generated user interface that lets you see and edit entries. Let's create a sample product
+
+
+![](/images/notion/3a4368c7e2c1.png)
+
+
+And the final result would look like this:
+
+
+![](/images/notion/52081077716a.png)
+
+
+Continue creating as many entries as you want that you would like to see on your app.
+
+
+## 4. Allow access
+
+
+When you are creating a content type, Strapi created a few set of files located in `api/your-content-type-name`. The `find` route is available at `http://localhost:xxxx/your-content-type-name` or `http://your-site-url.com/your-content-type-name`. However, due to Strapi APIS security, any access to those URLs would be blocked by 403 forbidden error. In order to let the app access your data, follow those steps:
+
+1. Navigate to the Settings then Roles & Permissions
+2. Click on the Public role
+3. Tick the `find`, `findone` and `count` checkboxes of the available routes
+4. Save.
+
+<Tip>
+**Important: do the same thing for the authenticated role.**
+</Tip>
+
+
+Now go back to, for example, [http://localhost:xxxx/products](http://localhostxxxx/) or [http://your-site-url.com/products](http://your-site-url.com/products) . At this point, you should be able to see your list of products.
+
+
+## 5. **Database setup**
+
+
+There are several choices for setting up a database for your Strapi application, please refer [Strapi Database Docs](https://strapi.io/documentation/v3.x/guides/databases.html#mongodb-installation) and pick whatever fits you the most.
+
+
+That’s all 😊
+
+

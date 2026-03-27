@@ -1,0 +1,229 @@
+---
+title: "Push Notifications via Firebase"
+---
+
+
+Your app can receive and process push notifications on Android and iOS. Besides, you are able to automatically send Order Status Notifications when order status changes.
+
+
+## 1. Setup Firebase Cloud Messaging (FCM)
+
+
+### iOS App
+
+
+Follow steps below to enable push notifications on iOS app:
+
+
+**1. Execute the Firebase Settings** 
+
+
+Create your project on Firebase. Then add iOS App into your project following this guide [Firebase Settings](https://docs.fluxbuilder.com/firebase-settings). _(Skip this step if you already did)_
+
+
+**2. Setup** **Cloud Messaging** **in Firebase**
+
+
+Step 1: Open the Firebase page [https://console.firebase.google.com](https://console.firebase.google.com/) 
+
+
+Step 2: Open your Firebase project. Click the gear icon in the upper left corner, and select the [Project settings] item:
+
+
+![](/images/notion/c93658f0c514.png)
+
+
+Step 3: Click Cloud Messaging as shown:
+
+
+![](/images/notion/1936af2526a7.png)
+
+
+Step 4: Select your iOS app, and click **`Upload`** button:
+
+
+![](/images/notion/bc6929603580.png)
+
+
+<Tip>
+Note: at this step, the Cloud Messaging requires you to upload the auth key APNs. To get this key, you must have an apple developer account. 
+- Visit page [https://developer.apple.com](https://developer.apple.com/) select **`Account`** as shown:
+
+![](/images/notion/ac4c29d83350.png)
+
+- Then choose **`Certificates, identifiers & Profiles`**
+
+![](/images/notion/377a2955facb.png)
+
+- Select Keys on the left menu, then click the plus icon to add a new key:
+
+_Note: 1 developer apple account can only create 2 keys, please consider before creating. But you can still delete them if needed._
+
+![](/images/notion/e249f954abe7.png)
+
+- Enter the key name and select Apple Push Notification service (APNs) then click **`continue`**
+
+![](/images/notion/d01ba6e2d794.png)
+
+- Click **`Register`**
+
+![](/images/notion/77db8671f5e9.png)
+
+- Click **`Download`** to download the APNs key file
+
+![](/images/notion/8316af432f20.png)
+
+- Return to the firebase console to update the APNs auth key.
+</Tip>
+
+
+Step 5: Click the Browse button and refer to the APNs auth key:
+
+
+![](/images/notion/2f31d31b6579.jpg)
+
+
+![](/images/notion/fe317ff23130.png)
+
+
+![](/images/notion/c01817212958.jpg)
+
+- The key ID is the back part of the downloaded key file name:
+
+![](/images/notion/07cc89de8af8.png)
+
+- Enter Team ID, if you do not know where Team ID is coming from, please click on the question mark as shown in the picture, then click on the **`membership tab`**
+
+![](/images/notion/556e40d5e9a9.png)
+
+
+This is Team ID, copy it and enter the form in firebase:
+
+
+![](/images/notion/d2fe6b3d9fa0.png)
+
+- Click **`Upload`**:
+
+![](/images/notion/b7a28688a954.png)
+
+
+In some cases, this error will be displayed (in some cases it will not be). If this is the case, please click **`Upload`** again:
+
+
+![](/images/notion/ebc712a565cf.png)
+
+
+If the following screen appears, congratulations, you have successfully configured:
+
+
+![](/images/notion/2fb0926610f8.png)
+
+
+### Android App
+
+
+Only need to create your project on Firebase. Then add Android App into your project following this guide [Firebase Settings](https://docs.fluxbuilder.com/firebase-settings). _(Skip this step if you already did)_
+
+
+---
+
+
+## 2. Execute the Push Notifications feature
+
+
+After finishing setting up Firebase Cloud Messaging (FCM), you can push notifications to the end-user. The end-user will receive the notifications on their smart devices.
+
+
+You can choose to push notifications via FluxBuilder or via Firebase directly.
+
+
+### Option 1: Firebase Push Notifications on FluxBuilder
+
+
+**Step 1: Get Private Key** 
+
+
+Open your project in [Firebase Console](https://console.firebase.google.com/u/0/), click on the Gear icon, and select **Project Settings**. Then, open the **Service Accounts**, and click **Generate new private key** button as below:
+
+
+![](/images/notion/1cc92b30a5a4.png)
+
+
+**Step 2: Input the Private Key File into FluxBuilder**
+
+
+After you have obtained the Private Key file, go back to the FluxBuilder App, open the Features Tab → select the Push Notification feature → upload the Private Key file.
+
+
+![](/images/notion/90ed9fdd1506.png)
+
+
+**Step 3: Send Messages**
+
+
+Enter any missing information and click `SEND` button.
+
+
+![](/images/notion/702a377b47a1.png)
+
+
+**4. Note**
+
+- Your project must have **Setup firebase cloud messaging** completely.
+- The Private Key file taken must belong to that project
+- Finally, do not share the Private Key file.
+
+### Option 2: Firebase Push Notifications on Firebase
+
+
+Instead of FluxBuilder, you can go to Firebase to push notification manually as these following steps:
+
+- Drag the left menu to the bottom, the Grow section will have Cloud Messaging. Click **`Cloud Messaging`**, then **`Send your first message`**:
+
+![](/images/notion/2cdf0ff0db64.jpg)
+
+- Create a new messenger, fill in the messenger information, and click next:
+
+![](/images/notion/aa79fbe12112.png)
+
+
+In the **Target** part, select the application you want to send, here select the iOS / Android application that was configured in Firebase before:
+
+
+![](/images/notion/d0137234d5ce.png)
+
+
+![](/images/notion/86cdaf097bbf.jpg)
+
+- Click **`Next`**:
+
+![](/images/notion/490e832047ef.jpg)
+
+- The remaining steps can be ignored, continue to click Review:
+
+![](/images/notion/25b70f7f42bb.png)
+
+- Click Publish button:
+
+![](/images/notion/ca22aaaf5cdc.png)
+
+- Now go back to the app and check if it works:
+
+---
+
+
+## 3. Add an Icon on Notifications
+
+
+![](/images/notion/d14d6518de33.png)
+
+
+To custom icon of notification item, you need to add an image field in additional data when pushing the notification like this:
+
+
+![](/images/notion/98ef622d0535.png)
+
+
+That’s all :)
+
+

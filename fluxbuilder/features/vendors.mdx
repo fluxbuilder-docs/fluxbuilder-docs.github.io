@@ -1,0 +1,212 @@
+---
+title: "Vendors"
+---
+
+
+This guide includes some configurations for vendors in the Multi Vendors app.
+
+
+## 1. Show/Hide Vendor Chat icon
+
+
+Follow this guide to show or hide the Vendor Chat icon on the **Vendor Detail** and **Product Details** screens.
+
+
+
+
+![](/images/notion/d6c0635f166a.jpg)
+
+
+![](/images/notion/f67ddae61c31.jpg)
+
+
+Go to **Features** > **Firebase** > turn on **Enable Firebase** > click **Apply**
+
+
+![](/images/notion/1ba6d7fb2b13.png)
+
+
+Go to **Smart Chat** > turn on **Enable Smart Chat**. Then enable **Use Realtime Chat** > click **Apply**
+
+
+![](/images/notion/4b444c5c1047.png)
+
+
+Go to **Vendors** > turn on **Enable Vendor Chat** > click **Apply**
+
+
+![](/images/notion/d2001ce34d46.png)
+
+
+## 2. Show/Hide Vendor Information
+
+
+Some clients don't want the Customer and Vendor to exchange contact details anyhow. So they want to hide the phone number, email, and address of the store Vendor on all screens, including:
+
+- Contact tab in the Vendor Details screen
+- Stores screen
+- Product Detail screen
+
+To hide the phone number, email, and address of the store Vendor on all screens, follow this guide:
+
+
+![](/images/notion/f379b2d9fa31.png)
+
+
+<Tip>
+This solution will hide the Vendor contact in these screens:
+- Contact tab in the Vendor Details screen:
+
+![](/images/notion/1af607853009.jpeg)
+
+- Stores screen
+
+![](/images/notion/6d2ba5e4a7c2.jpeg)
+
+- Product Detail screen:
+
+![](/images/notion/cbe0d605d47b.jpeg)
+</Tip>
+
+
+## 3. Order from Multi/Single Vendor
+
+
+### Enable Multi/Single Vendor
+
+
+On the app, you can add an option: Prevent users from adding products from multiple vendors.
+
+
+![](/images/notion/e43bfff0ab5b.png)
+
+1. Open your app on FluxBuilder
+2. Go to **Features** → in **Cart & Checkout**, select **Vendors**
+3. Disable **Multi Vendors Checkout**
+
+### Multi Vendors Detected PopUp
+
+
+The apps support showing a Multi Vendors Detected PopUp to remind users after preventing users from adding products from multiple stores.
+
+
+![](/images/notion/b6e2592855cc.png)
+
+
+Steps:
+
+1. Open your app on FluxBuilder.
+2. Go to **Features** > **Vendors**.
+3. In **Checkout**, disable **Multi Vendors Checkout** and enable **Show Popup If Multi Vendors Detected**.
+
+![](/images/notion/9413a0bf9624.png)
+
+
+## 4. Vendor Admin
+
+
+The Vendor Admin feature is available for WCFM only (when user login by vendor/admin account).
+
+
+<Tip>
+_You are also able to purchase the Manager app for this feature in native. This Vendor app is compatible with WooCommerce and WCFM plugin._
+</Tip>
+
+
+![](/images/notion/112860d28b8b.png)
+
+
+To show Vendor Admin on app:
+
+1. Open your app on FluxBuilder.
+2. In **Design**, open the **Profile** tab.
+3. Enable **Vendor Admin** in **GENERAL SETTING**.
+
+![](/images/notion/357fb649d2d9.png)
+
+
+### Vendor Admin (webview)
+
+1. Open your app on FluxBuilder.
+2. Go to **Features** > **Vendors**.
+3. In **Vendor Admin**, disable **Native Store Management**.
+4. Input **Vendor Dashboard URL**.
+5. Select **New Product Status** as default.
+
+![](/images/notion/de104a6e9abc.png)
+
+
+This is an amazing feature to support Vendor Admin being able to manage everything related to their store. All the features will be the same as the features on the Vendor Admin website.
+
+
+![](/images/notion/243cb98f47ba.png)
+
+
+![](/images/notion/3a180767a83e.png)
+
+
+![](/images/notion/7a906a359f5c.png)
+
+
+### Vendor Admin (native)
+
+
+As the current Admin is an All-In-One solution for Vendor admin on Multi Vendors app, it has a limit with WebView solution. For the Native vendor admin, you can combine with the Manager app that is full of native UX. 
+
+
+
+![](/images/notion/08fe23e2cc78.png)
+
+1. Open your app on FluxBuilder.
+2. Go to **Features** > **Vendors**.
+3. In **Vendor Admin**, enable **Native Store Management**.
+4. Enable **Allow Publish Product** (vendors can publish products directly) or disable **Allow Publish Product** (products are asked to be reviewed before publishing).
+
+![](/images/notion/1850d1405ad4.png)
+
+
+## 5. Delivery
+
+
+Users logging in with a **Delivery account** can directly access the **Delivery Management** page within the Multi Vendors app.
+
+
+To show Delivery on app:
+
+1. Open your app on FluxBuilder.
+2. In **Design**, open the **Profile** tab.
+3. Enable **Delivery** in **GENERAL SETTING**.
+
+![](/images/notion/bbdf3dab626e.png)
+
+
+
+After selecting **Delivery** on the **Settings** page of the Multi Vendors app, users will be directed to the **Delivery** page. You can configure the app to display the Delivery page in either **Webview** or **Native** mode.
+
+1. Open your app on FluxBuilder.
+2. Go to **Features** > **Vendors**.
+3. In **Vendor Admin**, disable Native Delivery Management to open the Delivery webview page.
+4. Input **Delivery URL**.
+
+![](/images/notion/fb2516657970.png)
+
+
+Note: If you already have Delivery app, you can enable Native Delivery Management to open the Delivery native page.
+
+
+## 6. Listing: Allow Register as Owner
+
+
+This update introduces support for owner role registration within the Listing app. Users can now register as business owners directly from the app interface.
+
+
+![](/images/notion/acdd66f8b934.png)
+
+- Open your Listing app on FluxBuilder.
+- Go to **Features** on the side menu
+- In **Cart & Checkout**, open Vendors.
+- Enable the **Allow Register as Owner** option.
+
+![](/images/notion/de89abe248de.png)
+
+

@@ -1,0 +1,147 @@
+---
+title: "Woocommerce API"
+---
+
+
+To create WooCommerce app (single vendor, WCFM, or Dokan) or Manager app, let’s install our free MStore API and some plugins to your WooCommerce website so that the app can sync with your data:
+
+
+## 1. Website Integration
+
+
+### Install required plugins
+
+- Install the [MStore API](https://wordpress.org/plugins/mstore-api/), [WooCommerce](https://wordpress.org/plugins/woocommerce/) and [WooCommerce Legacy REST API](https://wordpress.org/plugins/woocommerce-legacy-rest-api/) plugins on your website.
+
+    MStore API is required for supporting RestAPI to connect the app, support Payment, SMS Login, Facebook Login, and other features.
+
+- If your website is using WCFM multivendor plugin, please also install these plugins:
+    - [WCFM - WooCommerce Frontend Manager](https://wordpress.org/plugins/wc-frontend-manager/)
+    - [WCFM - WooCommerce Multivendor Marketplace](https://wordpress.org/plugins/wc-multivendor-marketplace/)
+    - [WCFM - WooCommerce Multivendor Marketplace - REST API](https://wordpress.org/plugins/wcfm-marketplace-rest-api/)
+- If your website is using Dokan multivendor plugin, be sure to also install this [Dokan](https://wordpress.org/plugins/dokan-lite/) plugin.
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/C-2lILD9-q8"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+---
+
+
+### Get Consumer Key & Secret
+
+
+The Consumer Key and Secret are generated from your WooCommerce settings: Go to WooCommerce > Settings > Advanced > REST API > Add Key. Make sure to choose 'Read/Write' permission. Details below:
+
+- After installing the required plugins, **`Generate`** the WooCommerce REST API key and save them to your private file for later usage. Then, go to **Legacy API** and enable the **Enable the legacy REST API.** Make sure to use the **Permission** as **Read** to protect your side data as Readonly.
+
+![](/images/notion/052b5f6a735a.png)
+
+
+![](/images/notion/a823eef2e8fe.png)
+
+> Checking the Rest API configuration:   
+> - Access your website using the Rest API endpoint (your-domain/wp-json/wc/v3), for example: https://wordpress.inspireui.com/wp-json/wc/v3   
+> - If there is a list of ordered endpoints, that means it works.  
+> - If not, have a look at this guide: [Setting up Rest API.](https://woocommerce.com/document/woocommerce-rest-api/)
+
+---
+
+
+## 2. Other Settings 
+
+
+### Permalink URL setting
+
+
+Go to **Common Setting**, change the URL to **Post name**, this is required for the setting, otherwise, some images could not be uploaded.
+
+
+![](/images/notion/9cc0c7a12cc6.png)
+
+
+---
+
+
+### Registration
+
+
+Enable the option **Anyone** can register.
+
+
+![](/images/notion/98e67f066d97.png)
+
+
+That’s all 😊
+
+
+---
+
+
+## 3. Supported Product Types
+
+
+All supported product types of WooCommerce:
+
+
+**Standard Products:**
+
+
+✅ Simple product
+
+
+✅ Grouped product
+
+
+✅ Variable product (Colors, sizes, ...)
+
+
+✅ External/Affiliate product
+
+
+✅ Downloadable product (Digital, book stores) --> [the guide](https://docs.fluxbuilder.com/faq#73af8abab99a44948d871e4ebf425e91).
+
+
+✅ Minimum quantity product --> [the guide](https://docs.fluxbuilder.com/min-max-quantities).
+
+
+✅ Out of stock product & On sale product.
+
+
+**Advanced & Specialty Products:**
+
+
+✅ Upload file on product (e.g., for Pharmacy orders) --> the guide.
+
+
+✅ Subscription --> [the guide](https://docs.fluxbuilder.com/woocommerce-subscription).
+
+
+✅ B2B wholesale product --> the guide.
+
+
+⚡️ B2B King --> [the guide.](https://docs.fluxbuilder.com/b2b-king)
+
+
+⚡️ Ultimate Membership; Paid Memberships Pro --> [the guide](https://support.inspireui.com/storage/article_images/OlnzH5d729N944cOVBVpEEVkP8JmJJjisdSgYoYN.png).
+
+
+⚡️ Appointable product (Appointment booking, spa, salon, clinic,…) --> [the guide](https://docs.fluxbuilder.com/woocommerce-appointment).
+
+
+⚡️ Composite products --> [the guide](https://youtu.be/_u3SU-uYC-U?si=ErxhbWSe-yleM-0M).
+
+
+⚡️ Gift Cards product --> the guide.
+
+
+⚡️ Auction / Bid product —> [supported plugin](https://codecanyon.net/item/woocommerce-simple-auctions-wordpress-auctions/6811382).
+
+

@@ -1,0 +1,83 @@
+---
+title: "Multi Payment (Webview)"
+---
+
+
+The payment on the app works the same as your website via Webview Payment. This feature is available in source code, and technical support is available for the extended license.
+
+
+**Compatible with**: Woocommerce, Opencart, Shopify, Multi Vendor, Notion, BigCommerce and Prestashop.
+
+
+
+![](/images/notion/bf8cc5e12a8d.png)
+
+
+## 1. Enable Webview Checkout
+
+
+![](/images/notion/ae6983aab0b5.png)
+
+
+This Webview Checkout feature allows open WebView when processing the order, if you are using some extra plugin Shipping, Checkout plugins, this is a great feature that supports out the box the checkout function right on your Webview (works the same as on your website).
+
+
+## 2. Enable Native Checkout
+
+
+FluxStore also supports the Payment that combines both `Native` and `WebView`, enable the Native Checkout as below:
+
+
+![](/images/notion/e79194511948.png)
+
+
+The default option of `Native OnePage Checkout` is set to support the Payment that combines both `Native` and `WebView`. If you would like to disable this option and enable the Webview Checkout, please select `Enable Webview Checkout`.
+
+
+## 3. MStore Checkout Webview
+
+
+(Not recommended) This feature is available for woocommerce. It uses MStore Checkout page.  You need to disable Webview Checkout and Native Checkout to make it work.
+
+
+**Use** [**FluxBuilder**](https://www.fluxbuilder.com/download)
+
+
+:
+
+
+![](/images/notion/d49d4eb3ba25.png)
+
+
+In the admin website, you need to create a new page with the slug "mstore-checkout" and template "MStore Api".
+
+
+![](/images/notion/b158c7093715.PNG)
+
+> Please note that you need to require to login to use this feature. if you don't login, the app will use Native OnePage Checkout instead of MStore Checkout Webview.
+> Please note that the multi payment gateway is available for the WooCommerce and Opencart integration, other frameworks are not supported yet.
+
+## Custom Success Checkout Page Slug
+
+
+Support custom or translated checkout success URLs so the app can correctly determine when the order is placed successfully and closes the webview checkout screen, trigger the cart deletion action. The app will also displays the native thank you page then.
+
+1. Open your app on FluxBuilder.
+2. Go to **Features**. In **Payment Methods**, open **Webview Payment**.
+3. in **Custom Checkout Success Page Slug**, add possible slugs for the successful checkout page on the website.
+
+![](/images/notion/68d4da7ed841.png)
+
+
+## Common problems:
+
+
+### 1. WebView Payment returns 404 Error, Page Not Found.
+
+
+Solution: Go to admin panel, create a page with slug: `mstore-checkout` and template is `MStore Api.`
+
+
+![](/images/notion/be6a2c8cb5eb.png)
+
+

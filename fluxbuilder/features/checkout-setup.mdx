@@ -1,0 +1,214 @@
+---
+title: "Checkout Setup"
+---
+
+
+## Address Screen
+
+
+### Enable Address Screen
+
+
+![](/images/notion/4102a97fd6b6.jpg)
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features**, open **Checkout Screens**.
+3. in **ADDRESS** option, turn on **Enable Address**
+4. You can set default values for Country and State fields by input **Default Country ISO Code** and **Default State ISO Code**.
+
+![](/images/notion/902451adb762.png)
+
+
+### Re-Order and Remove Items
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features**, open **Checkout Screens**.
+3. in **ADDRESS** option, scroll down to **Supported address fields**.
+
+![](/images/notion/f4d4233f1822.png)
+
+1. Click and hold an item to reorder.
+2. Click on the eye icon to hide the fields on app.
+3. Click on Edit button to adjust the fields
+    - **Editable**: users can edit the value of the field. If disabling the field, a default value is required.
+    - **Required**: users must input the field (_enabled_) or ignore it (_disabled_).
+
+### Google's libphonenumber
+
+
+On the Address screen, the phone number can be configured, which helps to validate the entered phone number by using Google's libphonenumber. Simpler and cheaper than sending OTP to verify the phone numbers.
+
+
+The feature includes:
+
+- Check validation of Phone Number.
+- Ability to customize Default Country.
+- Use for either normal or international phone numbers.
+- Support customizing the Country List.
+- Show or hide Flag Image.
+- Support RTL language.
+- Have 3 Selector Types for choosing a country list.
+
+![](/images/notion/f5d7fabc5a67.png)
+
+
+Steps:
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features**, open Phone Number Config.
+3. Turn on **Enable Number Validation** as the image below:
+
+![](/images/notion/ca3e39c78fcf.png)
+
+
+## Shipping Screen
+
+
+### Enable Shipping Screen
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features**, open **Checkout Screens**.
+3. In **SHIPPING** option, turn on Enable Shipping to show Shipping page on app.
+
+### Delivery Date Picker
+
+
+The feature supports the Delivery Shipping Date based on Available Time.
+
+
+![](/images/notion/441e7017db2b.png)
+
+
+First, install the Plugin:
+
+- WooCommerce / Pro (WooCommerce) or Multi Vendors (Dokan) apps: install [Order Delivery Date For WooCommerce](https://wordpress.org/plugins/order-delivery-date-for-woocommerce/)
+- MultiVendor (WCFM) app: install [WCFM Delivery Date](https://wclovers.com/knowledgebase/wcfm-marketplace-delivery/)
+- Shopify app: no need to install the plugin.
+
+Then,
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features**, open **Checkout Screens**.
+3. In **SHIPPING** option, turn on **Enable Delivery Date On Checkout**.
+
+![](/images/notion/37b796762a9d.png)
+
+
+### Shipping Countries
+
+
+By default, all available countries from your website are shown in the Shipping Address screen. To limit the country list in the Shipping Address screen, follow these steps:
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features**, open **Shipping Country**.
+3. Turn off Enable Web Option.
+4. In **Supported Country**, you can add, edit or remove the shipping countries available on the app as shown in the image:
+
+![](/images/notion/e6186fed09a8.png)
+
+
+### Shipping Methods
+
+
+The apps also support many shipping methods such as Free shipping, Flat rate, Local pickup (WooCommerce), etc., as you set up on the admin website.
+
+
+<Tip>
+**Local pickup**
+Refers to a transaction where the buyer must physically go to a specified location to collect the purchased item, instead of having it shipped.
+
+This is the guide [https://woocommerce.com/document/local-pickup/](https://woocommerce.com/document/local-pickup/) to set up Local Pickup on your WooCommerce website.
+
+![](/images/notion/f6498b77b0e8.jpg)
+</Tip>
+
+
+## Preview Screen
+
+
+To enable the Preview screen on app, follow these steps:
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features**, open **Checkout Screens**.
+3. In **PREVIEW** option, turn on **Enable Preview** (turn off to hide the Preview screen on app)
+4. Turn on **Enable Customer Note** to show **Your Note** box on the screen.
+
+![](/images/notion/519027de41ef.png)
+
+
+![](/images/notion/b7a8cf339b26.png)
+
+
+## Payments Screen
+
+
+### Guest Checkout
+
+
+This guide shows you how to enable Guest Checkout on the app so that users can purchase products without logging in. 
+
+
+The feature is available for Woocomerce, Pro, Multi Vendors, Shopify and Prestashop apps.
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features**, open **Checkout Screens**.
+3. In **PAYMENT** option, turn on **Guest Checkout**.
+
+![](/images/notion/5eb8b4488bf4.png)
+
+
+### Extra Fees for WooCommerce
+
+
+The WooCommerce Extra Fees plugin lets you apply dynamic extra fees at checkout based on your customer’s choices, making your pricing strategies more flexible and transparent.
+
+
+
+To enable the feature on app, install these plugins on your website:
+
+- [Extra Fees for WooCommerce](https://wordpress.org/plugins/woo-conditional-product-fees-for-checkout/)
+- [The latest MStore API plugin](https://wordpress.org/plugins/mstore-api/)
+
+![](/images/notion/63e28a30cac6.jpeg)
+
+
+![](/images/notion/2c98e91e0695.png)
+
+
+### Hide Payment Methods
+
+
+To hide some unnecessary payment methods on the PAYMENT screen, follow these steps:
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features**, open **Checkout Screens**.
+3. Select the **PAYMENT** option.
+4. In **Excluded Payment Method IDs**, add the payment IDs of the hidden payment methods.
+
+![](/images/notion/aa1e2f424dfe.png)
+
+
+### Show Order Details on Checkout Result
+
+
+Follow this guide to show or hide order details after successful checkout.
+
+
+<Tip>
+Demo
+Show Order Details
+
+![](/images/notion/d2c1c92e36e9.png)
+
+Hide Order Details
+
+![](/images/notion/5d8f755e82e0.png)
+</Tip>
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features**, open **Checkout Screens**.
+3. In the **PAYMENT** option, turn on/off **Show Order Details**.
+
+![](/images/notion/552f886007dc.png)
+
+

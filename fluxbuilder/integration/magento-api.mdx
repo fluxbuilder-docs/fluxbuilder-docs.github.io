@@ -1,0 +1,35 @@
+---
+title: "Magento API"
+---
+
+
+To build your Magento app, install the plugin below on your Magento website so that the app can sync with your data:
+
+
+To get the Integration tokens, follow [this guide](https://developer.adobe.com/commerce/webapi/get-started/).
+
+- Copy [Magento Extension](https://drive.google.com/file/d/1OInenrsptbMk2nLzF1_oTf2qOYD6W6Cd/view?usp=sharing) plugin folder to `app/code` folder on your Magento server.
+This plugin is required for supporting RestAPI to connect the app, support Payment, SMS Login, Facebook Login, and some features.
+- Run this command in the website directory:
+
+    `php bin/magento setup:upgrade`
+
+- Clear the cache on Magento after upgrade:
+
+    `php bin/magento cache:flush`
+
+- Change the Store View code:
+In Admin Site, Move to Stores -> All Stores and click Store View to change the store code. The store code must be language code like: en, ar...
+
+![](/images/notion/4eda930003c2.png)
+
+- If you're using Magento 2.4.x, You need to allow OAuth Access Tokens to be used as standalone Bearer tokens.
+
+```plain text
+Stores > Configuration > Services > OAuth > Consumer Settings > Allow OAuth Access Tokens to be used as standalone Bearer tokens option to Yes
+```
+
+
+That’s all 😊
+
+

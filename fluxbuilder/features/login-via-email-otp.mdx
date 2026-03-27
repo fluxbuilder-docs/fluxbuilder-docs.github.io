@@ -1,0 +1,76 @@
+---
+title: "Login via Email OTP"
+---
+
+
+This section is a guide on how to set up login via email OTP for Shopify app.
+
+
+Now users can log in instantly by entering their existing email. The app sends a secure OTP code, and just like that — they’re in.
+
+
+✅ No need to create a new account
+
+
+✅ OTP sent directly to their email
+
+
+✅ Fast, password-free access
+
+
+### Step 1. Setup on Shopify Dashboard
+
+- Go to your **Shopify Admin Dashboard** → **Settings** → **Customer accounts**
+- Enable the **Customer accounts** feature
+
+    ![](/images/notion/7a9bd3f82014.png)
+
+- Install **Headless** app to your store by clicking to this url [https://apps.shopify.com/headless](https://apps.shopify.com/headless) and then clicking **Install**
+
+    ![](/images/notion/8a62f8d18cff.png)
+
+- Click **Create storefront** to continue
+
+    ![](/images/notion/6e6042af381f.png)
+
+- In the **Customer Account API** section, click **Manage**
+
+    ![](/images/notion/96aa054710a5.png)
+
+- Under the **Client type** section, click **Edit** icon
+
+    ![](/images/notion/96d0de346b73.png)
+
+- Select **Public (mobile app)**, then click **Save**
+
+    ![](/images/notion/1ef25f4b3509.png)
+
+
+### Step 2. Configure on FluxBuilder
+
+- Go to the **Shopify Dashboard** → **App** → search for _headless_ and select **Headless**
+
+    ![](/images/notion/0ffb6fb6782f.png)
+
+- Click on the Headless item created from Step 1
+
+    ![](/images/notion/f3956f1ca1cc.png)
+
+- Click on **Manage** of **Customer Account API** section
+
+    ![](/images/notion/d9bf87877f44.png)
+
+- Retrieve the following two pieces of information:
+1. **Client ID**: under the **Customer Account API credentials**
+
+    ![](/images/notion/281ec4aaa54f.png)
+
+2. **Shop ID**: scroll to the bottom of the page to find it
+
+    ![](/images/notion/8a61214ac05b.png)
+
+- After collecting both values, open your Shopify app on **FluxBuilder**. Go to **Features** and open **Sign In/ Sign Up**. Here, remember to **Enable Login**. Then, scroll to **LOGIN VIA EMAIL OTP**, enable it and submit **Client ID Key** and **Shop ID**.
+
+![](/images/notion/d5c32bb9cffe.png)
+
+

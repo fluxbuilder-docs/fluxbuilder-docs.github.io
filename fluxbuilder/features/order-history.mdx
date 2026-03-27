@@ -1,0 +1,105 @@
+---
+title: "Order History"
+---
+
+
+This guide includes configurations for Order History and Order Details pages on app.
+
+
+## Order History Versions
+
+
+**Version 1:** The client will submit a review on the Order Details screen of the Completed Order.
+
+
+![](/images/notion/5316e195d04f.png)
+
+
+![](/images/notion/2ae024e51c8a.jpg)
+
+
+**Version 2:** The clients will be navigated to a separate Rating screen as the following video:
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/i65HGoXsxzQ"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+Follow these steps to select one version for your app:
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features** and open **Order History**.
+3. Select **Style Version**.
+
+![](/images/notion/795f7f1b091e.png)
+
+
+## Enable Order History 
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Design** and open **Profile** page.
+3. Enable **Order History** in **GENERAL SETTING**.
+
+To view the option on the simulator, please enable **Login Mode**.
+
+
+![](/images/notion/33484cd5ed43.png)
+
+
+## Refund or Cancel
+
+
+To allow users to cancel or return the product, you enable the Refund/Cancel feature. Specifically, the Refund button will be hidden once the refund period expires.
+
+
+The feature is support in Woocommerce, Pro (Woocommerce or Magento), Multi Vendors, Strapi, and BigCommerce apps.
+
+
+To setup the Refund/Cancel buttons on Order Details page, follow these steps:
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features** and open **Order History**.
+3. Enable the option **Allow Refund/Cancel**.
+4. Set **Refund Period** to hide buttons after dates.
+5. Input payment method ids allowing refund/cancel feature in **Refund/Cancel for specific payments** (other payments will not support the feature).
+
+![](/images/notion/15860f0828b9.png)
+
+
+## Show Transaction Details
+
+
+Allow to show or hide Transaction Details (only for Pending Order of the Direct Bank Transfer Payment or Thai PromptPay payments) in the Order History screen.
+
+
+![](/images/notion/254e4a0b011e.png)
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features** and open **Order History**.
+3. Enable **Show Transaction Details**.
+
+![](/images/notion/3af12c0ef827.png)
+
+
+## Show Re-Order Button
+
+
+Allow to show or hide Re-Order button on the Order Detail screen.
+
+1. Open your app on **FluxBuilder**.
+2. Go to **Features** and open **Order History**.
+3. Turn on **Enable Reorder** option.
+
+![](/images/notion/2fdb8682330e.png)
+
+
+That’s all!
+
+

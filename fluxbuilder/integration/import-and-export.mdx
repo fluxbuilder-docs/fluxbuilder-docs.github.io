@@ -1,0 +1,61 @@
+---
+title: "Import and Export"
+---
+
+
+After designing your app via the FluxBuilder tool, you can **Export** custom design and feature files to store on your local device.
+
+
+You can also **Import** these files to continue customization on the FluxBuilder tool.
+
+
+### Video Guide
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/UzVjizGEeXY"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+### Manual Guide
+
+
+Follow the steps below:
+
+
+**Step 1**: Open your app on FluxBuilder. Then set up the Language you want to export/import as below:
+
+
+![](/images/notion/2605d60d2550.png)
+
+
+**Step 2**: Import or Export your files as below. Repeat step 1 if you want to export/import for other languages.
+
+
+![](/images/notion/e2545980b1bd.png)
+
+- (4) `config json` file is the App Design/UI, that you configured on the Design tab:
+
+When Exporting, you need to enter a name of `config json` file to `Config DESIGN` textbox. This is the rule of entered name:
+
+
+| **Config DESIGN textbox**                                                                                         | **Language**              |
+| ----------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| enter `config_`**`en`**`.json` string                                                                             | to export English design  |
+| enter `config_`**`ar`**`.json` string                                                                             | to export Arabic design   |
+| Follow [this guide](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) | to export other languages |
+
+- (3) `env.dart` file is the App Features, that you configured on the Features tab below:
+
+![](/images/notion/d1adfd17d31b.png)
+
+
+That's all!
+
+

@@ -1,0 +1,585 @@
+---
+title: "Social Login"
+---
+
+
+## Biometrics Login
+
+
+This feature is available on almost apps, but Manager and Delivery Boy apps have not supported it yet.
+
+
+A new convenient method for authorizing access to your app by **Face ID** and **Touch ID**. Users will not need to remember the account username and password in the next login.
+
+
+⭐️ Mainly support the 3 screens:
+
+- Login
+- Checkout
+- Using Wallet
+
+Biometrics will be applied to your available screens that are included in the 3 above screens.
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/1LrCsgGjfW8"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+**Configure:** go to your app on FluxBuilder. Then on the `Profile` tab (Settings screen), enable the `Biometrics` option:
+
+
+![](/images/notion/4737b70dd415.png)
+
+
+---
+
+
+## Apple Login 
+
+
+✅ This guide is for WooCommerce, Opencart, Magento, PrestaShop, WordPress.
+
+
+❌ Not use for Shopify, BigCommerce, Notion, Strapi.
+
+
+![](/images/notion/81b2f893b1ff.png)
+
+
+Follow steps below to enable Apple Login:
+
+
+### 1. Execute the Firebase Settings 
+
+
+Create your project on Firebase. Then add iOS App into your project following this guide [Firebase Settings](https://docs.fluxbuilder.com/firebase-settings). _(Skip this step if you already did.)_
+
+
+### 2. Setup Apple in Firebase project
+
+
+Step 1: Open the Firebase page [https://console.firebase.google.com](https://console.firebase.google.com/) 
+
+
+Step 2: Open your Firebase project. Then in the left menu bar, select the [Build] item, and click the [Authentication] item:
+
+
+![](/images/notion/fe5624e91894.png)
+
+
+Step 3: Select the [Get Started] button:
+
+
+![](/images/notion/79e1f1249436.png)
+
+
+Step 4: Click the [Apple] item:
+
+
+![](/images/notion/01c2825052c2.png)
+
+
+Step 5: Turn on the Enable option, then click the Save button.
+
+
+### 3. Update Team ID & Bundle ID
+
+
+Step 1: Open the Firebase page [https://console.firebase.google.com](https://console.firebase.google.com/) 
+
+
+Step 2: Open your Firebase project. Click the gear icon in the upper left corner, and select the [Project settings] item:
+
+
+![](/images/notion/cfbea7c1f142.png)
+
+
+Step 3: Select your iOS app, then add Team ID and iOS Bundle ID to [your iOS App](https://tppr.me/4OmX0).
+
+- Go to [Apple Developer](https://developer.apple.com/account/#/membership/) and get the Team ID
+- Go to [AppStoreConnect](https://appstoreconnect.apple.com/apps/) and get your [Apple ID](https://tppr.me/OOdDD)
+- Save them to a note for later usage
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/FTzLZJanQOo"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+"How to create Bundle ID for iOS app on Windows or Mac?”
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/ZYQoKhsv2-I"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+### 4. Create Apple Sign In Key & Upload .p8 File
+
+
+Step 1: Go to [Apple Developer](https://developer.apple.com/account/#/membership/) and create new **Keys**
+
+
+![](/images/notion/13f5fc64fd34.png)
+
+
+![](/images/notion/b5e3e71d4d70.png)
+
+
+Step 2: Input the **Key Name. S**elect **Sign In with Apple** option and click **Configure** to edit.
+
+
+![](/images/notion/ee18d4b829c4.png)
+
+
+Step 3: Select **Primary App IDs** and **Save**
+
+
+![](/images/notion/2323404680e7.png)
+
+
+Step 4: Now click **Continue** and **Register**
+
+
+![](/images/notion/968f58e97777.png)
+
+
+![](/images/notion/a8f47cc25830.png)
+
+
+Step 5: After registering the new key successfully, download the key file
+
+
+![](/images/notion/7b72ca3ff1ec.png)
+
+
+Step 6: Upload the key file into **Mstore API** of your admin site.
+
+
+![](/images/notion/552f21dabeab.png)
+
+
+### 5. Enable Apple Login on FluxBuilder 
+
+
+Turn on the Google Login option on FluxBuilder by steps:
+
+
+Step 1: On FluxBuilder, open your app. 
+
+
+Step 2: Select **Features** on left menu. Click **Sign In/Sign Up** button (in the General section). 
+
+
+Step 3: Enable **Apple Login** option. Enter `IOS Bundle ID` and `Apple Account Team ID`. Then click **Apply**. 
+
+
+![](/images/notion/6e34d672429f.png)
+
+
+---
+
+
+## Google Login
+
+
+✅ This guide is for WooCommerce, Opencart, Magento, PrestaShop, WordPress.
+
+
+❌ Not use for Shopify, BigCommerce, Notion, Strapi.
+
+
+<Tip>
+For Firebase projects created since September 15 2023, the setting to protect against email enumeration is enabled by default. This setting makes it harder for malicious user to find out what users are in your project by changing the responses of some APIs, and disabling other APIs completely.
+While this protects your users from abuse, but unfortunately the API no longer distinguishes between 'user-not-found' and 'wrong-password' anymore and throws a more generic error instead. This causes errors when signing in to your app with Google.
+
+Therefore, you need to disable email enumeration protection to be able to sign in with Google normally in your app. Please refer to the following link to disable email enumeration protection. Ref: [https://cloud.google.com/identity-platform/docs/admin/email-enumeration-protection#disable](https://cloud.google.com/identity-platform/docs/admin/email-enumeration-protection#disable)
+</Tip>
+
+
+**Video guide:**
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/bJQC3fXXqtg"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+**Manual guide:** Follow steps below to enable Google Login:
+
+
+### 1. Execute the Firebase Settings 
+
+
+Create your project on Firebase. Then add Android App and iOS App into your project following this guide [Firebase Settings](https://docs.fluxbuilder.com/f584d7ee-720d-4ee1-a44b-6fc5cf4c036a). _(Skip this step if you have already done this step before.)_
+
+
+### 2. Setup OAuth consent screen
+
+
+To set up a login with Google, let’s set up the **OAuth consent screen** for your Firebase project.
+
+
+**Step 1**: Open the Google Cloud page [https://console.](https://console.cloud.google.com/)[developers.google.com](https://console.developers.google.com/)
+
+
+**Step 2**: Click the [Select a project] button:
+
+
+![](/images/notion/6c059d8c536b.png)
+
+
+**or** click the name of your projects (it may show the name of your projects):
+
+
+![](/images/notion/8b12d41cf9c6.png)
+
+
+Select the project you want to setup. If you cannot find them in the `RECENT` project list, please click `ALL` to display them all and select the project:
+
+
+![](/images/notion/12299c3a3014.png)
+
+
+![](/images/notion/b88e2010fa3a.png)
+
+
+**Step 3**: On the left menu, select the `OAuth consent screen`
+
+
+![](/images/notion/1315d976f4f5.png)
+
+
+**Step 4**: Choose `External` and click `CREATE`
+
+
+![](/images/notion/2fee9d8641a0.png)
+
+
+**Step 5**: Fill in some necessary information on the **OAuth consent screen**:
+
+- Enter your [App name], [User support email], and Logo:
+
+![](/images/notion/eaedd9256e36.png)
+
+- Enter your [Application Homepage link], [Privacy policy link], and [Terms of Service link]. If you do not have these links, use the default link below _(don't forget to add `https://`)._
+Enter your [Authorized domain] or use the default _fluxstore-login.firebaseapp.com_ _(The [Authorized domain] will not have `https://`)_
+
+![](/images/notion/86e0497c5f85.png)
+
+- Enter the [Email addresses]. 
+Click the [SAVE AND CONTINUE] buttons until finish the OAuth consent screen. 
+Then select the [BACK TO DASHBOARD] button, you will see this screen:
+
+![](/images/notion/be1048800e85.png)
+
+
+That’s all. You have set up the OAuth consent screen successfully.
+
+
+### 3. Setup Google in Firebase project
+
+
+Step 1: Open the Firebase page [https://console.firebase.google.com](https://console.firebase.google.com/) 
+
+
+Step 2: Open your Firebase project. Then in the left menu bar, select the [Build] item, and click the [Authentication] item:
+
+
+![](/images/notion/3173571aad4e.png)
+
+
+Step 3: Select the [Get Started] button:
+
+
+![](/images/notion/281335e552c8.png)
+
+
+Step 4: Click the [Google] item:
+
+
+![](/images/notion/6376bf21f90c.png)
+
+
+Step 5: Turn on the Enable option, then click the Save button:
+
+
+![](/images/notion/ac82123dd321.png)
+
+
+### 4. Update SHA-1 and SHA-256
+
+- Follow [this guide](https://docs.fluxbuilder.com/sha-1-and-sha-256) to get and update SHA-1 and SHA-256 into your Android App in your Firebase project.
+- When finishing settings, **download the [google-services.json] file** _**(and save this important file to use later)**__:_
+
+![](/images/notion/ef65064dd432.png)
+
+
+### 5. Enable Google Login on FluxBuilder 
+
+
+Turn on the Google Login option on FluxBuilder by steps:
+
+
+Step 1: On FluxBuilder, open your app. 
+
+
+Step 2: Select **Features** on left menu. Click **Sign In/Sign Up** button (in the General section). 
+
+
+Step 3: Enable **Google login option.**
+
+
+![](/images/notion/2438e46982c5.png)
+
+
+That’s all :)
+
+
+---
+
+
+## Facebook Login
+
+
+✅ This guide is for WooCommerce, Opencart, Magento, PrestaShop, WordPress.
+
+
+❌ Not use for Shopify, BigCommerce, Notion, Strapi.
+
+
+Follow steps below to enable Facebook Login:
+
+
+### 1. Execute the Firebase Settings 
+
+
+Create your project on Firebase. Then add Android App and iOS App into your project following this guide [Firebase Settings](https://docs.fluxbuilder.com/f584d7ee-720d-4ee1-a44b-6fc5cf4c036a). _(Skip this step if you already did)_
+
+
+### 2. Setup Facebook in Firebase project
+
+
+Step 1: Open the Firebase page [https://console.firebase.google.com](https://console.firebase.google.com/) 
+
+
+Step 2: Open your Firebase project. Then in the left menu bar, select the [Build] item, and click the [Authentication] item:
+
+
+![](/images/notion/662867939751.png)
+
+
+Step 3: Select the [Get Started] button:
+
+
+![](/images/notion/b17c6fee2103.png)
+
+
+Step 4: Click the [Facebook] item:
+
+
+![](/images/notion/09da549d8e67.png)
+
+
+Step 5: Turn on the Enable option
+
+
+![](/images/notion/87d6fa00a669.png)
+
+
+Enter [App ID] and [App secret] (Go to [facebook app](https://developers.facebook.com/apps/) and get them [here](https://tppr.me/Cfdr4). _(Save them to a note for later usage_)
+
+
+Then click the Save button.
+
+
+### 3. Add Facebook base64 keys
+
+- Go to this [site](https://tomeko.net/online_tools/hex_to_base64.php) and convert the SHA-1 keys to **base64**. Copy the output **base64** and paste them in Facebook Login -> QuickStart -> Android -> [section 6](https://tppr.me/RlJuq).
+
+### 4. Enable Facebook Login on FluxBuilder
+
+
+Turn on the Facebook Login option on FluxBuilder by steps:
+
+
+Step 1: On FluxBuilder, open your app. 
+
+
+Step 2: Select **Features** on left menu. Click **Sign In/Sign Up** button (in the General section). 
+
+
+Step 3: Enable **Facebook Login** option. Enter your Facebook’s information. 
+
+
+![](/images/notion/72635f11215f.png)
+
+
+---
+
+
+## SMS Login
+
+
+✅ This guide is for WooCommerce, Opencart, Magento, PrestaShop, WordPress.
+
+
+❌ Not use for Shopify, BigCommerce, Notion, Strapi.
+
+
+<Tip>
+_Starting September 2024, to improve the security and service quality of Phone Authentication, Firebase projects must be linked to a Cloud Billing account to enable and use the SMS Service". So you need to link your project to a Cloud Billing account if you plan to enable Phone Authentication, or currently have it enabled. And then upgrade the Firebase subscription plan to Blaze to be able to use phone authentication for your project._
+</Tip>
+
+
+### Setup SMS Login
+
+
+Follow steps below to enable SMS Login:
+
+
+**1. Execute the Firebase Settings** 
+
+
+Create your project on Firebase. Then add Android App and iOS App into your project following this guide [Firebase Settings](https://docs.fluxbuilder.com/firebase-settings). _(Skip this step if you already did)_
+
+
+**2. Update SHA-1 and SHA-256**
+
+- Follow [this guide](https://docs.fluxbuilder.com/sha-1-and-sha-256) to get and update SHA-1 and SHA-256 into your Android App in your Firebase project.
+- In case you meet this issue: After creating APK and releasing the app in **App Stores**, you may get an error when logging in with **SMS Login**. You need to go to the **App stores** and copy the **SHA-1** and **SHA-256** and paste to your **Firebase** setting:
+
+![](/images/notion/2fae1fa1b691.jpg)
+
+
+![](/images/notion/2857440f9243.jpg)
+
+
+**3. Enable SMS Login on FluxBuilder** 
+
+
+Turn on the SMS Login option on FluxBuilder by steps:
+
+
+Step 1: On FluxBuilder, open your app. 
+
+
+Step 2: Select **Features** on left menu. Click **Sign In/Sign Up** button (in the General section). 
+
+
+![](/images/notion/ad9906aa5c52.png)
+
+
+### SMS Default Country
+
+
+![](/images/notion/f76d4862d376.png)
+
+
+### SMS Login by Default
+
+
+You can set _only allow_ login to the app via SMS.
+
+
+![](/images/notion/2e9e88d07b8f.png)
+
+
+### New SMS Login
+
+- Another UI of Registration Form of SMS login:
+
+![](/images/notion/a8593b90f02f.gif)
+
+- Allow updating Email, Password after registration.
+- Enable this new feature by go to **Features** > **General** > **Sign In/Sign Up** > enable **SMS Login** > enable **Use New SMS Login**
+
+![](/images/notion/e0ef031191fc.png)
+
+
+### SMS OTP Digits plugin
+
+
+This Digits WordPress plugin is Not compatible with 'New SMS Login' above. It is available for **SMS Login** (OTP SMS).
+
+
+Instead of remembering a password, the feature supports users signing up and logging in with their Phone Number and One Time Passcode (OTP) on SMS. The feature also helps to avoid fake orders.
+
+
+![](/images/notion/e753630e1641.jpg)
+
+
+First, install the [Digits: WordPress Mobile Number Signup and Login](https://codecanyon.net/item/digits-wordpress-mobile-number-signup-and-login/19801105) plugin on your website. Make sure that the plugin works well on your backend.
+
+
+Then open app on FluxBuilder, go to **Features** > **General** > **Sign In/Sign Up** > enable **SMS Login** and **Custom SMS Login Plugin**:
+
+
+![](/images/notion/ec17b94ac705.png)
+
+
+---
+
+
+## Logo and Others
+
+
+This guide shows the way to:
+
+1. Change Logo on Sign Up and Sign In  screen
+2. Require users to login before using the app
+3. Show Phone field on the Sign Up screen
+4. Require users to input Phone Number on the Sign Up screen
+5. Show Reset Password and URL to reset on the Sign In screen.
+
+### 1. Logo
+
+
+To change **Logo on Login screen:**
+
+
+![](/images/notion/be5143ffffe3.png)
+
+- Open app on FluxBuilder
+- go to **Features** > **Branding** > **Theme and Logo**
+- Add **Theme Logo** > click **Update**
+
+![](/images/notion/3b19b5d59add.png)
+
+
+### 2. Others
+
+1. Open app on FluxBuilder.
+2. Go to **Features** on the side menu.
+3. In **General** section, select **Sign In/Sign Up**.
+4. Enable these items if you need:
+    - **Required Login**: Require users to login before using the app
+    - **Show Phone Number Field**: Show Phone field on the Sign Up screen
+    - **Require Phone Number**: Require users to input Phone Number on the Sign Up screen
+    - **Show Reset Password** : Show Reset Password button on the Sign In screen
+    - **Custom Reset Password URL**: Edit the url of reset password
+

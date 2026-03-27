@@ -1,0 +1,179 @@
+---
+title: "Push Notifications via OneSignal"
+---
+
+
+You can push notifications to your clients using [Firebase](https://docs.fluxbuilder.com/push-notifications-via-firebase) or OneSignal. This guide explains the way to use OneSignal to push notifications, configure/disable In-App messages to your users, .
+
+
+<Tip>
+Remember to **disable OneSignal** if you use [Push Notifications via Firebase](/bdfad4a1c2d84e9397b95338e960b843).
+</Tip>
+
+
+## Step 1. Configure OneSignal
+
+
+Push Notifications is a useful Flutter plugin. With this plugin, your Flutter app can receive and process push notifications on Android and iOS.
+
+
+**Requirements**
+
+- A [OneSignal account](https://dashboard.onesignal.com/signup) if you haven't had one.
+- A [OneSignal App ID](https://documentation.onesignal.com/docs/accounts-and-keys#section-app-id)
+
+**Credentials Setup**
+
+
+Before setting up **OneSignal**, you must generate the appropriate credentials for the platform(s) you are releasing on:
+
+- iOS - [Generate an iOS Push Certificate](https://documentation.onesignal.com/docs/en/ios-p8-token-based-connection-to-apns)
+- Android - [Generate a Google Firebase Server API Key](https://documentation.onesignal.com/docs/en/android-firebase-credentials)
+
+### iOS Setup
+
+
+**Step 1:** iOS Push Notification Certificate.
+
+- Once again, in order to set up and enable the push notification feature in iOS devices, you must [generate an iOS Push Notification Certificate and upload it to OneSignal](https://documentation.onesignal.com/docs/en/ios-p8-token-based-connection-to-apns)
+
+**Step 2:** Run your app and push notifications.
+
+- Note that the iOS Simulator does not support receiving remote push notifications. Therefore, you must run your app on a physical iOS device in order to test this feature.
+- Test your app on a physical iOS device to make sure it builds correctly. You should be prompted to subscribe to notifications and you should be able to send yourself a notification from the **OneSignal dashboard**.
+- To send a push on an iOS device, please refer [OneSignal official documents](https://documentation.onesignal.com/docs/en/mobile-push-setup)
+
+### Android Setup
+
+
+**Step 1: Generate new private key.**
+
+- Login to Firebase Console and open your app.
+- Click the gear icon in the top left and select **Project settings**.
+
+![](/images/notion/a4cd5d88ac3b.png)
+
+- Select the **CLOUD MESSAGING** tab, and ensure Cloud Messaging API (V1) is enabled.
+
+![](/images/notion/526db77949a1.png)
+
+- Open **Service Accounts** tab, and click on `Generate new private key` button.
+
+![](/images/notion/ddb0a8c6c11e.png)
+
+- Click on `Generate key` to save the file.
+
+![](/images/notion/f588283fc269.png)
+
+
+**Step 2: Configure your OneSignal app's Android Platform Settings**
+
+- In the OneSignal dashboard, select your app from the All Apps page, then go to **Settings**. Click on **Set up Push & In-App** button.
+
+![](/images/notion/cf913f6e642a.png)
+
+- Now, select **Google Android (FCM)**. Click on `Continue` button.
+- Here, click on `Choose File` to upload the private key file. Click on `Save & Continue` button.
+
+![](/images/notion/3fee94f599ad.png)
+
+- On this screen, select **Flutter** option. Click on `Save & Continue` button.
+- Copy and save the App ID for later use.
+
+![](/images/notion/acdcaaf2d776.png)
+
+- On the **Settings** screen, click on `Keys & IDs` .
+
+![](/images/notion/25d4088810a1.png)
+
+- After that, click on `Add key` button, input **Name,** and click `Create` to generate API key.
+
+![](/images/notion/78761260164f.png)
+
+- Save the API key for later use.
+
+![](/images/notion/8a0f2d73ebfe.png)
+
+
+**Step 3: Configure the feature in app**
+
+1. Open your app on FluxBuilder.
+2. Go to **Features** → **General** → **OneSignal** → turn on **Enable OneSignal** and input **App ID.**
+3. Click **Apply** and then **Save**.
+
+![](/images/notion/6ab820d31bee.png)
+
+
+### Add an icon on Notifications
+
+
+![](/images/notion/43b619f608bd.png)
+
+
+To custom icon of notification item, you need to add an `image` field in additional data when pushing the notification like this:
+
+
+![](/images/notion/f6c171b7ed71.png)
+
+
+---
+
+
+## Step 2. Push Notifications
+
+
+### Messages 
+
+
+Push messages to customers’ smartphone. **There are 2 ways:**
+
+1. Using the FluxBuilder:
+
+    ![](/images/notion/aa7b34a9800a.png)
+
+2. Or using Onesignal
+- At **OneSignal dashboard**, click on the **Messages** icon at the top menu bar. In the **Messages** tab, click on the **New Push** button.
+
+![](/images/notion/c9b643196c3a.png)
+
+- On the **New Message** screen, choose your **Audience**, then enter the message **TITLE**, **SUBTITLE** (iOS), **MESSAGEIMAGE**, and **LAUNCH URL**.
+
+![](/images/notion/0cdadff51032.png)
+
+
+![](/images/notion/11cd8eb3f123.png)
+
+- At the end click on **confirm**. It will show you a pop-up for confirmation. Click **Send** **Message**
+
+For advance settings, please refer to [OneSignal official documents](https://documentation.onesignal.com/docs/sending-notifications)
+
+
+### In-App
+
+
+Show messages on the App when customers open your App by smartphone.
+
+
+![](/images/notion/a7189358250b.png)
+
+
+If you have configured the OneSignal library successfully, there is a great feature to support **In-App Messages** from OneSignal. The flexible UI will dynamically be displayed on your mobile app instantly or scheduled based on your plan.
+
+
+To enable this feature, make sure to pass the config on the above guideline, then log in with your own **OneSignal Account**, select **Project** > **Messages** > **In-App,** you can create a new In-app message or use the default templates from OneSignal.
+
+
+![](/images/notion/492fa5b62835.png)
+
+
+### Notification Request Screen
+
+
+To ask for **User** **Notification Permission** at the first time opening:
+
+1. Open your app on **FluxBuilder** → **Features** → in **Branding**, select **Notification Request Screen**
+2. **Enable** the feature → click **Apply** and **Save**
+
+![](/images/notion/c7d00ca76579.png)
+
+

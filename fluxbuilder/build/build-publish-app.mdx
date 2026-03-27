@@ -1,0 +1,359 @@
+---
+title: "Build & Publish App"
+---
+
+
+Build your own applications and publish them to the Google Play and App Store to promote your business.
+This guide shows the way to automatically build your PWA, iOS & Android apps **on our server**:
+
+- No environment installation required.
+- Help Windows users build the iOS app without a Mac.
+- Auto-publish your iOS app to TestFlight.
+
+## 1. Precondition
+
+- You have installed the [required API](https://docs.fluxbuilder.com/create-your-app#6dfb4367efd04d5aba21c28495e94b0c).
+- Not use transparent background, special characters, or space in the files name (of **app icon file, provisioning, certificate**). They should be in English.
+- If you want to update your Apps later without re-publishing, follow [this guide](https://docs.fluxbuilder.com/update-app-without-republishing/) first.
+- To build a **multi-language app**, please follow [this guide](https://docs.fluxbuilder.com/update-app-without-republishing) first.
+- Be sure you have created your developer account on App Store and Google Play.
+- For building an iOS app, you need to create an app on App Store Connect first. Please go to [https://appstoreconnect.apple.com/apps](https://appstoreconnect.apple.com/apps) and create an app with your bundle ID. Just create the empty app and FluxBuilder then will build and submit your app to TestFlight automatically.
+
+## 2. Build Android app
+
+
+**Video Guide**
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/2sK9XbZNoqo"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+**Manual Guide**
+
+
+On the left menu, select `Build` > `Cloud`, then follow the steps below:
+
+
+1.  Select `Android APK` or `Android App Bundle`
+
+
+2.  Update your `Bundle ID` and click `UPDATE`_. Your Bundle ID must not include_ [_reserved keywords_](https://dart.dev/guides/language/language-tour#keywords)_._ 
+
+
+
+![](/images/notion/72f68b9a2881.png)
+
+
+3.  Input Google services file and Key Store's information:
+
+
+![](/images/notion/ffb668d0fc68.png)
+
+
+💠 Input your Keystore's information if you already had them. 
+
+
+If you do not have a keystore, click **CREATE KEYSTORE** button to create it automatically:
+
+- ‼Make sure to see the “[How to create a Keystore correctly?](https://docs.fluxbuilder.com/create-keystore-file)” guide.
+- Input a string to the key password and store password textboxes _(they must be the same, at least 6 characters)_
+- Select **CREATE** button.
+
+💠 After updating Keystore file, the `SHA-1` and `SHA-256` keys will display automatically. Or click **Get SHA Keys** to generate the keys. Save the keys for later use.
+
+
+💠 If needed, click **Create PEM File** to get the PEM file through email.
+
+
+💠 Input your Google services file: click the folder icon, refer to your `google-services.json` file 
+
+
+4.  Input app information as below:
+
+
+![](/images/notion/35fee5d9c6bb.png)
+
+
+💠 App Name: Input your app name _(at least 2 characters)_
+
+
+💠 Choose App Icon: Do not use transparent background, special characters, or space in the file name . They should be in English.
+
+
+💠 App Version: format of x.x.x
+
+
+💠 Build Version: greater than 1
+
+
+💠 Choose Notification Icon: Use transparent background icon
+
+
+💠 Notification Accent Color
+
+
+💠 Git Repository: If you have customized FluxStore source code and want to build app using it, click the Git Repository button - refer to [this guide](https://docs.fluxbuilder.com/build-and-publish-your-app#1d6cbb074f6280d297b7f3f319783ae9). If not, please ignore this button. 
+
+
+💠 Export env.dart & config JSON automatically:
+
+- Turn on this option to build your app with all configured UI & Features that you have edited with FluxBuilder. _(Recommended)_
+- Turn off that option if you have your own/edited `env.dart` and `config_en.json`
+- To build **Multi-language apps**, be sure to enable this option and configure [this document first](https://docs.fluxbuilder.com/update-app-without-republishing).
+
+💠 Upload information: select this button to save all your configuration.
+
+
+💠 Submit Build: Then click this button to start building apps. The result and APK, AAB files will be sent to your email after 5-15 minutes.
+
+
+Finish!
+
+
+## Release the App to Google Play
+
+
+**Video guide**: 
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/TT64miRsjAQ"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+**Manual guide**: For detailed instructions on publishing your app to the Google Play Store, check out the [Google Play launch](https://developer.android.com/distribute) documentation. 
+
+
+## 3. Build iOS App
+
+
+**Video Guide**
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/TlaKvETROwg"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+**Manual Guide**
+
+
+On the left menu, select `Build` > `Cloud`, then follow the steps below:
+
+
+1.  Select `iOS IPA`
+
+
+2.  Update your `Bundle ID` and click `UPDATE` button. _(the way to create Bundle ID of iOS app in_ [this guide](https://www.youtube.com/watch?v=ZYQoKhsv2-I&t=5s)_). Your Bundle ID must not include_ [_reserved keywords_](https://dart.dev/guides/language/language-tour#keywords)_._
+
+
+
+![](/images/notion/bb191dbeb7a6.png)
+
+
+"How to create Bundle ID for iOS app on Windows or Mac?” 
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/ZYQoKhsv2-I"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+3.  Input information of Apple Store Connect, Certificate, Google service files as below:
+
+
+![](/images/notion/0b489453abcb.png)
+
+
+💠 Input information of **Admin Role** `Apple Store Connect API Private key` _(file will have an extension_ _`.p8`__)._ Make sure to login by using the Owner of the App Store Account to create the key, see [Creating API Keys for App Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api) or [go here to create it](https://appstoreconnect.apple.com/access/api).
+
+
+![](/images/notion/8b6d0ea92288.png)
+
+
+💠 Input your certificate file .p12 and its password. (_Distribution_ or _iOS Distribution_ permissions)
+
+
+If you do not have it, select **Manually** or **Automatically** to create a new one.
+
+
+_**If getting an issue when creating a certificate**__, because it already exceeded the number of certificates with Distribution and iOS Distribution permissions, please go to_ [_Apple Developer_](https://developer.apple.com/) _to Revoke one as these steps:_
+
+1. [_Login_](https://tppr.me/76rMT) _with your dev account_
+2. _Click Account >_ [_Certificates_](https://tppr.me/RfdwZ) _(or go to_ [_this link_](https://developer.apple.com/account/resources/certificates/list)_)._
+3. _Select an_ [_old Distribution or iOS Distribution certificate_](https://tppr.me/QJfko)
+4. _Select_ [_Revoke_](https://tppr.me/2Dn2N) _- now you can continue to click_ Manually _or_ Automatically _to create a new certificate._
+
+💠 Input the GoogleService-Info.plist file by selecting the folder icon
+
+
+4. Input the information of your app as below:
+
+
+![](/images/notion/6b719d9e8bce.png)
+
+
+💠 App Name: Input your app name _(at least 2 characters)_
+
+
+💠 Choose App Icon: Do not use transparent background, special characters, or space in the file name . They should be in English.
+
+
+💠 App Version: format of x.x.x - If your App version is already published on App Store. Please increase the App version to a higher number in order to upload the new build to Test Flight.
+
+
+💠 Build Version: remember to update the **Build version** _by_ [_increasing this number_](https://tppr.me/JKqHf) _of build versions whenever you build_.
+
+
+💠 Git Repository: If you have customized FluxStore source code and want to build app using it, click the Git Repository button - refer to [this guide](https://docs.fluxbuilder.com/build-and-publish-your-app#1d6cbb074f6280d297b7f3f319783ae9). If not, please ignore this button. 
+
+
+💠 Export env.dart & config JSON automatically:
+
+- Turn on this option to build your app with all configured UI & Features that you have edited with FluxBuilder. _(recommended)_
+- Turn off that option if you have your own/edited `env.dart` and `config_en.json`
+- To build **Multi-language apps**, be sure to enable this option and configure [this document first](https://docs.fluxbuilder.com/update-app-without-republishing).
+
+💠 Upload information: select `Upload information` button to save all your configuration.
+
+
+💠 Submit Build: then click `Submit Build` button. If building the IPA file successfully, it will be uploaded to TestFlight. The result will be sent to your email after 18-20 minutes (then wait 5-30 minutes for [TestFlight approval](https://tppr.me/lOUsr)).
+
+
+Finish!
+
+
+## View your iOS app
+
+
+After receiving the email that notifies you have built the iOS app successfully, follow the steps below to test your iOS app on your smartphone:
+
+
+1. Go to [App Store Connect](https://appstoreconnect.apple.com/), then sign in with your Apple ID.
+
+
+2. Select `My Apps`
+
+
+![](/images/notion/cc4f00c645f8.png)
+
+
+3. Select your app, then choose `TestFlight`
+
+
+![](/images/notion/1cc740918104.png)
+
+
+4. Now you can check the App Version and the Build Version to view the correct one have built:
+
+
+![](/images/notion/5357d67ff933.jpg)
+
+
+5. Open TestFlight on your iOS smartphone to test the app. Enjoy!
+
+
+## Release the App to the App Store
+
+
+**Video guide**: 
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/zmKSyWKgfRY"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+**Manual guide:** [Release for iOS](https://docs.flutter.dev/deployment/ios#release-your-app-to-the-app-store)
+
+
+## 4. Build PWA
+
+
+FluxBuilder now supports the PWA Build feature. You can find detailed guides on configuration and building at this [LINK](/182cbb074f6280618e9ec65192b67302).
+
+
+## 5. Build with Git Repository
+
+
+In case you want to auto-build Android & iOS apps, and PWA with your **customized** [FluxStore source code](https://1.envato.market/21VBJA), follow this guide.
+
+
+To begin building with your Git repository, follow the platform-specific guides above (Android, iOS, or PWA). Then, at **Step 4 – Build on Cloud**, before selecting **Upload Information** or **Submit Build**, make sure to complete the following steps:
+
+
+Step 1: Save token from your Git Account 
+
+
+_Choose one of the 2 ways below:_
+
+
+**Github:**
+
+- Go to the [Settings](https://github.com/settings/profile) of your Account Profile, open **Developer Settings** on the side menu.
+- Click **Personal access tokens,** select **Token (classic).**
+- Click **Generate new token** button → select **Generate new token (classic).**
+- In **New Personal Access Token (Classic)**, input **Note**, select **Expiration** date and check **repo** option → click **Generate Token** button.
+- Now, save the token to your local for later use.
+
+**Gitlab:**
+
+- Go to the [Preferences](https://gitlab.com/-/profile/preferences), open **Access Token** on the side menu.
+- In **Personal Access Tokens**, click **Add new token** button.
+- Input **Token Name**, select **Expiration Date**, and check **api** option → click **Create personal access token** button.
+- Now, save the token to your local for later use.
+
+Step 2: Back to the Build screen of FluxBuilder, click on **Git Repository** button.
+
+
+![](/images/notion/6b47a926e20e.png)
+
+
+Step 3: On **GIT REPOSITORY** dialog, turn on **Enable Git Repository** and fill in all fields as below:
+
+
+![](/images/notion/fd48fe953867.png)
+
+- **Keep Source Config**: enable to build with the existing config files of design and features in Git Repository.
+- **Git Clone URL**: input your Git URL.
+- **Branch**: input the build branch.
+- **Username**: input your Github / Gitlab username.
+- **Token**: input token got from your Git account.
+- **Flutter**: select Flutter version to build your Git.
+- Click **Update Git Repository** to update.
+
+Step 4: Click **Upload Information** and then **Submit Build** button.
+
+

@@ -1,0 +1,229 @@
+---
+title: "App Activation"
+---
+
+
+This guide shows you how to:
+- Create your app after successfully subscribing to a plan (from the website [https://fluxbuilder.com/pricing](https://fluxbuilder.com/pricing) or any webpage).
+- How to move your app to the subscribed plan.
+- How to subscribe to a plan for your app.
+- How to apply a discount coupon.
+
+
+## 1. How to create app after Subscribing?
+
+
+If you subscribed a plan successfully from official website [https://fluxbuilder.com/pricing](https://fluxbuilder.com/pricing) or any webpage, please follow these steps below to create your app:
+
+
+### Video guide
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/35LflXFXgl4"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+### Manual guide
+
+
+Step 1 - [Download](/6056d6e982d94d1180d17ce667ccf4e9) FluxBuilder. 
+
+
+Step 2 - [Sign up](/22c6a812fe8943f197e15e60fafc2d90) to FluxBuilder with your email that you have subscribed the plan. 
+
+
+Then login _(If you have logged in to FluxBuilder,_ _**sign out and login again**_ _)._ 
+
+
+Step 3 - You will see this “Flutter Application” button (or “Get Started with Sumo” button), click on it:
+
+
+![](/images/notion/f2a5bc91349d.png)
+
+
+**Step 4 - App Information**
+
+
+Input the App Information as below:
+
+- **App Name** (required): input the name of your App/
+- **App Category** (required): select the field of the App.
+- **Short Description** (optional): input basic information about the app.
+- **Upload Logo** (optional): upload the logo of App in both Light Theme and Dark Theme. It can be changed later.
+
+![](/images/notion/f050d368760b.jpg)
+
+
+**Step 5 - Server Integration**
+
+
+![](/images/notion/cf3167778f06.png)
+
+
+Input your `Website URL` or `IP address of the HOSTING service` (e.g. https://1.100.67.68), select your website Framework, input API Keys/Access Token (if any), then click Run Troubleshoot 
+
+- Make sure you input https instead of http
+- Make sure you do not input sub-folder domain like this [https://yaari.store/pk-en](https://yaari.store/pk-en) because it causes Rest API issue. Please change to subdomain or main domain.
+- Guides to get the [Magento’s access token](https://devdocs.magento.com/guides/v2.3/get-started/authentication/gs-authentication-token.html), [Shopify’s access token](https://shopify.dev/api/examples/storefront-api), [PrestaShop’s API Key](https://devdocs.prestashop-project.org/1.7/webservice/tutorials/creating-access/).
+
+If getting failed, please click ? icon at the end of the Failed Message to see the solution:
+
+
+![](/images/notion/206c330551ee.png)
+
+
+**Step 6 - Select a template**
+
+
+![](/images/notion/3103ca23bde4.png)
+
+
+---
+
+
+**Step 7 - Choose Color and Font** 
+
+
+These settings can also be edited later. Now, click **CREATE APP** to start your journey.
+
+
+---
+
+
+### Common Issues
+
+- If you see a `failed` message after clicking on `Run Troubleshoot`, please click on the `failed` button to view the solution. Alternatively, you can check the solutions listed below:
+
+    | Failed item🚨            | Solution ✅                                                                                                                                                                        |
+    | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    |                          | Make sure you do not input sub-folder domain like this https://yaari.store/pk-en. Please change to subdomain or main domain                                                       |
+    |                          | Make sure you input `https` instead of http                                                                                                                                       |
+    | SSL Verification         | Please select `Run Troubleshoot` again or Ignore it.                                                                                                                              |
+    | Permalink Setting        | Check your backend to see if it works https://`your website`/wp-json/wc/v2/products?consumer_key=`your ck key`&consumer_secret=`your cs key`                                      |
+    | CS & CK Authorization    | Please input your Consumer Key and Consumer Secret, following [this guide](https://docs.woocommerce.com/document/woocommerce-rest-api/).                                          |
+    | CS & CK Validation       | Make sure you have inputted the correct Consumer Key and Consumer Secret, , following [this guide](https://docs.woocommerce.com/document/woocommerce-rest-api/).                  |
+    | WooCommerce Connectivity | Your REST APIs are not enabled on your website, please follow [this guide](https://docs.fluxbuilder.com/woocommerce-api).                                                         |
+    | PrestaShop Connectivity  | It could be missing the PrestaShop plugin/API on your site. Please follow [this guide](https://docs.fluxbuilder.com/prestashop-api).                                              |
+    | Magento Connectivity     | You could install this extension to active the API integrate with the app following [this guide](/1f7d7e56d4e0493eadb15ec51abab470).                                              |
+    | WCFM Connectivity        | Missing WCFM Rest API. Please install WCFM Rest API plugin to solve it.                                                                                                           |
+    | Dokan Connectivity       | Missing Dokan Rest API. Please install Dokan Rest API plugin to solve it.                                                                                                         |
+    | Opencart Connectivity    | You could install this extension to active the API integrate with the app following [this guide](/cdf589e4a23746408283ad3e7e547802).                                              |
+    | Listing Connectivity     | Your REST APIs are not enabled on your website, please follow [this guide](https://docs.fluxbuilder.com/listing-api).                                                             |
+    | Shopify Connectivity     | Please insert "**https://**" before your website URL [https://tppr.me/gJY9G](https://tppr.me/gJY9G) and refer to [this guide](https://docs.fluxbuilder.com/shopify-access-token). |
+    | Post Connectivity        | Please check if you install any strange plugins that needing the permission to access                                                                                             |
+    | Plugin Activation        | Please install the FREE [MStore API](https://wordpress.org/plugins/mstore-api/) on your website.                                                                                  |
+
+- **Cannot see** any **Images**, **Products,** or **Categories**, use [this solution](https://docs.fluxbuilder.com/app-performance).
+- **App loads slowly**, also use [this solution](https://docs.fluxbuilder.com/app-performance).
+- If you’ve followed this guide but are still facing issues, it might be due to a plugin conflict on your site. Please **open a ticket here** so we support you for FREE [https://support.fluxbuilder.com](https://support.fluxbuilder.com/)
+
+<Info>
+If you see images have non-good resolution on [FluxBuilder](https://fluxbuilder.com/), don't worry, we downgrade the resolution of images to improve the speed of FluxBuilder. After building, the app loads images with high resolution smoothly on the real device.
+</Info>
+
+
+---
+
+
+### Install API
+
+
+Make sure to install the required API below into your website. 
+It helps to display full products and images of your website on iOS & Android apps, and sync with your data/website:
+
+- [Shopify Access Token](https://docs.fluxbuilder.com/shopify-access-token) to build Shopify app.
+- [WooCommerce API](https://docs.fluxbuilder.com/woocommerce-api) to build WooCommerce app (single vendor, WCFM, Dokan), Manager app.
+- [WordPress API](https://docs.fluxbuilder.com/wordpress-api) to build WordPress app (posting, blog, news, etc.).
+- [Listing API](/35a8b116cb814fc7b98544c0f5fcecf4) to build Listing app for your Listeo, MyListing, or Listing Pro website.
+- [Magento API](https://docs.fluxbuilder.com/magento-api) to build Magento app.
+- [Opencart API](https://docs.fluxbuilder.com/opencart-api) to build Opencart app.
+- [PrestaShop API](https://docs.fluxbuilder.com/prestashop-api) to build PrestaShop app.
+- [Strapi API](/d4cb60310e71429fb985223348f2771a) to build Strapi app.
+- [Delivery Boy’s plugins](/a972160506be48568119922662ae8dbd) to build Delivery Boy app.
+- Other apps do not require API.
+
+---
+
+
+### Move your app to the Subscribed plan
+
+
+If you have created an app on FluxBuilder and now want to move that app to the subscribed plan, follow these steps:
+
+
+Step 1 - Open your old app, and [export](https://docs.fluxbuilder.com/import-export-and-other) all changes.
+
+
+Step 2 - Create a new app for your subscription plan following the guide above "1. How to create app after subscribing?"
+Then [import](https://docs.fluxbuilder.com/import-export-and-other) all files you have exported from step 1.
+
+
+Step 3 - Now you can delete your old app.
+
+
+That's all 🙂
+
+
+---
+
+
+## 2. How to subscribe to a plan for your app?
+
+
+If you have created a free app on the FluxBuilder tool and want to subscribe to a plan, please follow these steps below:
+
+
+Step 1 - On the FluxBuilder tool, open your existing app.
+
+
+Step 2 - Go to **My Subscription** on the left menu. Then, select the appropriate package for the app.
+
+
+![](/images/notion/15ec1e706b8f.png)
+
+
+---
+
+
+## 3. Apply Discount Coupon
+
+
+If you have a coupon, please follow step 1 and 2 above, then continue:
+
+
+On the Payment screen, click the Continue button: 
+
+
+![](/images/notion/f03887a5bc50.png)
+
+
+Next, select the **Add Discount** button:
+
+
+![](/images/notion/1e3046c359c1.png)
+
+
+Then enter the coupon code, you will see the updated price. That’s all ☺️
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/FRXHzIZ8gAA"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+---
+
+

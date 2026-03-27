@@ -1,0 +1,199 @@
+---
+title: "Multi Languages"
+---
+
+
+## 1. Multi-language Configuration
+
+
+Now you can use FluxBuilder to set the Default Language of your app, configure multi-languages, or auto-detect languages, as the image below:
+
+
+### 1.1 Set default language
+
+
+![](/images/notion/f9007d7134f2.png)
+
+
+### 1.2 Configuration for each language
+
+
+Step 1: Open app on **FluxBuilder**.
+
+
+Step 2: Go to **Features** > open **Languages** > set the language needing configuring into **Default.**
+
+
+Step 3: Go to **Design**, configure the design for that language.
+
+
+For example:
+
+- The default language is English > edit design and content in English.
+
+![](/images/notion/135c59a55295.png)
+
+- The default language is Arabic > edit design and content in Arabic.
+
+![](/images/notion/d2927ac6365d.png)
+
+
+Step 4: Go back to **Features** > go to **Export** > input the design config name corresponding to the language (ex: `config_en.json` for _English_, `config_ar.json` for _Arabic_, `config_fr.json` for _French_, etc.), and export the files to save the config in local for later use.
+
+
+![](/images/notion/41feb7226a6a.png)
+
+
+Step 5: Continue steps (from step 2 to step 4) for other languages.
+
+
+<Info>
+If you are using **MStore API caching** or **cloud config,** you need to upload these latest files to your server before running the app.
+Step 1: Open app on **FluxBuilder**.
+
+Step 2: Go to **Features** > open **Languages** > set the language needing configuring into Default.
+
+Step 3: Go to **Design**, configure the design for that language.
+
+Step 4: Click **Publish**, select **Website** or **Vercel**, input the **File Name** corresponding to the language (ex: `config_en.json` for _English_, `config_ar.json` for _Arabic_, `config_fr.json` for _French_, etc.). Click **UPLOAD** button.
+
+![](/images/notion/1816526ca845.png)
+
+Step 5: Continue steps (from step 2 to step 4) for other languages.
+
+**Note**: Refer to this guide for more details about [Update App without Re-publishing](/57e47dcbaacf4f83affea111df5b43fc).
+</Info>
+
+
+## 2. How to translate product content?
+
+
+In case you are using WooCommerce, to support product content translation (title, description..), it is required to install the following plugins:
+
+- [WooCommerce Multilingual](https://wordpress.org/plugins/woocommerce-multilingual/).
+- WPML Multilingual CMS
+- WPML String Translation +2.0
+- WPML Translation Management +2.2
+
+If your website don’t use WPML, it is possible to integrate with [Polylang Pro](https://polylang.pro/downloads/polylang-pro/) plugin.
+
+
+If you are using Shopify, to support product content translation (title, description..), it is required to install the following plugin:
+
+- T Lab ‑ AI Language Translate [https://apps.shopify.com/content-translation](https://apps.shopify.com/content-translation) ([Video](https://www.youtube.com/watch?v=FjZLpWCej8g))
+- Shopify Translate & Adapt [https://apps.shopify.com/translate-and-adapt](https://apps.shopify.com/translate-and-adapt)
+
+## 3. How to update the App's translations?
+
+
+Follow this guide to update text in the apps. This includes the variation names in multiple languages.
+
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/GC6C-5uXxvI"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+## 4. How to have multilingual Policy URL?
+
+
+This is a solution that supports **Multi-language Policy URLs** for your **multi languages App**.
+
+
+![](/images/notion/4ea32bd308bf.png)
+
+
+Follow the steps below:
+
+
+Step 1: Create app on FluxBuilder > `Features` > `GDPR Compliance` > enter page ID or URL of your privacy policy 
+
+
+![](/images/notion/83ef3cef67c7.png)
+
+
+Step 2: [Export](https://docs.fluxbuilder.com/import-export-and-other) the `env.dart` and config JSON files for your languages.
+
+
+Step 3: In the `env.dart` , copy the code of `PrivacyPoliciesPageUrlOrId` 
+Then in the config JSON files (for example: the English config JSON file is `config_en.json`):
+
+1. Scroll to the end of the file and find the last configuration entry for the design.
+2. Paste the copied `PrivacyPoliciesPageUrlOrId` code, and save the code.
+
+```javascript
+/// enter the Privacy Policies page ID or URL. Accessible in the app via Settings > Privacy menu.
+"PrivacyPoliciesPageUrlOrId": "https://policies.google.com/?hl=en"
+```
+
+
+Step 4: When you [auto-build](https://docs.fluxbuilder.com/build-and-publish-your-app) your Multi-language App on **Cloud**, be sure to:
+
+- Configure [this document](https://docs.fluxbuilder.com/update-app-without-republishing) first.
+- Enable this “Export env.dart & config JSON automatically” option:
+
+![](/images/notion/8bf4f236a2b0.png)
+
+
+---
+
+
+## 5. How to have multilingual OnBoarding screen?
+
+
+This is a solution that supports **Multi-language OnBoarding screen** for your **multi languages App**.
+
+
+Follow the steps below:
+
+
+Step 1: Create app on FluxBuilder > `Features` > `OnBoarding` > select version and upload image, content.
+
+
+![](/images/notion/0200be2fba00.png)
+
+
+Step 2: [Export](https://docs.fluxbuilder.com/import-export-and-other) the `env.dart` and config JSON files for your languages.
+
+
+Step 3: In the `env.dart` , copy the code of `onBoardingConfig` 
+Then in the config JSON files (for example: the English config JSON file is `config_en.json`):
+
+1. Scroll to the end of the file and find the last configuration entry for the design.
+2. Paste the copied Onboarding code, and save the code.
+
+![](/images/notion/dec379302bd8.png)
+
+
+Step 4: When you [auto-build](https://docs.fluxbuilder.com/build-and-publish-your-app) your Multi-language App on **Cloud**, be sure to:
+
+- Configure [this document](https://docs.fluxbuilder.com/update-app-without-republishing) first.
+- Enable this “Export env.dart & config JSON automatically” option:
+
+![](/images/notion/8bf4f236a2b0.png)
+
+
+## 6. How to request new languages to app?
+
+
+If you want to add a new language that is not yet supported in the app, please follow these steps:
+
+
+1. Check the [Flutter documentation](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) to see if your language is already supported.
+
+
+2. Create a ticket on [our support center](https://support.fluxbuilder.com/) with the title "**[New language in app]**" 
+
+
+We will then add that language to the upcoming releases, and you will be able to customize it further using **FluxBuilder**.
+
+
+That’s all!
+
+

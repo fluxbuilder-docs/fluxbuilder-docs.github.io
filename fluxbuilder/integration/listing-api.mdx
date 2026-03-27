@@ -1,0 +1,100 @@
+---
+title: "Listing API"
+---
+
+
+To build a mobile app for your [Listeo](https://1.envato.market/aVLrM), [MyListing](https://1.envato.market/AeAR7), or [Listing Pro](https://1.envato.market/Zadbz) website, install our free MStore API and some plugins to your admin site so that the app can sync with your data:
+
+
+## 1. Website Integration
+
+- Install the [MStore API](https://wordpress.org/plugins/mstore-api/) on your website. 
+This plugin is required for supporting RestAPI to connect the app, support Payment, Login, and other features.
+- [**WP REST API – Pure Taxonomies**](https://wordpress.org/plugins/wp-rest-api-pure-taxonomies/): support to get Custom Taxonomies.
+- [**WP REST API Controller**](https://wordpress.org/plugins/wp-rest-api-controller/): support to get Custom Post Type.
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/C-2lILD9-q8"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+Go to `Tools/REST API Controller` and enable these settings:
+
+
+**1. Post Types**
+- **Listeo:** `listing`.
+- **Listing Pro:** Listings(`/listing`), Reviews(`/lp-reviews`).
+- **My Listing:** `job_listing`, `case27_listing_type`.
+
+
+**2. Taxonomies**
+- **Listeo:** `listing_category`, `event_category`, `service_category`, `rental_category`, `listing_feature`, `region`.
+- **Listing Pro:** listing-category, features, list-tags, location.
+- **My Listing:** `job_listing_category`, `region`.
+
+
+![](/images/notion/ddfec400c88b.png)
+
+
+---
+
+
+## 2. Other Settings 
+
+
+### **P**ermalink URL setting
+
+
+WordPress permalinks must be enabled at **Settings** > **Permalinks** > Go to **Common Settings**, change the URL to **Post name**, this is required for the setting, otherwise, some images could not be uploaded.
+
+
+![](/images/notion/04287a7e7c21.png)
+
+
+### Registration
+
+
+Enable the option **Anyone** can register.
+
+
+![](/images/notion/bd4eb47e252c.png)
+
+
+That’s it 😊
+
+
+## **3. Enable Multivendor for Listeo**
+
+
+You can easily add Multivendor features to your [Listeo](/35a8b116cb814fc7b98544c0f5fcecf4) app (support Dokan for Listeo). This guide will show you how to do that. 
+
+
+**Steps:**
+
+1. Create a **Listeo app** on the FluxBuilder drag-and-drop app builder, following [this video guide](https://www.youtube.com/watch?v=Lr9UUcAebc4).
+NOTE: Remember to input your**WooCommerce API Keys**:
+_(Make sure your API keys have Read/Write permissions.)_
+
+![](/images/notion/c14669818d18.png)
+
+1. Subscribe to a plan for your app, following [this guide](https://docs.fluxbuilder.com/app-activation#c2bcc84b2b7341b7b8737a8caa471dc4).
+2. Export the _env.dart_ file (the Features configuration file), [following this guide to export](https://docs.fluxbuilder.com/import-export-and-other).
+3. Open the _env.dart_ file, then add `"multiVendorType": "dokan",` in `serverConfig`
+
+![](/images/notion/016f593dd164.png)
+
+1. Import the _env.dart_ file to your Listeo app on FluxBuilder, [following this guide to import](https://docs.fluxbuilder.com/import-export-and-other).
+2. To show the Vendors list in the Category tab, open your Listeo app on FluxBuilder. Then click the Category tab (1), and select the Vendors item (2):
+
+![](/images/notion/4a7c6f5c663b.png)
+
+
+That's it! Now you can continue configuring your app UI and features, then build your iOS and Android apps. Happy building!
+
+

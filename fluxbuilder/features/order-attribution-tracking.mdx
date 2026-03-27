@@ -1,0 +1,48 @@
+---
+title: "Order Attribution Tracking"
+---
+
+
+This feature allows store owners to identify and record specific orders from the app. This is quite an important feature for a growing business when you run ads for different campaigns that you want to track or convert and analyze.
+
+
+![](/images/notion/35ce5eb8c8c3.png)
+
+
+Currently, the feature is available on WooCommerce, Pro (WooCommerce), and Multi Vendors apps.
+
+
+## Method 1: Order Attribution Tracking
+
+
+### 1. Requirements
+
+- Requires [MStore API plugin](https://wordpress.org/plugins/mstore-api/) > 4.15.3
+- [WooCommerce](https://wordpress.org/plugins/woocommerce/) 8.5.0 or above
+- Reference: [Order Attribution Tracking Documentation - Woocommerce](https://woocommerce.com/document/order-attribution-tracking/)
+- Enabled **Order Attribution** in **WooCommerce Settings** > **Advanced** > **Features**.
+
+![](/images/notion/8627093d35eb.png)
+
+
+![](/images/notion/fa16b4eb1534.png)
+
+
+### 2. Result
+
+
+Now, the admin can check the order tracking in **Woocommerce Orders**, in **Origin** column.
+
+
+![](/images/notion/35ce5eb8c8c3.png)
+
+
+## Method 2: Use Custom Metadata
+
+
+Another way to check if the order came from website or application is to use custom meta data. You can open this order in website admin and check if it has a custom field `order_via_application` with value `1`. You can also query data from the database and display it anywhere you want.
+
+
+![](/images/notion/472fb5052387.png)
+
+

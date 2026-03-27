@@ -1,0 +1,118 @@
+---
+title: "OpenAI: Setup Supabase Server"
+---
+
+
+This guide explains how to securely store the OpenAI Key using the free Supabase service.
+
+
+**Advantages:**
+
+- Integrates easily with your app, no coding knowledge is required
+- Secure your app by calling your Supabase server. This avoids revealing your API key
+
+## 1. Set Up A Server Backend
+
+
+### 1.1 Create and Setup Project on Supabase
+
+
+Step 1: Go to [Supabase](https://app.supabase.io/) to create or log in to your account and create a new project.
+
+
+Step 2: Please [download](https://github.com/supabase/cli#install-the-cli) the latest version of the `Supabase CLI`.
+
+
+Step 3: Generate access token and log in to CLI 
+
+- Navigate to [https://app.supabase.io/account/tokens](https://app.supabase.io/account/tokens)
+- Click "**Generate New Token**"
+
+![](/images/notion/b45d5893594b.png)
+
+- Copy the newly created token
+- Open `Terminal` run `supabase login`
+- Input your token when prompting
+
+![](/images/notion/3593b99a20b3.png)
+
+
+Step 4: Link your project:
+
+- Go to the **Project Settings** → **General** on **Supabase** to get **Reference ID.**
+
+![](/images/notion/d996cb92c78f.png)
+
+- Open **Terminal**, and run the command `supabase link --project-ref [REFERENCE_ID]` . For example: `supabase link --project-ref fasdf12312`.
+
+### 1.2 Generate OpenAI Key
+
+- Go to [https://platform.openai.com/login/](https://platform.openai.com/login/) and login to your account.
+- Go to [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys) to generate API Key.
+
+![](/images/notion/0e972ba38743.png)
+
+
+### 1.3 Deploy
+
+- Open `supabase` folder on **Visual Studio Code**. You can [download the supabase folder here](https://github.com/inspireui/fluxstore/releases/download/gpt/supabase.zip).
+- Open **Terminal** in **Visual Studio Code** and run command `supabase secrets set OPENAI_API_KEY=[INPUT-YOUR-OPENAI-API-KEY-HERE]`.
+- Within supabase folder, run `supabase functions deploy completion --no-verify-jwt --project-ref [REFERENCE_ID]`  to deploy the module **Chat** and **Text Generation** (_ver 1_).
+- Run `supabase functions deploy chat --no-verify-jwt --project-ref [REFERENCE_ID]` to deploy the module **Chat** and **Text Generation** (_ver 2_).
+- Run `supabase functions deploy image-generate --no-verify-jwt --project-ref [REFERENCE_ID]` to deploy the module **Image Generation**.
+- Run `supabase function deploy prompt --no-verify-jwt --project-ref [REFERENCE_ID]` to deploy module **Prompt**
+
+### 1.4 Add data to the Database
+
+
+Currently, the app support feature **selects Prompt**, you can provide some template prompts for users to select and use on the app, you can see the demo of this feature here: [https://cln.sh/lXZLr5kh](https://cln.sh/lXZLr5kh). So to add Prompt library data to your database, please do the steps below:
+
+- Go to [https://app.supabase.com/](https://app.supabase.com/)
+- Select your project:
+- Select SQL Editor from the Sidebar and Select New Query
+
+![](/images/notion/e85b1d6b5b50.png)
+
+- Open this file from `supabase` folder: resources/supabase/sql/prompt_library.sql. Copy all content from this file and paste it to the Editor on the website and click **RUN**
+
+![](/images/notion/b8ea8ae45a19.png)
+
+- After clicking **RUN**, if it runs successfully, it will show
+
+![](/images/notion/f9f831b5cd08.png)
+
+- After that, click **Table Editor** on **Sidebar**, and you will see the Prompt Library table and all the content on it. You can add more, modify, or delete the data you want.
+
+![](/images/notion/b651e087bdbe.png)
+
+
+## 2. Configure your app
+
+
+### 2.1 Setup OpenAI config
+
+
+Get the `supabaseUrl` and `supabaseAnonKey`at **Project Settings** → **API** on **Supabase**
+
+
+![](/images/notion/0cc00e9170a2.png)
+
+
+Then, input to your app by using **FluxBuilder** as the image below:
+
+
+![](/images/notion/a0c214b1b670.png)
+
+
+### 2.2 Integrate ChatGPT into Smart Chat in your App
+
+
+To enable ChatGPT in SmartChat, execute "2.1 Setup OpenAI config" above.
+
+
+Then use **the drag&drop FluxBuilder** as below:
+
+
+![](/images/notion/a3e13c387264.png)
+
+

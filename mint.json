@@ -1,0 +1,277 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "FluxBuilder",
+  "logo": {
+    "dark": "/img/logo_dark.png",
+    "light": "/img/logo.png",
+    "href": "https://fluxbuilder.com"
+  },
+  "favicon": "/img/favicon.ico",
+  "colors": {
+    "primary": "#6366F1",
+    "light": "#818CF8",
+    "dark": "#4F46E5"
+  },
+  "topbarLinks": [
+    {
+      "name": "Home",
+      "url": "https://fluxbuilder.com"
+    },
+    {
+      "name": "Feature",
+      "url": "https://fluxbuilder.com/feature"
+    },
+    {
+      "name": "Agency",
+      "url": "https://fluxbuilder.com/agency"
+    },
+    {
+      "name": "Pricing",
+      "url": "https://fluxbuilder.com/pricing"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Support",
+    "url": "https://support.fluxbuilder.com"
+  },
+  "anchors": [
+    {
+      "name": "Download FluxBuilder",
+      "icon": "download",
+      "url": "https://www.fluxbuilder.com/download"
+    },
+    {
+      "name": "YouTube Tutorials",
+      "icon": "youtube",
+      "url": "https://www.youtube.com/@FluxBuilder"
+    },
+    {
+      "name": "Get Support",
+      "icon": "headset",
+      "url": "https://support.fluxbuilder.com"
+    }
+  ],
+  "feedback": {
+    "thumbsRating": true
+  },
+  "modeToggle": {
+    "default": "light"
+  },
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": ["onboarding"]
+    },
+    {
+      "group": "FluxBuilder",
+      "pages": [
+        "fluxbuilder/index-features",
+        "fluxbuilder/supported-plugins",
+        "fluxbuilder/download-and-install",
+        {
+          "group": "Integration",
+          "pages": [
+            "fluxbuilder/integration/sign-up-and-login",
+            "fluxbuilder/integration/create-new-app",
+            "fluxbuilder/integration/customize-app",
+            "fluxbuilder/integration/app-activation",
+            "fluxbuilder/integration/app-performance",
+            "fluxbuilder/integration/app-security",
+            "fluxbuilder/integration/import-and-export",
+            "fluxbuilder/integration/not-have-a-website",
+            {
+              "group": "Serverless Setup",
+              "pages": [
+                "fluxbuilder/integration/serverless-setup/serverless-introduction",
+                "fluxbuilder/integration/serverless-setup/create-serverless-app",
+                "fluxbuilder/integration/serverless-setup/product-content-management",
+                "fluxbuilder/integration/serverless-setup/customer-order-management",
+                "fluxbuilder/integration/serverless-setup/store-configuration"
+              ]
+            },
+            "fluxbuilder/integration/shopify-access-token",
+            "fluxbuilder/integration/woocommerce-api",
+            "fluxbuilder/integration/wordpress-api",
+            "fluxbuilder/integration/listing-api",
+            "fluxbuilder/integration/opencart-api",
+            "fluxbuilder/integration/magento-api",
+            "fluxbuilder/integration/prestashop-api",
+            "fluxbuilder/integration/strapi-api-settings",
+            "fluxbuilder/integration/notion-api-settings",
+            "fluxbuilder/integration/delivery-boy-app-s-plugins"
+          ]
+        },
+        {
+          "group": "Design",
+          "pages": [
+            "fluxbuilder/design/app-screens",
+            "fluxbuilder/design/app-uis",
+            "fluxbuilder/design/product-details",
+            "fluxbuilder/design/yith-woocommerce",
+            "fluxbuilder/design/blogs-settings",
+            "fluxbuilder/design/splash-screen",
+            "fluxbuilder/design/color-override",
+            "fluxbuilder/design/multi-languages",
+            "fluxbuilder/design/translation-override"
+          ]
+        },
+        {
+          "group": "Features",
+          "pages": [
+            "fluxbuilder/features/app-features",
+            "fluxbuilder/features/smart-chat",
+            "fluxbuilder/features/wcfm-live-chat",
+            "fluxbuilder/features/social-login",
+            "fluxbuilder/features/login-via-email-otp",
+            "fluxbuilder/features/firebase-settings",
+            "fluxbuilder/features/firebase-remote-config",
+            "fluxbuilder/features/firebase-realtime-chat",
+            "fluxbuilder/features/woo-product-add-ons-file-upload",
+            "fluxbuilder/features/dynamic-links-deeplink",
+            "fluxbuilder/features/fluxbuilder-dynamic-links",
+            "fluxbuilder/features/branch-io-dynamic-links",
+            "fluxbuilder/features/offline-mode",
+            "fluxbuilder/features/pw-woocommerce-gift-cards",
+            "fluxbuilder/features/push-notifications-via-firebase",
+            "fluxbuilder/features/firebase-cloud-messaging-api-http-v1",
+            "fluxbuilder/features/push-notifications-via-onesignal",
+            "fluxbuilder/features/order-notification",
+            "fluxbuilder/features/google-analytics-facebook-tracking",
+            "fluxbuilder/features/google-maps",
+            "fluxbuilder/features/woocommerce-subscription",
+            "fluxbuilder/features/order-attribution-tracking",
+            "fluxbuilder/features/nearest-stores",
+            "fluxbuilder/features/search-nearby-vendors-wcfm",
+            "fluxbuilder/features/privacy-security",
+            "fluxbuilder/features/advertisements",
+            "fluxbuilder/features/min-max-quantities",
+            "fluxbuilder/features/ajax-search-pro-fibosearch",
+            "fluxbuilder/features/judge-me-review",
+            "fluxbuilder/features/vendors",
+            "fluxbuilder/features/coupon",
+            "fluxbuilder/features/point-offline-store",
+            "fluxbuilder/features/checkout-setup",
+            "fluxbuilder/features/order-history",
+            "fluxbuilder/features/woocommerce-appointment",
+            "fluxbuilder/features/b2b-wholesale",
+            "fluxbuilder/features/b2b-king",
+            "fluxbuilder/features/loyalty",
+            "fluxbuilder/features/multi-payment-webview",
+            "fluxbuilder/features/direct-bank-transfer-bacs",
+            "fluxbuilder/features/cod-payment",
+            "fluxbuilder/features/razorpay-payment",
+            "fluxbuilder/features/paypal-payment",
+            "fluxbuilder/features/mercado-pago-payment",
+            "fluxbuilder/features/paytm-payment",
+            "fluxbuilder/features/paystack-payment",
+            "fluxbuilder/features/flutterwave-payment",
+            "fluxbuilder/features/phonepe-payment",
+            "fluxbuilder/features/stripe-apple-google-pay",
+            "fluxbuilder/features/tap-payment",
+            "fluxbuilder/features/myfatoorah-payment",
+            "fluxbuilder/features/in-app-purchases",
+            "fluxbuilder/features/midtrans-payment",
+            "fluxbuilder/features/xendit-payment",
+            "fluxbuilder/features/thawani-payment",
+            "fluxbuilder/features/first-iraqi-bank-payment",
+            "fluxbuilder/features/shopify-payment",
+            "fluxbuilder/features/assign-orders-to-delivery-boy",
+            "fluxbuilder/features/openai-setup-supabase-server",
+            "fluxbuilder/features/openai-input-key",
+            "fluxbuilder/features/openai-subscription",
+            "fluxbuilder/features/maintenance-mode"
+          ]
+        },
+        {
+          "group": "Build",
+          "pages": [
+            "fluxbuilder/build/build-a-demo-app",
+            "fluxbuilder/build/update-app-without-republishing",
+            "fluxbuilder/build/build-publish-app",
+            "fluxbuilder/build/build-pwa",
+            "fluxbuilder/build/sha-1-and-sha-256",
+            "fluxbuilder/build/create-key-store",
+            "fluxbuilder/build/create-appstore-key-to-upload-testflight",
+            "fluxbuilder/build/team-id-and-ios-bundle-id"
+          ]
+        },
+        {
+          "group": "More",
+          "pages": [
+            "fluxbuilder/fluxbuilder-config",
+            "fluxbuilder/faq",
+            "fluxbuilder/how-to-get-support"
+          ]
+        },
+        {
+          "group": "ChangeLog",
+          "pages": [
+            "fluxbuilder/changelog/version-2-4",
+            "fluxbuilder/changelog/version-2-3",
+            "fluxbuilder/changelog/version-2-2",
+            "fluxbuilder/changelog/version-2-1",
+            "fluxbuilder/changelog/version-2-0-10",
+            "fluxbuilder/changelog/version-2-0-9",
+            "fluxbuilder/changelog/version-2-0-8",
+            "fluxbuilder/changelog/version-2-0-7",
+            "fluxbuilder/changelog/version-2-0-6",
+            "fluxbuilder/changelog/version-2-0-5",
+            "fluxbuilder/changelog/version-2-0-4",
+            "fluxbuilder/changelog/version-2-0-3",
+            "fluxbuilder/changelog/version-2-0-2",
+            "fluxbuilder/changelog/version-2-0-1",
+            "fluxbuilder/changelog/version-2-0-0",
+            "fluxbuilder/changelog/version-1-7-0",
+            "fluxbuilder/changelog/version-1-6-1"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Agency",
+      "pages": [
+        "agency/introduction",
+        "agency/mail-settings",
+        "agency/customers",
+        "agency/settings",
+        "agency/products",
+        "agency/templates",
+        "agency/build-on-cloud",
+        "agency/git-repository",
+        "agency/developer"
+      ]
+    },
+    {
+      "group": "Changelog",
+      "pages": [
+        "fluxbuilder/changelog/version-2-4",
+        "fluxbuilder/changelog/version-2-3",
+        "fluxbuilder/changelog/version-2-2",
+        "fluxbuilder/changelog/version-2-1",
+        "fluxbuilder/changelog/version-2-0-10",
+        "fluxbuilder/changelog/version-2-0-9",
+        "fluxbuilder/changelog/version-2-0-8",
+        "fluxbuilder/changelog/version-2-0-7",
+        "fluxbuilder/changelog/version-2-0-6",
+        "fluxbuilder/changelog/version-2-0-5",
+        "fluxbuilder/changelog/version-2-0-4",
+        "fluxbuilder/changelog/version-2-0-3",
+        "fluxbuilder/changelog/version-2-0-2",
+        "fluxbuilder/changelog/version-2-0-1",
+        "fluxbuilder/changelog/version-2-0-0",
+        "fluxbuilder/changelog/version-1-7-0",
+        "fluxbuilder/changelog/version-1-6-1",
+        "changelog/version-1-6-0"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "website": "https://fluxbuilder.com",
+    "youtube": "https://www.youtube.com/@FluxBuilder"
+  },
+  "analytics": {
+    "gtm": {
+      "tagId": "G-QKWPZEM3TZ"
+    }
+  }
+}

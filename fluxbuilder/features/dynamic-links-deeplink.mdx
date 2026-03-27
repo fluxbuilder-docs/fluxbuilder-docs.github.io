@@ -1,0 +1,220 @@
+---
+title: "Dynamic Links (DeepLink)"
+---
+
+
+## Dynamic Links 
+
+
+This section shows how to configure the Dynamic Links. There are some smarter ways to manage sharing links in your apps, include:
+
+- ✅ [FluxBuilder Dynamic Links](/27acbb074f62803c88c1fefce47968f3): A new powerful sharing system that makes it easy to share product pages, categories, or blogs with deep links. FluxBuilder Dynamic Links is the top alternative to Firebase Dynamic Links. This system is fully integrated into FluxBuilder for better reliability, customization, and branding.
+- [Self Hosted Sharing Links](https://youtu.be/3b7baWDItiY?si=bOss4i9PiqRuxLAz): Share links from your own website. No configuration required.
+- [Branch.iO Dynamic Links](/153cbb074f628034a913db9fc8094ba1): This platform will enable you to continue using dynamic links for your app even after the Firebase service shuts down.
+
+![](/images/notion/e337902fa5c6.png)
+
+
+---
+
+
+The below guide is the way to configure Deep Links via Firebase Dynamic Link. It is available for sharing App, a specify Product, Notification, Tag. But According to Firebase's announcement, the Firebase Dynamic Link service will be discontinued on August 25th, 2025. After this date, you will no longer be able to create dynamic links through your Firebase accounts. So instead of using Firebase Dynamic Link, you should use _the FREE_ [_FluxBuilder Dynamic Links_](https://docs.fluxbuilder.com/fluxbuilder-dynamic-links) or one of smarter ways above.
+
+
+**How does Firebase Dynamic Link work?**
+
+
+![](/images/notion/4f4d698eaa27.png)
+
+
+[Image Source](https://medium.com/@jyotidubey)
+
+
+## 1. Preconditions
+
+- Your app must be successfully connected with Firebase following [this guide](/629e8b503dcc4e7cb7388bab3baabba1).
+- Your app must be released on Google Play and App Store.
+- [Mstore API](https://wordpress.org/plugins/mstore-api/) plugin has been installed and upgraded to the latest version in your CMS.
+
+## 2. URL Prefix
+
+
+This step guides to configure the URL Prefix as below:
+
+- Open the Firebase page [https://console.firebase.google.com](https://console.firebase.google.com/) and open your Firebase project. Then select the [Dynamic Links] item:
+
+    ![](/images/notion/7affdbef376d.png)
+
+- In Dynamic Links screen, click on **`Get Started`** button if this is your first time working with Firebase Dynamic Link. Otherwise, click on the current existing URL Prefix dropdown button, and click on **`add URL prefix`**
+
+    ![](/images/notion/12d826d45088.png)
+
+- Type the domain name you want to use for your Dynamic Links. You can use the domain you own (for example, **`yourdomain.com`** or **`app.yourdomain.com`**), or a free Google-provided domain (for example, **`yourapp.page.link`**).
+- Finish the following steps: Configure, Verify and Finish to get URL prefix.
+
+## 3. For iOS app
+
+
+If you need the iOS app, follow this guide to configure more:
+
+- Open the Firebase page [https://console.firebase.google.com](https://console.firebase.google.com/) , then click the gear icon in the upper left corner and select **`Project settings`**
+
+![](/images/notion/882b6094a615.png)
+
+- In the General tab, click on your project on iOS apps list, then edit your **`App Store ID`**. You can find your App Store ID in your app’s URL. In the example below, **`1469772800`** is the App Store ID at [https://itunes.apple.com/us/app/yourapp/id1469772800](https://itunes.apple.com/us/app/yourapp/id1469772800)
+
+    ![](/images/notion/20268dd3ce53.png)
+
+
+## 4. Configure the Dynamic Link feature
+
+
+You can configure Firebase Dynamic Link easily on the [drag&drop FluxBuilder](https://www.fluxbuilder.com/download)
+
+
+Update the information as the image below:
+
+
+![](/images/notion/abd419de40e8.png)
+
+- `U`**`ri Prefix`** is the URL that you created in Firebase in step 2.
+- `L`**`ink`** is the URL that your app will launch if it is opened in web browser.
+- `A`**`ndroid Package Name`** is your package name.
+- `A`**`ndroid App Minimum Version`** is the minimum version of your app in Google Play that can open the link.
+- **`iOS Bundle Id`** is your iOS Bundle ID, which you can find at iOS Settings in Firebase Project Settings. ([How to get or create iOS Bundle ID?](https://docs.fluxbuilder.com/team-id-and-ios-bundle-id))
+
+    ![](/images/notion/158e537d7dcb.png)
+
+- **`iOS App Minimum Version`** is the minimum version of your app in Apple Store that can open the link.
+- **`iOS App Store Id`** is your app ID, which you have already got in step 3.
+
+## 5. Test
+
+
+This step guides to test your Firebase Dynamic Link:
+
+- When you did from step 1 to step 4, successfully running your app will generate a Firebase Dynamic Link in the console.
+
+    ![](/images/notion/e7d630eb3db4.png)
+
+- Now it's time to test your dynamic link. Please keep in mind that Firebase Dynamic Link only works on physical Android/iOS devices.
+
+## 6. Share a Product
+
+
+This step guides to share a specific product with Firebase Dynamic Link:
+
+- Make sure you have done from step 1 to step 5.
+- Go to Admin Dashboard > Settings > Permalinks. At Product permalinks, edit Custom base: `/product/`
+
+![](/images/notion/0b4774245eca.jpg)
+
+- You now can get Dynamic Link by click on "Share" in a product. This is how this feature should work: [Android demo reference](https://youtube.com/shorts/OcBJukkZoQM?feature=share) & [iOS demo reference](https://youtube.com/shorts/BjFN0CelHmQ?feature=share)
+
+## 7. Share Tag
+
+
+Users can share a list of products with the same Tag. When users open the link, the App will be launched and show all products under that Tag.
+
+- Make sure you have done from step 1 to step 5.
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/QOVIcQeIZZM"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+## 8. Share a Product or Page in Notifications
+
+
+The feature allows sending a Notification with the Product URL or a specific page. When users open Notification, App is launched with that product/page.
+
+
+Note:
+
+- Make sure you have done from step 1 to step 5.
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/dBXmzUFRy2w"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+**Manual guide:**
+
+
+To make the feature work, go to the **Cloud Messaging** from **Firebase Console**, and `Send your first message`.
+
+
+![](/images/notion/419863fc8b51.png)
+
+
+Then, on the **Compose Notification** screen, fill in the necessary information in all steps **Information**, **Target**, **Scheduling**, **Conversion** **events** **(optional)**, and **Additional options (optional)**.
+
+
+In step 4 - **Additional options (optional)** - you will add a **Key-Value** for the **Custom Data**, fill `dynamic_link` for `Key` and the Product URL for `Value`.
+
+
+## 9. Share a Tab or Screen
+
+
+To navigate users to a specific screen, you need to
+
+- Follow the **Precondition**
+- Manually create a dynamic link on the Firebase Console and configure it accordingly as below:
+1. Go to [https://console.firebase.google.com](https://console.firebase.google.com/u/0/), select your project, and click **New Dynamic Link**
+
+    ![](/images/notion/e3f0bf3aec9f.jpg)
+
+2. Click **Next**
+
+    ![](/images/notion/90629a11e1ae.jpg)
+
+3. Fill in the information for the following two fields: and click **Next**
+    1. Deep link URL: Fill the link as scheme: `your-home-page + ? + screen you want to open`. We currently support `tab_number` and `screen`. For example:
+        - tab_number: input a number like [https://mstore.io?tab_number=3](https://mstore.io/?tab_number=3)
+        - screen: input a screen name like [https://mstore.io?screen=category](https://mstore.io/?screen=category)
+    2. Dynamic link name: The name of this dynamic link, which you will refer to when tracking data, such as clicks on this link.
+
+        ![](/images/notion/222741979de7.jpg)
+
+4. Select **Open the deep link in your Apple App** and select exactly your bundle id for your iOS app, and click **Next**
+
+    ![](/images/notion/8fa7d23b8fe8.jpg)
+
+5. Select **Open the deep link in your Android App** and select exactly your bundle id for your android app, and click **Next**
+
+    ![](/images/notion/6b48911242db.jpg)
+
+6. Click **Create**.
+
+    ![](/images/notion/44a729c5dee3.jpg)
+
+7. Copy the link and use it:
+
+    ![](/images/notion/970a07c36bf5.jpg)
+
+
+**Note**:
+
+- `tab_number` supports values from 1 to the number of tabs you have configured on your app.
+- `screen` supports the following list:
+    - home-search
+    - profile
+    - list-blog
+    - wishlist
+    - category
+    - category-search
+    - search
+    - cart
+

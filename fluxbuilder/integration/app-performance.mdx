@@ -1,0 +1,256 @@
+---
+title: "App Performance"
+---
+
+
+If you do not see any Images, Products, or Categories, the App loads slowly, blurry Image, the below solutions will solve them.
+
+
+<Tip>
+If your images are in `.avif` format, we recommend using a different format such as `webp`. This is because the `avif` format may cause the application to freeze on Android
+</Tip>
+
+
+## 1. Why are Images Blurry?
+
+
+If you see images have non-good resolution on the Simulator and Sharing feature, rest assured! We downgrade the resolution of images to faster speed of FluxBuilder.
+
+
+👍 Your real app will load images with high resolution smoothly on the real device.
+
+
+## 2. No Images, Products, or Categories visible
+
+
+The common product image issues are usually generated from slow app loading. To make the app **load faster** or to **fix missing Product Images**, you would **resize images**, optimize the network request for Images.
+
+
+### **For WordPress** 
+
+
+**Option 1: Regenerate Thumbnails Plugin**
+
+1. On your website, setup the [Regenerate Image plugin](https://wordpress.org/plugins/regenerate-thumbnails/), then be sure your site plugin has regenerated thumbnail like [this image](https://tppr.me/ckgYZ).
+2. Go to **Setting/ Media** Settings, and set up the image sizes for the Product Image. This is our [recommended settings](https://tppr.me/IbRvL).
+3. Go to `Tools/Regenerate Thumbnails` and click the blue button `Regenerate Thumbnails For All xx Attachements`, then wait for the process to complete:
+
+    ![](/images/notion/28056f92dd65.png)
+
+4. To check if the image is generated correctly, go to `Media` and click to view any image files, select Regenerate and you can check the list of new images generated with `xxx-smal` or `xxx-medium` or `xxx-large` format.
+
+    ![](/images/notion/401c1443a98b.png)
+
+5. After running the Regenerate successfully, open your app on the FluxBuilder, go to **Features** → open **General** → open **App Performance** and **enable Image Optimization.** In **Optimize Image Plugin**, select **Regenerate Thumbnails**.
+
+    ![](/images/notion/609aaa822352.png)
+
+
+---
+
+
+**Option 2: WebP Express Plugin**
+
+
+This is a good solution to optimize more image loading by converting the Image to Webp image type by using [**WebP Express**](https://wordpress.org/plugins/webp-express/) plugin. This is also a good tool which is our recommendation to compress the images in order to optimize the image loading.
+
+
+---
+
+
+**Option 3: Optimole Plugin**
+
+
+A new plugin is supported to optimize image performance - **Optimole plugin**.
+
+
+Very similar to SPAI. It processes your images via their CDN, delivering fully optimized and perfectly sized versions based on the visitor's device and browser. It also includes lazy loading and WebP conversion. The plugin enhance loading speed and image quality by dynamically adjusting images based on visitor's screen size.
+
+
+Support WooCommerce, Pro(WooCommerce), Multi Vendors, Listing, Wordpress - GPT, Manager, and Delivery apps.
+
+
+To apply Optimole on app:
+
+
+Step 1: install the Optimole plugin [https://wordpress.org/plugins/optimole-wp/](https://wordpress.org/plugins/optimole-wp/) on your website.
+
+
+Step 2: Open your app on FluxBuilder. Go to **Features** on the side menu. Select **App Performance**. Enable **Image Optimization**. In **Optimize Image Plugin**, select **Optimole.** 
+
+
+![](/images/notion/d91e7045939b.png)
+
+
+### **For Shopify**
+
+
+You can modify the width and height of images for high resolution. For example, set `_imageWidth` to 350 and `_imageHeight` is 500 as [this image](https://tppr.me/u24mx):
+
+
+![](/images/notion/22586fcf73d6.jpg)
+
+
+### **For PrestaShop**
+
+
+Go to `Design` > `Image Settings`, add list requirement images if it does not exist: `small_default`, `medium_default`, `large_default`. Then, tap the `Regenerate thumbnails` button as [this image](https://tppr.me/NO9VG):
+
+
+![](/images/notion/2220aac06d6c.jpg)
+
+
+<Info>
+If you see images have non-good resolution on [FluxBuilder](https://fluxbuilder.com/), don't worry, we downgrade the resolution of images to improve the speed of FluxBuilder. After building, the app loads images with high resolution smoothly on the real device.
+</Info>
+
+
+---
+
+
+## 3. Improve App Initialization
+
+
+### Lazy Tabbar
+
+
+If your applications have many tabs with complex content, you can enable this feature.
+
+- For too many tabs on the TabBar, it can make multiple API calls: up to 100 calls at once. Use Lazy Loading to load tabs only when they are first opened. This will help improve the performance of the application.
+- It also minimizes memory usage, which is especially useful for devices with low memory.
+- If your app does not have too many tabs on TabBar, you can disable this feature or not. Because the tabs may take a few moments to load when they are first switched to. However, this is typically only a minor issue than loading all tabs at the same time when you open the app
+- To configure the feature on the app, you can edit on the FluxBuilder app builder, or edit in the source code:
+
+    ![](/images/notion/63493d04935c.png)
+
+
+<Tip>
+**Advantages of using a lazy loading TabBar:**
+- Performance: The lazy TabBar only loads the currently displayed tabs, which improves application performance, especially for applications with many tabs with complex content.
+
+- Minimize memory footprint: By only loading currently displayed tabs, the lazy TabBar helps minimize memory usage, especially useful for devices with low memory.
+
+**Disadvantages of using a lazy TabBar:**
+
+- User experience: Lazy TabBar can make an app feel slower to users, as tabs take time to load data when first displayed.
+</Tip>
+
+
+### Lazy Category
+
+
+The solution is used for Woocommerce, Shopify, BigCommerce, Prestashop, Multi-Vendor.
+
+
+♻️ If your app has many categories (more than 100 categories), enable Large Number of Categories to lazy load category data. **Lazy Load** will be automatically activated on the app:
+
+- Show the button for ScrollToTop for a large list
+- Add skeleton when loading category for all category layout
+
+♻️ Support a new Category Layout: **Multi Level**, useful to configure the multi levels of Categories (Multi-Level Category) with the `Deep level` feature.
+
+
+♻️ Some categories may not load until you fetch this data that cause category name may not show on Home Screen for some layout
+
+
+![](/images/notion/3faeff74aee0.png)
+
+
+---
+
+
+## 4. Improve Product Detail Loading
+
+
+If you do not want to wait to load the product variant when opening the product detail screen, you can enable this feature.
+
+
+The product detail screen will display all variant product data without waiting, as it is preloaded while loading the product list.
+
+
+However, if you have a lot of variants, it may cause server performance issues because it needs to load a lot of things when fetching your product list data.
+
+
+![](/images/notion/58b544bc59f6.png)
+
+
+---
+
+
+## 5. HTTP Caching
+
+
+All apps support the HTTP caching to save the performance and the repeat network request that will help the app load faster. To enable this feature, please open your app on the FluxBuilder:
+
+1. Go to **Features** → open **General**→ open **App Performance**
+2. Enable **HTTP Cache**
+
+    ![](/images/notion/ff990a41f6d7.png)
+
+
+<Tip>
+**Note**: 
+This feature will cause some unexpected issues due to caching data on the mobile side. Therefore, you should still turn off if you don't use it.
+
+This method is not suitable for some kind of Blog/News app that requires updating the Blog more regularly. The caching time could be managed by customizing the DefaultCacheManager [https://tppr.me/ZRjYZ](https://tppr.me/ZRjYZ) - for more info please refer to the library - [https://pub.dev/packages/flutter_cache_manager](https://pub.dev/packages/flutter_cache_manager)
+</Tip>
+
+
+---
+
+
+## 6. MStore API Caching
+
+
+This way is used for WooCommerce and WordPress apps. They support a great Caching method to improve performance loading.
+
+
+It will preload product data when opening the app for home and dynamic screens. It also caches data on the server to reduce server resource usage.
+
+
+However, it can cause some problems due to caching in some way. You may need to clear the cache manually on your admin site.
+
+
+To improve the caching from these apps, please follow these steps:
+
+1. _Step 1_: _Install MStore API to your website_
+Update [mstore-api](https://wordpress.org/plugins/mstore-api/) to the latest version and install the [wp-rest-cache](https://wordpress.org/plugins/wp-rest-cache/) plugins.
+2. _Step 2_: _Upload the config json file to MStore API_
+Go to Wordpress dashboard, select **MStore Api** menu and upload the config file `config_xx.json` which you get from [Export](https://tppr.me/49P9l) from your App on FluxBuilder. 
+Then make sure to clean up the Wordpress Rest API cache - [https://tppr.me/wdK1I](https://tppr.me/wdK1I)
+3. _Step 3_: _Enable MStore API option in one of the 2 ways below:_
+open your app on the FluxBuilder, go to **Features** → go to **General**→ open **App Performance** and enable the **MStore-API Caching**. Then rebuild the app and enjoy the new **Super-Speed app**.
+
+    ![](/images/notion/726779a709fd.png)
+
+
+<Tip>
+Note: 
+- _This is also great solution if you would like to change the app UI without resubmit to App stores, by reupload the_ _`config_xx.json`_ _file to MStore API._
+
+- _It will automatically flush the caches if (some of) its products contents are edited._
+
+- _Default setting is to disable the_ _`MStore-API Caching`__, so you need to enable it after activating the plugin and upload the_ _`config_xx.json`_ _file to the MStore API._
+
+- _The latest MStore API is also supporting multi caching per languages, you could go to the mstore-api and upload multi config files -_ [_https://tppr.me/bLr2Z_](https://tppr.me/bLr2Z)
+</Tip>
+
+
+---
+
+
+## 7. Optimize Server Side
+
+
+This solution is used for all FluxStore apps.
+
+- You can do anything to apply caching on your server side, especially cache API requests
+- Or upgrade your server system/hosting to reduce latency when calling the API
+
+If you are using Wordpress system as the backend, you can install [Query Monitor](https://wordpress.org/plugins/query-monitor/) plugin. It will be useful when you want to check where the Database queries come from. It's a free and open-source plugin where you can filter your queries in various contexts, such as:
+
+- Which plugin called
+- Queries that took the most time
+- Duplicated queries
+- You can filter by Select / Update / Insert / Delete
+

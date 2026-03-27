@@ -1,0 +1,104 @@
+---
+title: "Create Key Store"
+---
+
+
+This guide shows how to create Keystore .jks file correctly.
+
+
+## 1. Create Key Store .jks file
+
+
+To create Key Store file .jks, use one of these 2 ways:
+
+
+1️⃣ **Using the FluxBuilder app builder:**
+
+
+Automatically create Keystore file by these steps:
+
+
+Step 1: On FluxBuilder, open your app, select the Build item: 
+
+
+![](/images/notion/ee69fb7b59e3.jpg)
+
+
+Step 2: Select the Cloud button.
+
+
+Step 3: Select `Android APK` or `Android App Bundle`.
+
+
+Step 4: Enter your [Android package name] to the `Bundle ID` textbox. Check the `Use OneSignal` checkbox if you would like to push notifications via OneSignal. And click `UPDATE`_. 
+Your Bundle ID must not include_ [_reserved keywords_](https://dart.dev/guides/language/language-tour#keywords). _Use only lowercase letters._ 
+_Recommend in reverse domain format. For example, your domain is example.com, bundle ID and package name for your app should be "com.example.app"_
+
+
+Step 5: Click the [Create Keystore] button:
+
+
+![](/images/notion/bf64b7574b05.jpg)
+
+
+Step 6: Enter a string to the [Enter key password] and [Enter store password] textboxes _(they must be the same, at least 6 characters)_. Select the **CREATE** button.
+
+
+![](/images/notion/1f0c9208ffec.jpg)
+
+
+That’s all. You have created the Key store file successfully. Then, expand step 4 **BUILD ON CLOUD** → scroll down → click the **Download** button → select the **Keystore** to download, and save all passwords to use it later.
+
+
+![](/images/notion/381d3a23616c.png)
+
+
+2️⃣ **Using Android Studio:**
+
+
+Following these [Android Studio key generation steps](https://developer.android.com/studio/publish/app-signing#sign-apk). 
+
+
+## 2. How to create a Keystore correctly?
+
+
+If you see the issue “# Your Android App Bundle is signed with the wrong key”, please follow steps below to solve:
+
+
+1. You MUST use the same keystore for every build to be able to update your app on Google Play
+
+
+2. Do you still have the old key? If yes, please use this old key to sign your app and re-upload the new version to Google Play
+
+
+3. If you lost the old key, or have created a new keystore, simply generate the PEM file from your keystore file manually or using App Builder and then download it from your email:
+
+
+![](/images/notion/493dc698de23.png)
+
+
+4. Then submit a request to reset the uploaded key on Google Play console and wait for Google to accept (1~3 business days):
+
+
+![](/images/notion/6a627389591e.png)
+
+
+![](/images/notion/2b7e63bf03b6.png)
+
+
+5. Finally, upload new app version which signed with the new keystore to Google Play after Google accepts your request
+
+
+6. Please note that DO NOT regenerate the file keystore many times, only do it once. We DO NOT have a backup for your old key if you recreate or upload another key. You can download the keystore here to backup:
+
+
+![](/images/notion/15203fd2f1b0.png)
+
+
+Refer to this guide [https://support.google.com/googleplay/android-developer/community-guide/243925915/how-to-request-a-…](https://support.google.com/googleplay/android-developer/community-guide/243925915/how-to-request-a-new-upload-key?hl=en) 
+and [https://developer.android.com/studio/publish/app-signing#reset_upload_key](https://developer.android.com/studio/publish/app-signing#reset_upload_key)
+
+
+That’s all 😊
+
+

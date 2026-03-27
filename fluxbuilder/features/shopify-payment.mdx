@@ -1,0 +1,132 @@
+---
+title: "Shopify Payment"
+---
+
+
+## 1. Prerequisites
+
+- To use ApplePay, GooglePay, and Stripe Card, please ensure that Stripe has been successfully connected to your website as shown below:
+- Please make sure your country supports ApplePay, you can double-check here: [https://help.shopify.com/en/manual/payments/accelerated-checkouts/apple-pay](https://help.shopify.com/en/manual/payments/accelerated-checkouts/apple-pay)
+- Please make sure you have set up the App to get Storefront Access Token before, if not, please check out the guide: [https://support.inspireui.com/help-center/articles/50/57/8/app-installation#2-manual-guide](https://support.inspireui.com/help-center/articles/50/57/8/app-installation#2-manual-guide)
+
+![](/images/notion/90a9d69189f3.png)
+
+
+## 2. Apple Pay
+
+
+2.1 Go to your app and **Edit**.
+
+
+![](/images/notion/49c84de663c9.png)
+
+
+2.2 Scroll to the end of the page and download the **Certificate.**
+
+
+![](/images/notion/567642a5dfd1.png)
+
+
+2.3 Go to [https://developer.apple.com/account/resources/certificates/list](https://support.inspireui.com/help-center/articles/50/57/8/app-installation#2-manual-guide), select **Apple Pay Payment Processing Certificate,** and click **Continue**.
+
+
+![](/images/notion/9fa3872750ff.png)
+
+
+2.4 Select the Merchant Identifier of your app and click **Continue** (example: `merchant.com.inspireui.mstore.flutter`).
+
+
+![](/images/notion/e438d0770127.png)
+
+
+2.5 Click **Create Certificate.**
+
+
+![](/images/notion/afdd721d6fe8.png)
+
+
+2.6 Click **Continue**.
+
+
+![](/images/notion/d9d4305c1323.png)
+
+
+2.7 Click choose file and upload, select the file that has been downloaded at step 1.2, and click **Upload**.
+
+
+![](/images/notion/eeb1dc82ae20.png)
+
+
+2.8 Click **Download**.
+
+
+![](/images/notion/e64d677a0ea6.png)
+
+
+2.9 Back to the website at step 1.3 and click **Upload certificate**, then click **Add file**, select the file downloaded at step 1.8, and click **Save**.
+
+
+![](/images/notion/d8165160af40.png)
+
+
+![](/images/notion/64d6f38e7ea8.png)
+
+
+2.10 Then configure this feature into your app by **Using FluxBuilder**:
+
+
+![](/images/notion/f3e232136c8f.png)
+
+
+## 3. Google Pay
+
+
+3.1 Take a look at the [integration requirements](https://developers.google.com/pay/api/android/overview).
+
+
+3.2 Sign in to the [business console](https://pay.google.com/business/console/), and create a business.
+
+
+3.3 Fill in all business information, and Request production access to the Google Pay API for your app. You can wait a few days for the validation.
+
+
+3.4 Get your merchant ID:
+
+
+![](/images/notion/eccce154b804.png)
+
+
+3.5 Then configure this feature into your app by **Using FluxBuilder:**
+
+
+![](/images/notion/14d2c498b7ea.png)
+
+
+## 4. Stripe
+
+
+### 4.1 Setup Stripe Node Server 
+
+
+**Use** [**FluxBuilder**](https://www.fluxbuilder.com/download)**:**
+
+
+1. Open your app and go to **Features**
+2. In **Tools** → select **Deploy Stripe Payment** 
+3. Deploy Stripe server and save to your local to update into the **Stripe Payment** feature
+
+
+![](/images/notion/5455d4e61ded.png)
+
+
+### 4.2 Configure Stripe Payment Card into your app
+
+
+![](/images/notion/8d91088f87f1.png)
+
+
+### Test
+
+- Test API keys (publishable key & secret key) can be taken [here](https://dashboard.stripe.com/test/apikeys).
+- You can use a card number `4242 4242 4242 4242` with any CVV, and any future expiry date to test Stripe payment (this only works with test keys).
+

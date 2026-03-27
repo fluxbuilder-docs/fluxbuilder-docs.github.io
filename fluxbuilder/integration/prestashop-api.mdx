@@ -1,0 +1,60 @@
+---
+title: "PrestaShop API"
+---
+
+
+To build your PrestaShop app, install the API below on your PrestaShop website so that the app can sync with your data:
+
+
+This guide also solve the _‘failed’_ result when Running TroubleShoot on FluxBuilder with your PrestaShop website, or _you do not see the product’s images._
+
+
+## 1. Website Integration
+
+- **Install Prestashop Custom API**
+Go to Dashboard > Modules > Module Manager > Upload a module. Select the module ‘[PrestashopAPI.zip’](https://drive.google.com/file/d/1JCDyZUsveEfCAFB_qQXrs_1ob2AL_fdt/view?usp=drive_link).
+- **Create a new webservice key**
+Go to Dashboard > Advanced > Webservice > Add a new webservice key. Generate your key and select permissions. Click the **Save** button after finishing the settings. There is a list of required permissions with the method.
+
+GET: `categories`, `products`, `product_options`, `product_option_values`, `combinations`, `payment_methods`, `orders`, `countries`, `states`, `cart_rules`, `images`, `order_histories`, `product_feature_values`, `product_features`, `product_price_range` 
+
+
+
+POST: `carriers`, `orders`, `update_user`, `sign_up`, `sign_in`
+
+
+![](/images/notion/65f5a01733dc.png)
+
+- **Enable Webservice**
+By default, the webservice feature is disabled on PrestaShop and needs to be switched on before the first use. Go to Dashboard > Advanced > Webservice. Choose “Yes” for the “Enable PrestaShop Webservice” option and click the Save button
+
+    ![](/images/notion/b9eb460b4fb8.png)
+
+
+For more details about the Prestashop Service API, refer to [this guide](https://devdocs.prestashop-project.org/1.7/webservice/tutorials/creating-access/).
+
+
+## 2. **Setup the Regenerate Image**
+
+
+The first time installing the FluxStore app could cause missing Images or a quite slow Image Loading issue.
+
+
+Go to `Design` > `Image Settings`, add list requirement images if it does not exist:
+
+
+_small_default, medium_default, large_default_
+
+
+. Then, tap the `Regenerate thumbnails` button:
+
+
+![](/images/notion/57715027e66d.png)
+
+
+![](/images/notion/aee8fb5948b3.png)
+
+
+That’s all 😊
+
+

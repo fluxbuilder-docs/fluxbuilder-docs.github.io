@@ -1,0 +1,132 @@
+---
+title: "Ajax Search Pro & FiboSearch"
+---
+
+
+We support two search options for your app. Please select the one that fits your needs: [FiboSearch](https://wordpress.org/plugins/ajax-search-for-woocommerce/) (New) or [Ajax Search Pro](https://codecanyon.net/item/ajax-search-pro-for-wordpress-live-search-plugin/3357410).
+
+
+### **1. Ajax Search Pro**
+
+
+The Ajax Search will be integrated with WooCommerce, and MultiVendor apps.
+
+
+To have the feature on the app, please follow these steps:
+
+1. You need to install and activate the [Ajax Search Pro](https://ajaxsearchpro.com/) plugin for your website.
+2. Next, go to the "**Compatibility & Other Settings**" page of the Ajax Search Pro plugin. You can find this page by navigating to "**Ajax Search Pro**" in your WordPress dashboard, and then clicking on "**Compatibility & Other Settings**".
+3. In the "**Compatibility & Other Settings**" page, click on the "**Other**" tab.
+4. Make sure that the "**Enable REST API**" checkbox is checked.
+5. Click on the "**Save options**" button at the bottom of the page to save your changes.
+
+Then follow the one of the 2 methods below:
+
+
+**Method 1. Use FluxBuilder:** go to `Features`, select `Search Product`, enable `Enable Ajax Search Pro plugin`, then fill in the Ajax Search URL:
+
+
+`https://your-domain/wp-json/ajax-search-pro/v0/woo_search?s=`
+
+
+![](/images/notion/4916e42aca3c.png)
+
+
+**Method 2. Edit the source code:** open `lib/env.dart` file like below: 
+
+
+```dart
+"searchConfig": {
+  /// Enable Ajax Search using either AjaxSearchPro or FiboSearch plugin
+  /// ref: https://support.inspireui.com/help-center/articles/35/37/196/ajax-search-pro
+  "ajaxSearch": {
+    "enable": true,
+    "plugin": "ajaxSearchPro", //fiboSearch, ajaxSearchPro
+   },
+
+   /// Enable search by SKU in search screen
+   "enableSkuSearch": true,
+ },
+```
+
+
+Check the API Search function is available when returning as the JSON, for example: `[https://your-hosting.com]/wp-json/ajax-search-pro/v0/woo_search?s=[text]`
+
+
+### **2. FiboSearch**
+
+
+FluxStore has now added support for FiboSearch, enabling a faster and smarter product search experience for WooCommerce stores.
+
+- Seamless integration with the FiboSearch (Ajax Search) plugin
+- Displays instant search results while typing, without page reloads
+- Improves search accuracy and product discovery for users
+- Fully compatible with the existing FluxStore search UI and product data
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/1Saezc4sAeU"
+  title="video"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+Before enabling the feature on the app, make sure to install these plugins on your website:
+
+1. [Mstore API](https://wordpress.org/plugins/mstore-api/) plugin (version 4.18.3 or higher)
+2. [FiboSearch – Ajax Search for WooCommerce](https://wordpress.org/plugins/ajax-search-for-woocommerce/) plugin
+
+Then edit in the source code manually: 
+
+1. Export the `env.dart` file from FluxBuilder ([Guide to export](/c4054f7e45cb40d589d859ab7d043987)).
+2. Open `lib/env.dart` file, add the config as below, and add `"fiboSearch"` into `plugin`.
+
+    ```dart
+    "searchConfig": {
+        /// Enable Ajax Search using either AjaxSearchPro or FiboSearch plugin
+        /// ref: https://support.inspireui.com/help-center/articles/35/37/196/ajax-search-pro
+        "ajaxSearch": {
+          "enable": true,
+          "plugin": "fiboSearch" //fiboSearch, ajaxSearchPro
+        },
+    
+        /// Enable search by SKU in search screen
+        "enableSkuSearch": true
+      }
+    ```
+
+3. Import the file into your app on FluxBuilder ([Guide to import](/c4054f7e45cb40d589d859ab7d043987)).
+
+### **3. Common search issues:**
+
+
+**💊 Result page loop issues**
+
+
+With the Ajax Search Pro plugin, the default search query returns 10 search results. To retrieve all search results, you need to edit the plugin to return all results.
+
+
+Please log in to your website as an administrator and set the limit for the returned product results to the desired value, for example: 100
+
+
+![](/images/notion/8924a57e3bdc.jpg)
+
+
+**💊 Filter not working with ASP** -  If you use Ajax search, it can't apply the filter when loading the product
+
+
+**💊 The search product results cannot load images**
+
+
+The issue arises from not specifying a search ID, leading to the default route being utilized, where images are not parsed by default. Please log in to your website as an administrator and create a **search instance** configured specifically for **product searches**.
+
+
+![](/images/notion/e14058497947.png)
+
+
+![](/images/notion/3febf4bc7929.png)
+
+
